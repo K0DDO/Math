@@ -24,10 +24,10 @@
 
 После матана ты должен закрывать такой билет за 60–90 минут:
 
-- \(\displaystyle\int_0^{1/2}\arcsin x\,dx\)
-- исследовать \(\displaystyle\int_1^\infty\frac{dx}{(x+5)^2}\) и \(\displaystyle\int_{-1}^{0}\frac{dx}{\sqrt{x+1}}\)
-- площадь между \(y=x^2-2x\) и \(y=x+4\)
-- двойной \(\iint_D x\sqrt{y}\,dx\,dy\)
+- $\displaystyle\int_0^{1/2}\arcsin x\,dx$
+- исследовать $\displaystyle\int_1^\infty\frac{dx}{(x+5)^2}$ и $\displaystyle\int_{-1}^{0}\frac{dx}{\sqrt{x+1}}$
+- площадь между $y=x^2-2x$ и $y=x+4$
+- двойной $\iint_D x\sqrt{y}\,dx\,dy$
 - объём по тройному интегралу
 - криволинейный по треугольнику
 - определение суммы Римана / поверхностного интеграла I рода

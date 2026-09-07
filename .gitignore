@@ -2,6 +2,7 @@ _extract/
 _extract_docs.py
 _extract_math.py
 _extract_test_order.py
+_fix_math.py
 __pycache__/
 .DS_Store
 Thumbs.db
