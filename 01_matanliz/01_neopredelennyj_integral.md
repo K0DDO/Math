@@ -19,18 +19,18 @@ $$
 Таблица, которую надо знать наизусть (это пункт 1 опорного конспекта):
 
 $$
-\begin{align*}
+\begin{aligned}
 \int x^n\,dx&=\frac{x^{n+1}}{n+1}+C,\quad n\neq-1,\\
 \int\frac{dx}{x}&=\ln|x|+C,\\
 \int e^x\,dx&=e^x+C,\\
 \int a^x\,dx&=\frac{a^x}{\ln a}+C,\\
 \int\sin x\,dx&=-\cos x+C,\\
-\int\cos x\,dx=\sin x+C,\\
-\int\frac{dx}{\cos^2 x}&=\operatorname{tg} x+C,\\
-\int\frac{dx}{\sin^2 x}&=-\operatorname{ctg} x+C,\\
-\int\frac{dx}{1+x^2}&=\operatorname{arctg} x+C,\\
+\int\cos x\,dx&=\sin x+C,\\
+\int\frac{dx}{\cos^2 x}&=\mathrm{tg} x+C,\\
+\int\frac{dx}{\sin^2 x}&=-\mathrm{ctg} x+C,\\
+\int\frac{dx}{1+x^2}&=\mathrm{arctg} x+C,\\
 \int\frac{dx}{\sqrt{1-x^2}}&=\arcsin x+C.
-\end{align*}
+\end{aligned}
 $$
 
 Свойства:
@@ -56,7 +56,7 @@ $$
 \int u\,dv=uv-\int v\,du.
 $$
 
-Памятка, кого брать в $u$: логарифм, обратная тригонометрия, многочлен, экспонента/тригонометрия (ЛИАТЕ / ILATE). Для $\arcsin,\arccos,\operatorname{arctg},\ln$ в $u$ всегда идёт эта функция.
+Памятка, кого брать в $u$: логарифм, обратная тригонометрия, многочлен, экспонента/тригонометрия (ЛИАТЕ / ILATE). Для $\arcsin,\arccos,\mathrm{arctg},\ln$ в $u$ всегда идёт эта функция.
 
 4. **Рациональная дробь** — выделить целую часть, разложить знаменатель, простые дроби.
 5. **Тригонометрия** — степени, универсальная подстановка, формулы понижения.
@@ -156,5 +156,5 @@ $$
 1. $\int(2x-3)^5\,dx$
 2. $\int x e^{x^2}\,dx$
 3. $\int\ln x\,dx$
-4. $\int\operatorname{arctg} x\,dx$
+4. $\int\mathrm{arctg} x\,dx$
 5. $\int\frac{2x+3}{x^2+3x+2}\,dx$

@@ -13,8 +13,8 @@
 Векторное поле $\mathbf{a}=(P,Q,R)$:
 
 $$
-\operatorname{div}\mathbf{a}=P_x+Q_y+R_z,\qquad
-\operatorname{rot}\mathbf{a}=\begin{vmatrix}
+\mathrm{div}\mathbf{a}=P_x+Q_y+R_z,\qquad
+\mathrm{rot}\mathbf{a}=\begin{vmatrix}
 \mathbf{i}&\mathbf{j}&\mathbf{k}\\
 \partial_x&\partial_y&\partial_z\\
 P&Q&R
@@ -23,8 +23,8 @@ $$
 
 Характер поля:
 
-- $\operatorname{rot}\mathbf{a}=\mathbf{0}$ — потенциальное (безвихревое);
-- $\operatorname{div}\mathbf{a}=0$ — соленоидальное;
+- $\mathrm{rot}\mathbf{a}=\mathbf{0}$ — потенциальное (безвихревое);
+- $\mathrm{div}\mathbf{a}=0$ — соленоидальное;
 - оба нуля — гармоническое.
 
 ## Как решать (пошагово)
@@ -37,7 +37,7 @@ $$
 4. Сложи три куска.
 5. Быстрая проверка: если поле потенциально, возьми $u$ с $du=Pdx+Qdy$ и считай $u(C)-u(A)$ по замкнутому контуру даст $0$.
 
-Характер поля: посчитай $\operatorname{div}$ и $\operatorname{rot}$, назови тип. Не выдумывай третье слово.
+Характер поля: посчитай $\mathrm{div}$ и $\mathrm{rot}$, назови тип. Не выдумывай третье слово.
 
 ## Примеры с разбором
 
@@ -63,9 +63,9 @@ $$
 \mathbf{a}=(-y,x,0).
 $$
 
-$\operatorname{div}=0$, $\operatorname{rot}=(0,0,2)$. Соленоидальное, не потенциальное.
+$\mathrm{div}=0$, $\mathrm{rot}=(0,0,2)$. Соленоидальное, не потенциальное.
 
-$\mathbf{a}=(x,y,z)$: $\operatorname{div}=3$, $\operatorname{rot}=\mathbf{0}$. Потенциальное, не соленоидальное. Потенциал $u=x^2/2+y^2/2+z^2/2$.
+$\mathbf{a}=(x,y,z)$: $\mathrm{div}=3$, $\mathrm{rot}=\mathbf{0}$. Потенциальное, не соленоидальное. Потенциал $u=x^2/2+y^2/2+z^2/2$.
 
 ## Типичные ошибки / вопросы на экзамен
 

@@ -73,7 +73,7 @@ $\lambda=1$: $(A-I)v=\begin{pmatrix}0&2\\0&2\end{pmatrix}v=0\Rightarrow v=(1,0)$
 
 $\lambda=3$: $\begin{pmatrix}-2&2\\0&0\end{pmatrix}v=0\Rightarrow v=(1,1)$.
 
-$T=\begin{pmatrix}1&1\\0&1\end{pmatrix}$, $A'=T^{-1}AT=\operatorname{diag}(1,3)$.
+$T=\begin{pmatrix}1&1\\0&1\end{pmatrix}$, $A'=T^{-1}AT=\mathrm{diag}(1,3)$.
 
 ### Б. Сильвестр
 

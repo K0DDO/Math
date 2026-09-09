@@ -19,13 +19,13 @@ $$
 Стандартные разложения, область $(-\infty,+\infty)$ у первых трёх:
 
 $$
-\begin{align*}
+\begin{aligned}
 e^x&=\sum_{n=0}^\infty\frac{x^n}{n!},\\
 \sin x&=\sum_{n=0}^\infty\frac{(-1)^n x^{2n+1}}{(2n+1)!},\\
 \cos x&=\sum_{n=0}^\infty\frac{(-1)^n x^{2n}}{(2n)!},\\
 \ln(1+x)&=\sum_{n=1}^\infty\frac{(-1)^{n+1}x^n}{n},\quad x\in(-1,1],\\
 (1+x)^\alpha&=1+\alpha x+\frac{\alpha(\alpha-1)}{2!}x^2+\cdots,\quad |x|<1.
-\end{align*}
+\end{aligned}
 $$
 
 Приближённые вычисления: берут частичную сумму, остаток оценивают по Лагранжу или по Лейбницу, если ряд знакочередующийся.
