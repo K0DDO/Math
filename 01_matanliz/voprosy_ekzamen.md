@@ -4,6 +4,8 @@
 
 Исходники: [`istochniki/`](istochniki/).
 
+Подробные определения (формулировка, смысл, теоремы, микропример): [интегралы](opredeleniya_integraly.md), [ряды](opredeleniya_ryady.md).
+
 ---
 
 ## Интегралы

@@ -18,6 +18,8 @@
 
 Дальше:
 
+- [Определения: операторы и формы](opredeleniya_operatory.md) — вопросы 1–10
+- [Определения: дифференциальные уравнения](opredeleniya_du.md) — вопросы 11–30
 - [Вопросы к экзамену](voprosy_ekzamen.md)
 - [Практика](praktika.md)
 - Исходники: [`istochniki/`](istochniki/)
