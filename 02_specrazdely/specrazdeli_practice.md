@@ -51,7 +51,7 @@
 
 ## 4. Собственный базис, диагональная матрица — практика
 
-**Пример.** Для предыдущего $A=\begin{pmatrix}2&1\\1&2\end{pmatrix}$, $C=(h_1|h_2)=\begin{pmatrix}1&1\\-1&1\end{pmatrix}$, $C^{-1}AC=\operatorname{diag}(1,3)$. В базисе $f_1,f_2$ оператор действует как $Af_1=1·f_1$, $Af_2=3·f_2$.
+**Пример.** Для предыдущего $A=\begin{pmatrix}2&1\\1&2\end{pmatrix}$, $C=(h_1|h_2)=\begin{pmatrix}1&1\\-1&1\end{pmatrix}$, $C^{-1}AC=\mathrm{diag}(1,3)$. В базисе $f_1,f_2$ оператор действует как $Af_1=1·f_1$, $Af_2=3·f_2$.
 
 **Пример.** $A=\begin{pmatrix}1&1\\0&1\end{pmatrix}$ — только один собственный вектор $(1,0)$ → собственного базиса нет (дефект).
 
@@ -61,7 +61,7 @@
 
 **Пример 2.** Восстановить по матрице $A=\begin{pmatrix}1&-1\\-1&2\end{pmatrix}$: $Q=x_1^2-2x_1x_2+2x_2^2$.
 
-**Пример 3 (ортогональная диагонализация).** $A=\begin{pmatrix}2&1\\1&2\end{pmatrix}$, $λ_1=1$, $λ_2=3$, нормированные $u_1=\frac1{\sqrt2}(1,-1)$, $u_2=\frac1{\sqrt2}(1,1)$ → $U=\frac1{\sqrt2}\begin{pmatrix}1&1\\-1&1\end{pmatrix}$, $U^T A U=\operatorname{diag}(1,3)$, замена $X=UY$ → $Q=y_1^2+3y_2^2$.
+**Пример 3 (ортогональная диагонализация).** $A=\begin{pmatrix}2&1\\1&2\end{pmatrix}$, $λ_1=1$, $λ_2=3$, нормированные $u_1=\frac1{\sqrt2}(1,-1)$, $u_2=\frac1{\sqrt2}(1,1)$ → $U=\frac1{\sqrt2}\begin{pmatrix}1&1\\-1&1\end{pmatrix}$, $U^T A U=\mathrm{diag}(1,3)$, замена $X=UY$ → $Q=y_1^2+3y_2^2$.
 
 ## 6. Лагранж и Якоби — практика
 
@@ -251,7 +251,7 @@
 
 ## 29. Неоднородные системы, вариация — практика
 
-**Пример.** $\mathbf{x}'=\begin{pmatrix}1&0\\0&2\end{pmatrix}\mathbf{x}+\begin{pmatrix}e^t\\t\end{pmatrix}$: $Φ=\operatorname{diag}(e^{t},e^{2t})$, $Φ^{-1}g=(1, t e^{-2t})$ → $C_1=t$, $C_2=\int t e^{-2t}dt$ → частное $ΦC(t)$.
+**Пример.** $\mathbf{x}'=\begin{pmatrix}1&0\\0&2\end{pmatrix}\mathbf{x}+\begin{pmatrix}e^t\\t\end{pmatrix}$: $Φ=\mathrm{diag}(e^{t},e^{2t})$, $Φ^{-1}g=(1, t e^{-2t})$ → $C_1=t$, $C_2=\int t e^{-2t}dt$ → частное $ΦC(t)$.
 
 **Пример 2×2.** $x'=x+y+ t$, $y'=x+y+1$ — $Φ$ из однородной → $C'=Φ^{-1}g$.
 
