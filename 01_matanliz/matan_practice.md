@@ -38,7 +38,9 @@
 ## 1. Первообразная и неопределённый интеграл — практика — [лекция](https://mathprofi.ru/integraly_primery_reshenij.html)
 
 **Пример 1.** $\int (3x^2 - 4\sin x + 5e^x)dx$
+
 $$ = 3\int x^2dx -4\int\sin x dx +5\int e^xdx = 3\cdot\frac{x^3}{3} -4(-\cos x)+5e^x+C = x^3+4\cos x+5e^x+C$$
+
 Проверка: $(x^3+4\cos x+5e^x+C)' = 3x^2-4\sin x+5e^x$.
 
 **Пример 2.** $\int \frac{dx}{\sqrt[3]{x}} = \int x^{-1/3}dx = \frac{x^{2/3}}{2/3}+C = \frac{3}{2} \sqrt[3]{x^2}+C$.
@@ -52,6 +54,7 @@ $$ = 3\int x^2dx -4\int\sin x dx +5\int e^xdx = 3\cdot\frac{x^3}{3} -4(-\cos x)+
 **Пример 2.** $\int \frac{dx}{3x-7}= \frac{1}{3}\int\frac{d(3x-7)}{3x-7}= \frac{1}{3}\ln|3x-7|+C$.
 
 **Пример 3 (замена).** $\int x e^{x^2}dx$, $t=x^2$, $dt=2xdx$:
+
 $$= \frac{1}{2}\int e^t dt = \frac{1}{2} e^{x^2}+C.$$
 
 **Пример 4.** $\int \frac{x dx}{\sqrt{x^2+1}}$, $t=x^2+1$, $dt=2xdx$ → $\frac{1}{2}\int t^{-1/2}dt = \sqrt{t}+C=\sqrt{x^2+1}+C$.
@@ -59,12 +62,15 @@ $$= \frac{1}{2}\int e^t dt = \frac{1}{2} e^{x^2}+C.$$
 ## 3. Интегрирование по частям — практика — [лекция](https://mathprofi.ru/integrirovanie_po_chastyam.html)
 
 **Пример 1.** $\int x\sin x dx$, $u=x, dv=\sin x dx$:
+
 $$= -x\cos x + \int \cos x dx = -x\cos x+\sin x+C.$$
 
 **Пример 2.** $\int \ln x dx$, $u=\ln x, dv=dx$:
+
 $$= x\ln x - \int x\cdot\frac{dx}{x}= x\ln x -x+C = x(\ln x-1)+C.$$
 
 **Пример 3.** $\int x^2 e^x dx$ — дважды по частям:
+
 $$= x^2 e^x -2\int x e^xdx = x^2 e^x-2(x e^x-\int e^xdx)= e^x(x^2-2x+2)+C.$$
 
 **Пример 4 (циклический).** $\int e^x\sin x dx = [u=e^x] $ → дважды → $= \frac{e^x(\sin x-\cos x)}{2}+C$.
@@ -74,6 +80,7 @@ $$= x^2 e^x -2\int x e^xdx = x^2 e^x-2(x e^x-\int e^xdx)= e^x(x^2-2x+2)+C.$$
 **Пример 1.** $\int \frac{dx}{x^2-5x+6}= \int \frac{dx}{(x-2)(x-3)} = \int\left(\frac{-1}{x-2}+\frac1{x-3}\right)dx = -\ln|x-2|+\ln|x-3|+C = \ln\left|\frac{x-3}{x-2}\right|+C$.
 
 **Пример 2.** $\int \frac{2x+3}{x^2+2x+5}dx$ — выделяем производную знаменателя $2x+2$:
+
 $$= \int\frac{(2x+2)+1}{x^2+2x+5}dx = \ln(x^2+2x+5)+ \frac{1}{2}\arctan\frac{x+1}{2}+C.$$
 
 **Пример 3.** $\int \frac{dx}{x(x+1)^2}$ — разложение $A/x + B/(x+1)+ C/(x+1)^2$ → $A=1,B=-1,C=-1$ → $\ln|x|-\ln|x+1|+1/(x+1)+C$.
@@ -91,6 +98,7 @@ $$= \int\frac{(2x+2)+1}{x^2+2x+5}dx = \ln(x^2+2x+5)+ \frac{1}{2}\arctan\frac{x+1
 ## 6. Иррациональные выражения — практика — [лекция](https://mathprofi.ru/integrirovanie_kornei.html)
 
 **Пример 1.** $\int \frac{dx}{\sqrt{x}+\sqrt[3]{x}}$, НОК 2 и 3 =6, $x=t^6$, $dx=6t^5dt$:
+
 $$= \int \frac{6t^5dt}{t^3+t^2}=6\int\frac{t^3}{t+1}dt =6\int(t^2-t+1-1/(t+1))dt =2t^3-3t^2+6t-6\ln|t+1|+C,\ t=\sqrt[6]{x}.$$
 
 **Пример 2.** $\int \sqrt{4-x^2}dx$, $x=2\sin t$ → $=2\arcsin(x/2)+x\sqrt{4-x^2}/2+C$.
@@ -283,7 +291,7 @@ $$= \int \frac{6t^5dt}{t^3+t^2}=6\int\frac{t^3}{t+1}dt =6\int(t^2-t+1-1/(t+1))dt
 
 **Даламбер.** $\sum n!/3^n$: $D=\lim (n+1)/3 =\infty>1$ → расходится.
 
-**Даламбер.** $\sum 3^n/n!$ : $D=0$ → сходится.
+**Даламбер.** $\sum 3^n/n!$: $D=0$ → сходится.
 
 **Коши.** $\sum (n/(2n+1))^n$: $C=\lim n/(2n+1)=1/2<1$ → сходится.
 
@@ -367,9 +375,9 @@ $$= \int \frac{6t^5dt}{t^3+t^2}=6\int\frac{t^3}{t+1}dt =6\int(t^2-t+1-1/(t+1))dt
 
 **Пример 1.** $\sum n x^n$: $R=\lim |c_n/c_{n+1}|=1$.
 
-**Пример 2.** $\sum x^n/n!$ : $R=\infty$ → вся прямая.
+**Пример 2.** $\sum x^n/n!$: $R=\infty$ → вся прямая.
 
-**Пример 3.** $\sum n! x^n$ : $R=0$ → только $0$.
+**Пример 3.** $\sum n! x^n$: $R=0$ → только $0$.
 
 **Абель:** если сходится в $x=2$, то абсолютно в $(-2,2)$.
 
