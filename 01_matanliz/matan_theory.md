@@ -88,7 +88,7 @@ $$\int f(ax+b)dx = \frac1a F(ax+b)+C.$$
 2. Добиваемся, чтобы под $d$ оказалась та же функция, что и под функцией: $d(ax+b)=a\,dx$.
 3. Компенсируем домножением/делением на $a$.
 
-*Пример:* $\int \sin 3x dx = \int \sin 3x \cdot \frac{d(3x)}3 = \frac13\int \sin(3x)d(3x)= -\frac13\cos 3x+C$.
+*Пример:* $\int \sin 3x dx = \int \sin 3x \cdot \frac{d(3x)}3 = \frac{1}{3}\int \sin(3x)d(3x)= -\frac{1}{3}\cos 3x+C$.
 Проверка — дифференцированием сложной функции.
 
 Если $x$ входит с коэффициентом $1$, домножать не нужно: $\int \sin(x+5)dx=-\cos(x+5)+C$.
@@ -189,7 +189,7 @@ $$\sin x =\frac{2t}{1+t^2},\quad \cos x=\frac{1-t^2}{1+t^2},\quad dx=\frac{2dt}{
 
 - $\int \tan^m x\,dx$, $\int \cot^m x\,dx$ — через $\tan^2= \sec^2-1$.
 
-- $\int \sin ax\cos bx\,dx$ и т.п. — через произведения в суммы: $\sin\alpha\cos\beta =\frac12[\sin(\alpha+\beta)+\sin(\alpha-\beta)]$.
+- $\int \sin ax\cos bx\,dx$ и т.п. — через произведения в суммы: $\sin\alpha\cos\beta =\frac{1}{2}[\sin(\alpha+\beta)+\sin(\alpha-\beta)]$.
 
 - $\int R(\sin x)\cos x dx \to t=\sin x$, $\int R(\cos x)\sin x dx \to t=\cos x$, $\int R(\tan x) dx \to t=\tan x$ (частные замены).
 
@@ -348,10 +348,10 @@ $$\int_a^b u\,dv = uv\Big|_a^b - \int_a^b v\,du.$$
 
 .
 
-Полярные координаты $(\rho,\varphi)$, $\rho=\rho(\varphi)$. Элемент площади $\frac12\rho^2 d\varphi$.
+Полярные координаты $(\rho,\varphi)$, $\rho=\rho(\varphi)$. Элемент площади $\frac{1}{2}\rho^2 d\varphi$.
 
 - Сектор, $ \alpha\le\varphi\le\beta$: 
- $$S=\frac12\int_{\alpha}^{\beta}\rho^2(\varphi)\,d\varphi.$$
+ $$S=\frac{1}{2}\int_{\alpha}^{\beta}\rho^2(\varphi)\,d\varphi.$$
 - Если $\rho<0$ — берём модуль .
 - Фигура между двумя лучами и двумя кривыми — разность интегралов.
 
@@ -433,7 +433,7 @@ $$V_x = \pi\int_{\alpha}^{\beta} y^2(t)\,x'(t)dt \quad (\text{берут мод�
 
 $$V_x = \pi\int_{a}^{b} y^2 dx = \pi\int_{\alpha}^{\beta} y^2(t) |x'(t)|dt.$$
 
-Пример: эллипс $x=a\cos t, y=b\sin t$ вращается — получается эллипсоид $V= \frac43\pi a b^2$ (при вращении вокруг $Ox$).
+Пример: эллипс $x=a\cos t, y=b\sin t$ вращается — получается эллипсоид $V= \frac{4}{3}\pi a b^2$ (при вращении вокруг $Ox$).
 
 Также $V_y$ — аналогично с $x$.
 
@@ -685,7 +685,7 @@ $$V.p. = \lim_{\varepsilon\to0}\left(\int_{-1}^{-\varepsilon}\frac{dx}{x}+ \int_
 
 **Гармонический ряд:**
 
-$$ \sum_{n=1}^\infty \frac1n = 1+\frac12+\frac13+...$$
+$$ \sum_{n=1}^\infty \frac1n = 1+\frac{1}{2}+\frac{1}{3}+...$$
 
 Необходимое условие выполнено: $1/n\to0$, но ряд **расходится** (сумма бесконечна). 
 
@@ -709,7 +709,7 @@ $$ \sum_{n=1}^\infty \frac1n = 1+\frac12+\frac13+...$$
 - Если $|q|<1$, то $q^n\to0$, $S_n\to \frac{b}{1-q}$ — **сходится**, сумма $S=\frac{b}{1-q}$.
 - Если $|q|\ge1$ — расходится ($q=1$: $S_n=nb\to\infty$; $q=-1$: $S_n$ скачет $b,0,b,0...$ предела нет; $|q|>1$: $|q^n|\to\infty$).
 
-*Примеры:* $1+\frac12+\frac14+...=2$ ($q=1/2$); $1-1+1-1+...$ расходится; $\sum (2/3)^n$ сходится; $\sum 2^n$ расходится.
+*Примеры:* $1+\frac{1}{2}+\frac{1}{4}+...=2$ ($q=1/2$); $1-1+1-1+...$ расходится; $\sum (2/3)^n$ сходится; $\sum 2^n$ расходится.
 
 Используется как эталон сравнения: любой ряд с $a_n\sim q^n$ сравнивают с геометрическим.
 
@@ -1047,7 +1047,7 @@ $$f(x)=\sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!}x^n.$$: ряд Тейлора — 
 4. $\ln(1+x)= \sum_{n=1}^\infty (-1)^{n+1}\frac{x^n}{n}=x-\frac{x^2}2+\frac{x^3}3-...,\quad -1<x\le1$ ($R=1$)
 5. $(1+x)^\alpha = 1+\alpha x+\frac{\alpha(\alpha-1)}{2!}x^2+...,\quad |x|<1$ (биномиальный, $R=1$) — при $\alpha=-1$: $\frac1{1+x}=1-x+x^2-...$, при $\alpha=1/2$: $\sqrt{1+x}$ и т.д.
 6. $\arctan x = \sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{2n+1}=x-\frac{x^3}3+\frac{x^5}5-..., |x|\le1$
-7. $\arcsin x = x+\frac12\frac{x^3}3+...$: получают заменой, интегрированием/дифференцированием стандартных.
+7. $\arcsin x = x+\frac{1}{2}\frac{x^3}3+...$: получают заменой, интегрированием/дифференцированием стандартных.
 
 ---
 

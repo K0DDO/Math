@@ -41,20 +41,20 @@
 $$ = 3\int x^2dx -4\int\sin x dx +5\int e^xdx = 3\cdot\frac{x^3}{3} -4(-\cos x)+5e^x+C = x^3+4\cos x+5e^x+C$$
 Проверка: $(x^3+4\cos x+5e^x+C)' = 3x^2-4\sin x+5e^x$.
 
-**Пример 2.** $\int \frac{dx}{\sqrt[3]{x}} = \int x^{-1/3}dx = \frac{x^{2/3}}{2/3}+C = \frac32 \sqrt[3]{x^2}+C$.
+**Пример 2.** $\int \frac{dx}{\sqrt[3]{x}} = \int x^{-1/3}dx = \frac{x^{2/3}}{2/3}+C = \frac{3}{2} \sqrt[3]{x^2}+C$.
 
 **Пример 3.** Найти первообразную $F$ для $f(x)=2x$ проходящую через $(1,3)$: $F=x^2+C$, $1+C=3\Rightarrow C=2$, $F=x^2+2$.
 
 ## 2. Замена переменной. Подведение под знак дифференциала — практика — [лекция](https://mathprofi.ru/metod_zameny_peremennoi.html)
 
-**Пример 1 (подведение).** $\int \sin(5x+2)dx = [d(5x+2)=5dx] = \frac15\int \sin(5x+2)d(5x+2)= -\frac15\cos(5x+2)+C$.
+**Пример 1 (подведение).** $\int \sin(5x+2)dx = [d(5x+2)=5dx] = \frac{1}{5}\int \sin(5x+2)d(5x+2)= -\frac{1}{5}\cos(5x+2)+C$.
 
-**Пример 2.** $\int \frac{dx}{3x-7}= \frac13\int\frac{d(3x-7)}{3x-7}= \frac13\ln|3x-7|+C$.
+**Пример 2.** $\int \frac{dx}{3x-7}= \frac{1}{3}\int\frac{d(3x-7)}{3x-7}= \frac{1}{3}\ln|3x-7|+C$.
 
 **Пример 3 (замена).** $\int x e^{x^2}dx$, $t=x^2$, $dt=2xdx$:
-$$= \frac12\int e^t dt = \frac12 e^{x^2}+C.$$
+$$= \frac{1}{2}\int e^t dt = \frac{1}{2} e^{x^2}+C.$$
 
-**Пример 4.** $\int \frac{x dx}{\sqrt{x^2+1}}$, $t=x^2+1$, $dt=2xdx$ → $\frac12\int t^{-1/2}dt = \sqrt{t}+C=\sqrt{x^2+1}+C$.
+**Пример 4.** $\int \frac{x dx}{\sqrt{x^2+1}}$, $t=x^2+1$, $dt=2xdx$ → $\frac{1}{2}\int t^{-1/2}dt = \sqrt{t}+C=\sqrt{x^2+1}+C$.
 
 ## 3. Интегрирование по частям — практика — [лекция](https://mathprofi.ru/integrirovanie_po_chastyam.html)
 
@@ -74,7 +74,7 @@ $$= x^2 e^x -2\int x e^xdx = x^2 e^x-2(x e^x-\int e^xdx)= e^x(x^2-2x+2)+C.$$
 **Пример 1.** $\int \frac{dx}{x^2-5x+6}= \int \frac{dx}{(x-2)(x-3)} = \int\left(\frac{-1}{x-2}+\frac1{x-3}\right)dx = -\ln|x-2|+\ln|x-3|+C = \ln\left|\frac{x-3}{x-2}\right|+C$.
 
 **Пример 2.** $\int \frac{2x+3}{x^2+2x+5}dx$ — выделяем производную знаменателя $2x+2$:
-$$= \int\frac{(2x+2)+1}{x^2+2x+5}dx = \ln(x^2+2x+5)+ \frac12\arctan\frac{x+1}{2}+C.$$
+$$= \int\frac{(2x+2)+1}{x^2+2x+5}dx = \ln(x^2+2x+5)+ \frac{1}{2}\arctan\frac{x+1}{2}+C.$$
 
 **Пример 3.** $\int \frac{dx}{x(x+1)^2}$ — разложение $A/x + B/(x+1)+ C/(x+1)^2$ → $A=1,B=-1,C=-1$ → $\ln|x|-\ln|x+1|+1/(x+1)+C$.
 
@@ -86,7 +86,7 @@ $$= \int\frac{(2x+2)+1}{x^2+2x+5}dx = \ln(x^2+2x+5)+ \frac12\arctan\frac{x+1}{2}
 
 **Пример 3 (универсальная).** $\int \frac{dx}{1+\sin x}$, $t=\tan x/2$ → $= \int \frac{2dt/(1+t^2)}{1+2t/(1+t^2)} = \frac{2}{t+1}+C = \frac{2}{\tan x/2+1}+C = -\frac{2\cos x}{\sin x+\cos x+1}$ — после упрощений также $= -\frac{2}{\tan(x/2)+1}$; часто дают ответ $-2/(1+\tan x/2)$.
 
-**Пример 4.** $\int \sin x\cos x dx = \frac12\int \sin2x dx = -\frac14\cos2x+C = \frac12\sin^2x+C$.
+**Пример 4.** $\int \sin x\cos x dx = \frac{1}{2}\int \sin2x dx = -\frac{1}{4}\cos2x+C = \frac{1}{2}\sin^2x+C$.
 
 ## 6. Иррациональные выражения — практика — [лекция](https://mathprofi.ru/integrirovanie_kornei.html)
 
@@ -127,7 +127,7 @@ $$= \int \frac{6t^5dt}{t^3+t^2}=6\int\frac{t^3}{t+1}dt =6\int(t^2-t+1-1/(t+1))dt
 
 ## 10. Замена и по частям в определённом — практика — [лекция](https://mathprofi.ru/opredelennye_integraly_primery_reshenij.html)
 
-**Замена.** $\int_0^1 x e^{x^2}dx$, $t=x^2$, пределы $0→0$, $1→1$ → $\frac12\int_0^1 e^t dt = (e-1)/2$.
+**Замена.** $\int_0^1 x e^{x^2}dx$, $t=x^2$, пределы $0→0$, $1→1$ → $\frac{1}{2}\int_0^1 e^t dt = (e-1)/2$.
 
 **Замена поляр.** $\int_0^{\sqrt3}\frac{xdx}{\sqrt{1+x^2}}$, $t=1+x^2$ → $= \sqrt{4}-\sqrt1=1$.
 
@@ -141,9 +141,9 @@ $$= \int \frac{6t^5dt}{t^3+t^2}=6\int\frac{t^3}{t+1}dt =6\int(t^2-t+1-1/(t+1))dt
 
 **Декарт между кривыми.** $y=\sqrt{x}$, $y=x^2$ → $S=\int_0^1 (\sqrt{x}-x^2)dx=1/3$.
 
-**Полярная.** Кардиоида $\rho=1+\cos\varphi$: $S=\frac12\int_0^{2\pi}(1+\cos\varphi)^2d\varphi = \frac32\pi$.
+**Полярная.** Кардиоида $\rho=1+\cos\varphi$: $S=\frac{1}{2}\int_0^{2\pi}(1+\cos\varphi)^2d\varphi = \frac{3}{2}\pi$.
 
-**Полярная роза** $\rho=2\sin2\varphi$ (4 лепестка) один лепесток $0→\pi/2$: $S_1=\frac12\int_0^{\pi/2}4\sin^22\varphi d\varphi=\pi/2$, вся $2\pi$.
+**Полярная роза** $\rho=2\sin2\varphi$ (4 лепестка) один лепесток $0→\pi/2$: $S_1=\frac{1}{2}\int_0^{\pi/2}4\sin^22\varphi d\varphi=\pi/2$, вся $2\pi$.
 
 ## 12. Параметрическая площадь + поверхность вращения — практика — [лекция](https://mathprofi.ru/ploshad_i_obyem_esli_linija_zadana_parametricheski.html)
 
@@ -155,7 +155,7 @@ $$= \int \frac{6t^5dt}{t^3+t^2}=6\int\frac{t^3}{t+1}dt =6\int(t^2-t+1-1/(t+1))dt
 
 ## 13. Объёмы по сечениям и вращения в декартовой — практика — [лекция](https://mathprofi.ru/obyem_tela_vrashenija.html)
 
-**Шар** $y=\sqrt{R^2-x^2}$: $V=\pi\int_{-R}^{R}(R^2-x^2)dx=\frac43\pi R^3$.
+**Шар** $y=\sqrt{R^2-x^2}$: $V=\pi\int_{-R}^{R}(R^2-x^2)dx=\frac{4}{3}\pi R^3$.
 
 **Конус** $y= (r/h)x$, $0→h$ вокруг $Ox$? вокруг $Ox$ параболоид; для конуса вокруг $Ox$ берут $y= (R/h)x$: $V=\pi\int_0^h (R x/h)^2dx=\pi R^2 h/3$.
 
@@ -171,9 +171,9 @@ $$= \int \frac{6t^5dt}{t^3+t^2}=6\int\frac{t^3}{t+1}dt =6\int(t^2-t+1-1/(t+1))dt
 
 ## 15. Длина дуги в декарте — практика — [лекция](https://mathprofi.ru/dlina_dugi_krivoi.html)
 
-**Пример 1.** $y= \frac23 (x^2+1)^{3/2}$, $0→1$: $y'=2x\sqrt{x^2+1}?$ — на сайте берут $y=\ln x$ и т.д. Простой: $y=x^2/2$, $y'=x$, $L=\int_0^1\sqrt{1+x^2}dx = [\frac12(x\sqrt{1+x^2}+\mathrm{arsinh}x)]_0^1$.
+**Пример 1.** $y= \frac{2}{3} (x^2+1)^{3/2}$, $0→1$: $y'=2x\sqrt{x^2+1}?$ — на сайте берут $y=\ln x$ и т.д. Простой: $y=x^2/2$, $y'=x$, $L=\int_0^1\sqrt{1+x^2}dx = [\frac{1}{2}(x\sqrt{1+x^2}+\mathrm{arsinh}x)]_0^1$.
 
-**Пример 2.** Полукубическая парабола $y=\frac23 x^{3/2}$, $0→3$: $L=\int_0^3\sqrt{1+x}dx = \frac23[(1+x)^{3/2}]_0^3=14/3$.
+**Пример 2.** Полукубическая парабола $y=\frac{2}{3} x^{3/2}$, $0→3$: $L=\int_0^3\sqrt{1+x}dx = \frac{2}{3}[(1+x)^{3/2}]_0^3=14/3$.
 
 **Пример 3.** $y=\mathrm{ch}x$, $0→1$: $L=\int_0^1\sqrt{1+\sinh^2x}dx=\int_0^1\cosh x dx=\sinh1$.
 
