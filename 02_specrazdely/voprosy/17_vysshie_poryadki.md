@@ -14,13 +14,15 @@ $$F\bigl(x,y,y',\ldots,y^{(n)}\bigr)=0,$$
 
 $$y^{(n)}=f\bigl(x,y,y',\ldots,y^{(n-1)}\bigr).$$
 
+([урок](https://mathprofi.ru/differencialnye_uravnenija_dopuskajushie_ponizhenie_poryadka.html))
+
 **Задача Коши:** найти решение с начальными условиями в точке $x_0$:
 
 $$y(x_0)=y_0,\quad y'(x_0)=y_0',\quad \ldots,\quad y^{(n-1)}(x_0)=y_0^{(n-1)}.$$
 
-Нужно задать значение функции и все производные до порядка $n-1$ — всего $n$ условий (как $n$ постоянных в общем решении).
+Нужно задать значение функции и все производные до порядка $n-1$ — всего $n$ условий (как $n$ постоянных в общем решении). ([урок](https://mathprofi.ru/differencialnye_uravnenija_primery_reshenii.html))
 
-**Теорема существования и единственности.** Если $f$ и частные производные $\frac{\partial f}{\partial y},\ldots,\frac{\partial f}{\partial y^{(n-1)}}$ непрерывны в области, содержащей точку Коши $(x_0,y_0,\ldots,y_0^{(n-1)})$, то в окрестности $x_0$ существует единственное решение задачи Коши.
+**Теорема существования и единственности.** Если $f$ и частные производные $\frac{\partial f}{\partial y},\ldots,\frac{\partial f}{\partial y^{(n-1)}}$ непрерывны в области, содержащей точку Коши $(x_0,y_0,\ldots,y_0^{(n-1)})$, то в окрестности $x_0$ существует единственное решение задачи Коши. ([урок](https://mathprofi.ru/differencialnye_uravnenija_primery_reshenii.html))
 
 ### Геометрический смысл (порядок 2)
 
@@ -46,13 +48,15 @@ $$y^{(n)}=f(x).$$
 
 $$y^{(n-1)}=\int f\,dx+C_1,\quad \ldots,\quad y=\ldots+C_1\frac{x^{n-1}}{(n-1)!}+\ldots+C_n.$$
 
+([урок](https://mathprofi.ru/differencialnye_uravnenija_dopuskajushie_ponizhenie_poryadka.html))
+
 ### Тип 2. Нет явной искомой функции $y$ (и младших производных)
 
 Уравнение вида $F(x,y',y'',\ldots,y^{(n)})=0$ (нет $y$). Замена $z=y'$, тогда порядок падает на 1:
 
 $$F(x,z,z',\ldots,z^{(n-1)})=0.$$
 
-Частный случай 2-го порядка: $F(x,y',y'')=0$ → $z'=f(x,z)$.
+Частный случай 2-го порядка: $F(x,y',y'')=0$ → $z'=f(x,z)$. ([урок](https://mathprofi.ru/differencialnye_uravnenija_dopuskajushie_ponizhenie_poryadka.html))
 
 ### Тип 3. Нет явной независимой переменной $x$
 
@@ -60,7 +64,7 @@ $F(y,y',y'')=0$ (для 2-го порядка). Замена: $p=y'$, счита
 
 $$y''=\frac{dp}{dx}=\frac{dp}{dy}\cdot\frac{dy}{dx}=p\frac{dp}{dy}.$$
 
-Получаем уравнение 1-го порядка относительно $p(y)$.
+Получаем уравнение 1-го порядка относительно $p(y)$. ([урок](https://mathprofi.ru/differencialnye_uravnenija_dopuskajushie_ponizhenie_poryadka.html))
 
 ### Тип 4. Другие спецслучаи
 

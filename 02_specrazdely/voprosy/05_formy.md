@@ -23,29 +23,33 @@
 
 $$L(\alpha\mathbf{x}+\beta\mathbf{y})=\alpha L(\mathbf{x})+\beta L(\mathbf{y}).$$
 
-В координатах: $L(x)=\alpha_1 x_1+\ldots+\alpha_n x_n=A X$, где $A$ — строка коэффициентов.
+В координатах: $L(x)=\alpha_1 x_1+\ldots+\alpha_n x_n=A X$, где $A$ — строка коэффициентов. ([урок](https://mathprofi.ru/kvadratichnye_formy.html))
 
 **Билинейная форма** — функция $B(\mathbf{x},\mathbf{y})$ от двух векторов, линейная по каждому аргументу отдельно. В координатах
 
 $$B(\mathbf{x},\mathbf{y})=X^T B Y=\sum_{i,j}b_{ij}x_i y_j.$$
 
-Если $B^T=B$, форма **симметричная**.
+Если $B^T=B$, форма **симметричная**. ([урок](https://mathprofi.ru/kvadratichnye_formy.html))
 
 **Квадратичная форма** — однородный многочлен второй степени от координат:
 
 $$Q(x_1,\ldots,x_n)=\sum_{i=1}^{n}a_{ii}x_i^2+2\sum_{i<j}a_{ij}x_i x_j.$$
 
-Её можно получить из симметричной билинейной формы: $Q(\mathbf{x})=B(\mathbf{x},\mathbf{x})$.
+Её можно получить из симметричной билинейной формы: $Q(\mathbf{x})=B(\mathbf{x},\mathbf{x})$. ([урок](https://mathprofi.ru/kvadratichnye_formy.html))
 
 **Матрица квадратичной формы** — симметрическая матрица $A=(a_{ij})$, для которой
 
 $$Q=X^TAX.$$
 
+Источник: [квадратичные формы](https://mathprofi.ru/kvadratichnye_formy.html).
+
 **Канонический вид** квадратичной формы — вид без произведений разных переменных:
 
 $$Q=\lambda_1 y_1^2+\lambda_2 y_2^2+\ldots+\lambda_n y_n^2.$$
 
-**Ортогональное преобразование** — замена $X=UY$, где $U^TU=E$ (поворот / отражение осей; сохраняет длины и углы).
+Источник: [метод ортогонального преобразования КФ](https://mathprofi.ru/metod_ortogonalnogo_preobrazovaniya_kf.html).
+
+**Ортогональное преобразование** — замена $X=UY$, где $U^TU=E$ (поворот / отражение осей; сохраняет длины и углы). ([урок](https://mathprofi.ru/metod_ortogonalnogo_preobrazovaniya_kf.html))
 
 ---
 
@@ -82,7 +86,7 @@ $$U^T A U=\Lambda=\mathrm{diag}(\lambda_1,\ldots,\lambda_n).$$
 
 $$Q=X^TAX=Y^T(U^T A U)Y=Y^T\Lambda Y=\lambda_1 y_1^2+\ldots+\lambda_n y_n^2.$$
 
-Это **канонический вид методом ортогонального преобразования**. На mathprofi его выделяют как наиболее «геометричный»: оси поворачивают вдоль главных направлений формы.
+Это **канонический вид методом ортогонального преобразования**. На mathprofi его выделяют как наиболее «геометричный»: оси поворачивают вдоль главных направлений формы. ([урок](https://mathprofi.ru/metod_ortogonalnogo_preobrazovaniya_kf.html))
 
 Знаки $\lambda_i$ определяют знакоопределённость (положительно определённая — все $\lambda_i>0$ и т.д.; подробнее — критерий Сильвестра в других билетах).
 

@@ -10,7 +10,7 @@
 
 $$y'+P(x)y=Q(x).$$
 
-Здесь $P$ и $Q$ — заданные функции от $x$ (на экзамене обычно непрерывные).
+Здесь $P$ и $Q$ — заданные функции от $x$ (на экзамене обычно непрерывные). ([урок](https://mathprofi.ru/lineinye_differencialnye_uravnenija.html))
 
 - Если $Q(x)\equiv 0$ — **линейное однородное**: $y'+P(x)y=0$.
 - Если $Q\not\equiv 0$ — **линейное неоднородное**.
@@ -21,7 +21,7 @@ $$y'+P(x)y=Q(x).$$
 
 $$\frac{d}{dx}\bigl(\mu y\bigr)=\mu Q.$$
 
-Это тот же результат, что даёт вариация постоянной.
+Это тот же результат, что даёт вариация постоянной. ([урок](https://mathprofi.ru/lineinye_differencialnye_uravnenija.html))
 
 ## Теория подробно
 
@@ -45,6 +45,7 @@ $$C'(x)\,e^{-\int P\,dx}=Q(x)\qquad\Rightarrow\qquad C'(x)=Q(x)\,e^{\int P\,dx}.
 
 $$y=e^{-\int P\,dx}\left(C+\int Q\,e^{\int P\,dx}\,dx\right).$$
 
+([урок](https://mathprofi.ru/lineinye_differencialnye_uravnenija.html))
 ### Метод Бернулли (подстановка $y=uv$)
 
 Полагаем $y=uv$, $y'=u'v+uv'$. Тогда

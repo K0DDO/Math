@@ -222,8 +222,7 @@ $$a_{11}x^2+2a_{12}xy+a_{22}y^2+2a_{13}x+2a_{23}y+a_{33}=0,$$
 **Шаги по (ортогональная диагонализация):**
 1. Выписываем $A$ квадратичной части.
 2. Находим собственные числа $\lambda_1,\lambda_2$ и ортонормированные собственные векторы — матрица $U$.
-3. Поворот $X = U X'$ (ортогональное преобразование, убирает $x'y'$): уравнение становится
-$$\lambda_1 x'^2+\lambda_2 y'^2 + 2b'_1 x' +2b'_2 y' +c=0,$$
+3. Поворот $X = U X'$ (ортогональное преобразование, убирает $x'y'$): уравнение становится $\lambda_1 x'^2+\lambda_2 y'^2 + 2b'_1 x' +2b'_2 y' +c=0,$
 
  где $(b'_1,b'_2)= B^T U$.
 4. Выделяем полные квадраты (сдвиг начала координат) по $x',y'$ — параллельный перенос.
@@ -249,8 +248,7 @@ $$M = \begin{pmatrix} A & B \\\\ C & D \end{pmatrix},\quad A\ (m\times m),\ D\ (
 
 - Сложение: $\begin{pmatrix}A & B \\\\ C & D\end{pmatrix}+\begin{pmatrix}A' & B' \\\\ C' & D'\end{pmatrix}= \begin{pmatrix}A+A' & B+B' \\\\ C+C' & D+D'\end{pmatrix}$.
 - Умножение на число: $\lambda M = \begin{pmatrix}\lambda A & \lambda B \\\\ \lambda C & \lambda D\end{pmatrix}$.
-- Умножение: 
-$$\begin{pmatrix} A & B \\\\ C & D \end{pmatrix}\begin{pmatrix} P & Q \\\\ R & S \end{pmatrix}= \begin{pmatrix} AP+BR & AQ+BS \\\\ CP+DR & CQ+DS \end{pmatrix},$$
+- Умножение: $\begin{pmatrix} A & B \\\\ C & D \end{pmatrix}\begin{pmatrix} P & Q \\\\ R & S \end{pmatrix}= \begin{pmatrix} AP+BR & AQ+BS \\\\ CP+DR & CQ+DS \end{pmatrix},$
 
  требуется совместимость $A_{m\times k} P_{k\times p}$ и тд. Порядок важен!
 - Транспонирование: $\begin{pmatrix}A & B \\\\ C & D\end{pmatrix}^T = \begin{pmatrix}A^T & C^T \\\\ B^T & D^T\end{pmatrix}$.
@@ -395,8 +393,7 @@ $$y' + P(x)y = Q(x)y^n,\quad n\neq0,1.$$
 
 **Метод:**
 1. Делим на $y^n$: $y^{-n}y' +P y^{1-n}=Q$.
-2. Замена $z = y^{1-n}$, тогда $z'=(1-n)y^{-n}y'$ → получаем линейное:
-$$z' + (1-n)P(x)z = (1-n)Q(x).$$
+2. Замена $z = y^{1-n}$, тогда $z'=(1-n)y^{-n}y'$ → получаем линейное: $z' + (1-n)P(x)z = (1-n)Q(x).$
 
  Решаем как линейное, возвращаемся $y = z^{1/(1-n)}$.
 
@@ -597,8 +594,7 @@ $$k^n + a_{n-1}k^{n-1}+...+a_1 k + a_0 =0.$$
 **Правило подбора (таблица):**
 - Считаем $ \gamma = \alpha + i\beta$ (комплексное число).
 - Находим, сколько раз $\gamma$ является корнем характеристического уравнения — кратность $s$ ($s=0$ если не корень, $s=1$ если простой, $s=2$ и т.д.).
-- Частное ищем в виде
-$$y_{ч.н.}= x^s e^{\alpha x}\big(R_l(x)\cos\beta x + S_l(x)\sin\beta x\big),$$
+- Частное ищем в виде $y_{ч.н.}= x^s e^{\alpha x}\big(R_l(x)\cos\beta x + S_l(x)\sin\beta x\big),$
 
  где $l=\max(m,n)$, $R_l,S_l$ — многочлены степени $l$ с неопределёнными коэффициентами.
 

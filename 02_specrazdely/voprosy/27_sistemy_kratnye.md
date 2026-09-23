@@ -9,15 +9,17 @@
 
 ## Все понятия с нуля
 
-**Алгебраическая кратность** $\lambda$ — кратность корня характеристического многочлена.
+**Алгебраическая кратность** $\lambda$ — кратность корня характеристического многочлена. ([урок](https://mathprofi.ru/sobstvennye_znachenija_i_sobstvennye_vektory.html))
 
-**Геометрическая кратность** — $\dim\ker(A-\lambda E)$ = число независимых собственных векторов.
+**Геометрическая кратность** — $\dim\ker(A-\lambda E)$ = число независимых собственных векторов. ([урок](https://mathprofi.ru/sobstvennye_znachenija_i_sobstvennye_vektory.html))
 
 Всегда геометрическая $\le$ алгебраической. Если строго меньше — матрица **не диагонализируема**, нужны **присоединённые (обобщённые) векторы**.
 
 **Присоединённый вектор** $\mathbf{g}$ к собственному $\mathbf{h}$ (для жордановой клетки $2\times 2$):
+
 $$(A-\lambda E)\mathbf{g}=\mathbf{h},\qquad (A-\lambda E)\mathbf{h}=\mathbf{0}.$$
 
+([урок](https://mathprofi.ru/kak_reshit_sistemu_differencialnyh_uravnenii.html))
 ## Теория подробно
 
 Система $\mathbf{x}'=A\mathbf{x}$, $\lambda$ — действительный корень кратности $m$.
@@ -25,7 +27,9 @@ $$(A-\lambda E)\mathbf{g}=\mathbf{h},\qquad (A-\lambda E)\mathbf{h}=\mathbf{0}.$
 ### Случай 1. Достаточно собственных векторов
 
 Если есть $m$ независимых собственных векторов $\mathbf{h}_1,\ldots,\mathbf{h}_m$, то вклад в общее решение такой же, как при простых корнях:
+
 $$(C_1\mathbf{h}_1+\cdots+C_m\mathbf{h}_m)e^{\lambda t}.$$
+
 Для $n=2$ и $\lambda_1=\lambda_2=\lambda$ это бывает, когда $A=\lambda E$ (тогда любой вектор — собственный).
 
 ### Случай 2. Один собственный вектор при $m=2$ (типичный экзамен)
@@ -33,16 +37,25 @@ $$(C_1\mathbf{h}_1+\cdots+C_m\mathbf{h}_m)e^{\lambda t}.$$
 Пусть $n=2$, $\lambda$ двукратный, $\ker(A-\lambda E)$ одномерен, базис — $\mathbf{h}$.
 
 Ищем второе решение в виде
+
 $$\mathbf{x}_2(t)=(\mathbf{h}\,t+\mathbf{g})e^{\lambda t}.$$
+
 Подстановка даёт:
+
 $$(A-\lambda E)\mathbf{h}=\mathbf{0},\qquad (A-\lambda E)\mathbf{g}=\mathbf{h}.$$
+
 Первое решение: $\mathbf{x}_1=\mathbf{h}\,e^{\lambda t}$.
 
 Общее:
+
 $$\mathbf{x}=C_1\mathbf{h}\,e^{\lambda t}+C_2(\mathbf{h}\,t+\mathbf{g})e^{\lambda t} =\bigl((C_1+C_2 t)\mathbf{h}+C_2\mathbf{g}\bigr)e^{\lambda t}.$$
 
+([урок](https://mathprofi.ru/kak_reshit_sistemu_differencialnyh_uravnenii.html))
+
 Покоординатно часто получается вид
+
 $$x=(a_1+b_1 t)e^{\lambda t},\quad y=(a_2+b_2 t)e^{\lambda t}$$
+
 со связанными константами.
 
 Для $n>2$ строят жордановы цепочки большей длины; на экзамене обычно хватает $n=2$.
@@ -60,6 +73,7 @@ $$x=(a_1+b_1 t)e^{\lambda t},\quad y=(a_2+b_2 t)e^{\lambda t}$$
 $$A=\begin{pmatrix} 2 & -1 \\\\ 1 & 0 \end{pmatrix}.$$
 
 $$\det\begin{pmatrix} 2-\lambda & -1 \\\\ 1 & -\lambda \end{pmatrix} =\lambda^{2}-2\lambda+1=(\lambda-1)^{2}=0.$$
+
 $\lambda=1$ кратности 2.
 
 $(A-E)\mathbf{h}=\begin{pmatrix}1 & -1 \\\\ 1 & -1\end{pmatrix}\mathbf{h}=0$ ⇒ $h_1=h_2$. Берём $\mathbf{h}=\begin{pmatrix}1 \\\\ 1\end{pmatrix}$.
@@ -67,12 +81,17 @@ $(A-E)\mathbf{h}=\begin{pmatrix}1 & -1 \\\\ 1 & -1\end{pmatrix}\mathbf{h}=0$ ⇒
 Второй независимый собственный вектор нет (ранг $A-E$ равен 1).
 
 Ищем $\mathbf{g}=\begin{pmatrix}g_1 \\\\ g_2\end{pmatrix}$:
+
 $$\begin{pmatrix} 1 & -1 \\\\ 1 & -1 \end{pmatrix}\begin{pmatrix} g_1 \\\\ g_2 \end{pmatrix}=\begin{pmatrix} 1 \\\\ 1 \end{pmatrix} \Rightarrow g_1-g_2=1.$$
+
 Берём $g_2=0$, $g_1=1$, то есть $\mathbf{g}=\begin{pmatrix}1 \\\\ 0\end{pmatrix}$.
 
 Общее решение:
+
 $$\mathbf{x}=C_1\begin{pmatrix} 1 \\\\ 1 \end{pmatrix}e^{t} +C_2\left(\begin{pmatrix} 1 \\\\ 1 \end{pmatrix}t+\begin{pmatrix} 1 \\\\ 0 \end{pmatrix}\right)e^{t},$$
+
 $$\begin{cases} x=(C_1+C_2 t+C_2)e^{t}=(C_1+C_2+C_2 t)e^{t}, \\\\ y=(C_1+C_2 t)e^{t}. \end{cases}$$
+
 (Переобозначение констант допустимо: $x=(A+Bt)e^{t}$, $y=(A-B+Bt)e^{t}$ и т.п. — главное согласовать связь.)
 
 ## Практика

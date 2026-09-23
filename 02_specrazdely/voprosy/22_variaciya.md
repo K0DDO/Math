@@ -14,34 +14,47 @@
 
 **$y_{\mathrm{о.о.}}$** — общее решение однородного $L[y]=0$.  
 **$y_{\mathrm{ч.н.}}$** — любое одно частное решение неоднородного $L[y]=g$.  
-**$y_{\mathrm{о.н.}}$** — общее решение неоднородного.
+**$y_{\mathrm{о.н.}}$** — общее решение неоднородного. ([урок](https://mathprofi.ru/kak_reshit_neodnorodnoe_uravnenie_vtorogo_poryadka.html))
 
 **Метод вариации произвольных постоянных:** в общем решении однородного константы $C_i$ заменяют на **функции** $C_i(x)$ и подбирают их так, чтобы получилось частное решение неоднородного.
 
-Метод **универсален** (нужна только ФСР однородного), но часто длиннее метода неопределённых коэффициентов (вопрос 24).
+Метод **универсален** (нужна только ФСР однородного), но часто длиннее метода неопределённых коэффициентов (вопрос 24). ([урок](https://mathprofi.ru/metod_variacii_proizvolnyh_postoyannyh.html))
 
 ## Теория подробно
 
 ### Структура общего решения
 
 Если $L[y_{\mathrm{о.о.}}]=0$ и $L[y_{\mathrm{ч.н.}}]=g$, то
+
 $$L[y_{\mathrm{о.о.}}+y_{\mathrm{ч.н.}}]=g,$$
+
 и любое решение неоднородного имеет вид
+
 $$y_{\mathrm{о.н.}}=y_{\mathrm{о.о.}}+y_{\mathrm{ч.н.}}=\sum_{i=1}^{n} C_i y_i + y_{\mathrm{ч.н.}}.$$
+
+([урок](https://mathprofi.ru/kak_reshit_neodnorodnoe_uravnenie_vtorogo_poryadka.html))
 
 ### Метод вариации
 
 Пусть $\{y_1,\ldots,y_n\}$ — ФСР. Ищем
+
 $$y_{\mathrm{ч.н.}}=C_1(x)y_1+\cdots+C_n(x)y_n.$$
+
 Накладывают условия:
+
 $$\begin{cases} \sum C_i' y_i = 0, \\\\ \sum C_i' y_i' = 0, \\\\ \vdots \\\\ \sum C_i' y_i^{(n-2)} = 0, \\\\ \sum C_i' y_i^{(n-1)} = g(x). \end{cases}$$
+
 Определитель системы — вронскиан $W\neq 0$. Решают относительно $C_i'$, интегрируют (для частного решения константы интегрирования берут нулевыми):
+
 $$C_i(x)=\int C_i'(x)\,dx.$$
 
 Для **$n=2$**, $y''+p y'+q y=g$:
+
 $$\begin{cases} C_1' y_1 + C_2' y_2 = 0, \\\\ C_1' y_1' + C_2' y_2' = g, \end{cases} \qquad W=y_1 y_2'-y_1' y_2,$$
+
 $$C_1'=-\frac{y_2 g}{W},\qquad C_2'=\frac{y_1 g}{W}.$$
 
+([урок](https://mathprofi.ru/metod_variacii_proizvolnyh_postoyannyh.html))
 ## Как решать / алгоритм ($n=2$)
 
 1. Решить однородное → ФСР $y_1,y_2$, записать $y_{\mathrm{о.о.}}=C_1 y_1+C_2 y_2$.
@@ -56,15 +69,21 @@ $$C_1'=-\frac{y_2 g}{W},\qquad C_2'=\frac{y_1 g}{W}.$$
 Решить $y''+y=\dfrac{1}{\cos x}$.
 
 Однородное: $y''+y=0$, ФСР $y_1=\cos x$, $y_2=\sin x$.
+
 $$W=\begin{vmatrix} \cos x & \sin x \\\\ -\sin x & \cos x \end{vmatrix}=1.$$
 
 Система вариации при $g=1/\cos x$:
+
 $$\begin{cases} C_1'\cos x+C_2'\sin x=0, \\\\ -C_1'\sin x+C_2'\cos x=\dfrac{1}{\cos x}. \end{cases}$$
+
 $$C_1'=-\frac{y_2 g}{W}=-\sin x\cdot\frac{1}{\cos x}=-\mathrm{tg}\,x,\qquad C_2'=\frac{y_1 g}{W}=1.$$
+
 $$C_1(x)=\int(-\mathrm{tg}\,x)\,dx=\ln|\cos x|,\qquad C_2(x)=x$$
+
 (константы для частного решения не пишем).
 
 $$y_{\mathrm{ч.н.}}=\cos x\cdot\ln|\cos x|+x\sin x,$$
+
 $$y=C_1\cos x+C_2\sin x+\cos x\ln|\cos x|+x\sin x.$$
 
 ## Практика

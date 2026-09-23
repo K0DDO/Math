@@ -24,13 +24,13 @@ $$dU=P\,dx+Q\,dy,$$
 
 $$U(x,y)=C$$
 
-— **общий интеграл**.
+— **общий интеграл**. ([урок](https://mathprofi.ru/differencialnye_uravnenija_v_polnyh_differencialah.html))
 
 **Критерий** (в односвязной области при гладких $P,Q$):
 
 $$\frac{\partial P}{\partial y}=\frac{\partial Q}{\partial x}.$$
 
-Это равенство смешанных производных $U_{xy}=U_{yx}$.
+Это равенство смешанных производных $U_{xy}=U_{yx}$. ([урок](https://mathprofi.ru/differencialnye_uravnenija_v_polnyh_differencialah.html))
 
 **Частная производная** $\frac{\partial P}{\partial y}$ — производная $P$ по $y$ при фиксированном $x$.
 
@@ -41,7 +41,7 @@ $$y'+P(x)y=Q(x)y^n,\qquad n\neq 0,\,1.$$
 - при $n=0$ — линейное;
 - при $n=1$ — разделяющиеся ($y'+ (P-Q)y=0$).
 
-Не линейное при прочих $n$, но **сводится к линейному** заменой.
+Не линейное при прочих $n$, но **сводится к линейному** заменой. ([урок](https://mathprofi.ru/differencialnoe_uravnenie_bernulli.html))
 
 ## Теория подробно
 

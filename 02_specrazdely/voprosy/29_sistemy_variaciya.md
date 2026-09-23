@@ -11,32 +11,44 @@
 ## Все понятия с нуля
 
 **Неоднородная линейная система:**
+
 $$\mathbf{x}'=A(t)\mathbf{x}+\mathbf{g}(t),$$
-где $\mathbf{g}(t)\not\equiv\mathbf{0}$ — вектор правых частей. Часто $A$ постоянна.
 
-**Однородная:** $\mathbf{x}'=A\mathbf{x}$. Её общее решение $\mathbf{x}_{\mathrm{о}}=\Phi(t)\mathbf{c}$, $\mathbf{c}$ — постоянный вектор.
+где $\mathbf{g}(t)\not\equiv\mathbf{0}$ — вектор правых частей. Часто $A$ постоянна. ([урок](https://mathprofi.ru/sistemy_differencialnyh_uravnenij.html))
 
-**Фундаментальная матрица** $\Phi(t)$ — матрица, столбцы которой — линейно независимые решения однородной системы (ФСР в матричной форме). Тогда $\Phi'=A\Phi$ и $\det\Phi\neq 0$.
+**Однородная:** $\mathbf{x}'=A\mathbf{x}$. Её общее решение $\mathbf{x}_{\mathrm{о}}=\Phi(t)\mathbf{c}$, $\mathbf{c}$ — постоянный вектор. ([урок](https://mathprofi.ru/sistemy_differencialnyh_uravnenij.html))
 
-**Вариация постоянных:** ищем частное решение в виде $\mathbf{x}_{\mathrm{ч}}=\Phi(t)\mathbf{c}(t)$, где $\mathbf{c}(t)$ — уже **функции**.
+**Фундаментальная матрица** $\Phi(t)$ — матрица, столбцы которой — линейно независимые решения однородной системы (ФСР в матричной форме). Тогда $\Phi'=A\Phi$ и $\det\Phi\neq 0$. ([урок](https://mathprofi.ru/metod_variacii_proizvolnyh_postoyannyh.html))
+
+**Вариация постоянных:** ищем частное решение в виде $\mathbf{x}_{\mathrm{ч}}=\Phi(t)\mathbf{c}(t)$, где $\mathbf{c}(t)$ — уже **функции**. ([урок](https://mathprofi.ru/metod_variacii_proizvolnyh_postoyannyh.html))
 
 ## Теория подробно
 
 Подставляем $\mathbf{x}=\Phi\mathbf{c}(t)$ в неоднородную систему:
+
 $$\Phi'\mathbf{c}+\Phi\mathbf{c}'=A\Phi\mathbf{c}+\mathbf{g}.$$
+
 Но $\Phi'=A\Phi$, поэтому
+
 $$\Phi\mathbf{c}'=\mathbf{g}\quad\Rightarrow\quad\mathbf{c}'=\Phi^{-1}\mathbf{g},\quad \mathbf{c}(t)=\int\Phi^{-1}(t)\mathbf{g}(t)\,dt$$
+
 (для частного решения константу интегрирования можно взять нулевой).
 
 Общее решение неоднородной:
+
 $$\mathbf{x}(t)=\Phi(t)\mathbf{c}+\Phi(t)\int\Phi^{-1}(t)\mathbf{g}(t)\,dt.$$
 
+([урок](https://mathprofi.ru/metod_variacii_proizvolnyh_postoyannyh.html))
 ### Для $n=2$ без матричной записи
 
 Если однородное решение
+
 $$\begin{cases} x=C_1 x_1(t)+C_2 x_2(t), \\\\ y=C_1 y_1(t)+C_2 y_2(t), \end{cases}$$
+
 то варьируем $C_1(t),C_2(t)$ и ставим систему
+
 $$\begin{cases} C_1' x_1+C_2' x_2=g_1(t), \\\\ C_1' y_1+C_2' y_2=g_2(t), \end{cases}$$
+
 где $\mathbf{g}=(g_1,g_2)^{T}$. Определитель — вронскиан столбцов ФСР (равен $\det\Phi$).
 
 Это полный аналог скалярной вариации (вопрос 22).
@@ -55,21 +67,27 @@ $$\begin{cases} C_1' x_1+C_2' x_2=g_1(t), \\\\ C_1' y_1+C_2' y_2=g_2(t), \end{ca
 $$\begin{cases} x'=y, \\\\ y'=-x+e^{t}, \end{cases} \qquad A=\begin{pmatrix} 0 & 1 \\\\ -1 & 0 \end{pmatrix},\quad \mathbf{g}=\begin{pmatrix} 0 \\\\ e^{t} \end{pmatrix}.$$
 
 Однородная $\mathbf{x}'=A\mathbf{x}$: $\lambda=\pm i$, ФСР
+
 $$\mathbf{x}_1=\begin{pmatrix} \cos t \\\\ -\sin t \end{pmatrix},\quad \mathbf{x}_2=\begin{pmatrix} \sin t \\\\ \cos t \end{pmatrix}.$$
+
 $$\Phi=\begin{pmatrix} \cos t & \sin t \\\\ -\sin t & \cos t \end{pmatrix},\quad \det\Phi=1,\quad \Phi^{-1}=\begin{pmatrix} \cos t & -\sin t \\\\ \sin t & \cos t \end{pmatrix}.$$
 
 $$\mathbf{c}'=\Phi^{-1}\mathbf{g}=\begin{pmatrix} -\sin t\cdot e^{t} \\\\ \cos t\cdot e^{t} \end{pmatrix}.$$
 
 Интегрируя (формулы $\int e^{t}\sin t\,dt$, $\int e^{t}\cos t\,dt$):
+
 $$c_1=\int(-e^{t}\sin t)\,dt=\frac{e^{t}}{2}(\cos t-\sin t),\qquad c_2=\int e^{t}\cos t\,dt=\frac{e^{t}}{2}(\sin t+\cos t)$$
+
 (без произвольных постоянных).
 
 $$\mathbf{x}_{\mathrm{ч}}=\Phi\begin{pmatrix} c_1 \\\\ c_2 \end{pmatrix} =\frac{e^{t}}{2}\begin{pmatrix} \cos t(\cos t-\sin t)+\sin t(\sin t+\cos t) \\\\ -\sin t(\cos t-\sin t)+\cos t(\sin t+\cos t) \end{pmatrix} =\frac{e^{t}}{2}\begin{pmatrix} 1 \\\\ 1 \end{pmatrix}.$$
 
 Проверка: $x_{\mathrm{ч}}=\frac12 e^{t}$, $y_{\mathrm{ч}}=\frac12 e^{t}$,
+
 $$x_{\mathrm{ч}}'= \tfrac12 e^{t}=y_{\mathrm{ч}},\qquad y_{\mathrm{ч}}'=\tfrac12 e^{t}=-x_{\mathrm{ч}}+e^{t}.$$
 
 Общее решение:
+
 $$\begin{cases} x=C_1\cos t+C_2\sin t+\dfrac12 e^{t}, \\\\ y=-C_1\sin t+C_2\cos t+\dfrac12 e^{t}. \end{cases}$$
 
 ## Практика

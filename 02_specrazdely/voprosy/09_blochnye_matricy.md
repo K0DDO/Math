@@ -12,13 +12,13 @@
 
 $$M=\begin{pmatrix} A & B \\\\ C & D \end{pmatrix}.$$
 
-Здесь $A,B,C,D$ сами матрицы подходящих размеров. Например, $A$ размера $m\times m$, $D$ — $n\times n$, тогда $B$ — $m\times n$, $C$ — $n\times m$, а вся $M$ — $(m+n)\times(m+n)$.
+Здесь $A,B,C,D$ сами матрицы подходящих размеров. Например, $A$ размера $m\times m$, $D$ — $n\times n$, тогда $B$ — $m\times n$, $C$ — $n\times m$, а вся $M$ — $(m+n)\times(m+n)$. ([урок](https://mathprofi.ru/svoistva_operacij_nad_matricami_matrichnye_vyrazheniya.html))
 
 **Согласованность разбиения** — чтобы операции имели смысл, одинаковые «позиции» должны иметь блоки одного размера (для сложения), а для умножения — как у обычных матриц: ширина левого блока = высота правого.
 
 **Почему это удобно.** Большую матрицу можно трактовать как «матрицу из матриц» и сокращать выкладки (доказательства, обратные, определители).
 
-**Единичная матрица $E$ (или $I$)** — единицы на диагонали. **Нулевая $O$** — все нули. В блоках часто пишут $E$ и $O$ подходящего размера.
+**Единичная матрица $E$ (или $I$)** — единицы на диагонали. **Нулевая $O$** — все нули. В блоках часто пишут $E$ и $O$ подходящего размера. ([урок](https://mathprofi.ru/dejstviya_s_matricami.html))
 
 ## Теория подробно
 
@@ -34,13 +34,13 @@ $$\lambda\begin{pmatrix} A & B \\\\ C & D \end{pmatrix}=\begin{pmatrix} \lambda 
 
 $$\begin{pmatrix} A & B \\\\ C & D \end{pmatrix}\begin{pmatrix} P & Q \\\\ R & S \end{pmatrix}=\begin{pmatrix} AP+BR & AQ+BS \\\\ CP+DR & CQ+DS \end{pmatrix}.$$
 
-Правило как у чисел $2\times 2$, но **порядок сомножителей в произведениях блоков важен**: $AP\neq PA$ вообще говоря. Размеры должны позволять каждое произведение ($A$ и $P$, $B$ и $R$, …).
+Правило как у чисел $2\times 2$, но **порядок сомножителей в произведениях блоков важен**: $AP\neq PA$ вообще говоря. Размеры должны позволять каждое произведение ($A$ и $P$, $B$ и $R$, …). ([урок](https://mathprofi.ru/svoistva_operacij_nad_matricami_matrichnye_vyrazheniya.html))
 
 ### Транспонирование
 
 $$\begin{pmatrix} A & B \\\\ C & D \end{pmatrix}^T=\begin{pmatrix} A^T & C^T \\\\ B^T & D^T \end{pmatrix}.$$
 
-Блоки меняются местами «относительно диагонали» и каждый транспонируется.
+Блоки меняются местами «относительно диагонали» и каждый транспонируется. ([урок](https://mathprofi.ru/svoistva_operacij_nad_matricami_matrichnye_vyrazheniya.html))
 
 ### Определитель (формула Шура)
 
@@ -48,7 +48,7 @@ $$\begin{pmatrix} A & B \\\\ C & D \end{pmatrix}^T=\begin{pmatrix} A^T & C^T \\\
 
 $$\det\begin{pmatrix} A & B \\\\ C & D \end{pmatrix}=\det A\cdot\det(D-CA^{-1}B).$$
 
-Матрица $D-CA^{-1}B$ называется **дополнением Шура** блока $A$. Есть симметричный вариант при обратимом $D$.
+Матрица $D-CA^{-1}B$ называется **дополнением Шура** блока $A$. Есть симметричный вариант при обратимом $D$. ([урок](https://mathprofi.ru/svoistva_operacij_nad_matricami_matrichnye_vyrazheniya.html))
 
 ### Обратная блочная (частный случай)
 
@@ -56,7 +56,7 @@ $$\det\begin{pmatrix} A & B \\\\ C & D \end{pmatrix}=\det A\cdot\det(D-CA^{-1}B)
 
 $$\begin{pmatrix} E & X \\\\ O & E \end{pmatrix}^{-1}=\begin{pmatrix} E & -X \\\\ O & E \end{pmatrix}.$$
 
-Проверка: произведение даёт $E$.
+Проверка: произведение даёт $E$. ([урок](https://mathprofi.ru/svoistva_operacij_nad_matricami_matrichnye_vyrazheniya.html))
 
 Для общего $\begin{pmatrix}A & B \\\\ C & D\end{pmatrix}$ обратная выражается через дополнения Шура (на экзамене чаще просят идею или простой случай).
 
