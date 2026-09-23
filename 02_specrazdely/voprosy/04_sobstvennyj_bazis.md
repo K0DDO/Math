@@ -20,13 +20,7 @@
 
 **Диагональная матрица** — матрица, у которой вне главной диагонали нули:
 
-$$
-\mathrm{diag}(\lambda_1,\ldots,\lambda_n)=\begin{pmatrix}
-\lambda_1 & & 0 \cr
-& \ddots & \cr
-0 & & \lambda_n
-\end{pmatrix}.
-$$
+$$\mathrm{diag}(\lambda_1,\ldots,\lambda_n)=\begin{pmatrix} \lambda_1 & & 0 \\\\ & \ddots & \\\\ 0 & & \lambda_n \end{pmatrix}.$$
 
 **Диагонализуемый оператор (матрица)** — такой, для которого существует базис, где матрица диагональна; эквивалентно: существует собственный базис.
 
@@ -34,9 +28,7 @@ $$
 
 **Каноническое (спектральное) разложение** (когда диагонализация возможна):
 
-$$
-A=T\,\mathrm{diag}(\lambda_1,\ldots,\lambda_n)\,T^{-1},
-$$
+$$A=T\,\mathrm{diag}(\lambda_1,\ldots,\lambda_n)\,T^{-1},$$
 
 или $T^{-1}AT=\mathrm{diag}(\lambda_i)$.
 
@@ -51,15 +43,11 @@ $$
 
 Пусть $f_1,\ldots,f_n$ — собственный базис, $Af_i=\lambda_i f_i$. По правилу построения матрицы оператора $i$-й столбец — координаты $Af_i$ в базисе $f$. Но
 
-$$
-Af_i=0\cdot f_1+\ldots+\lambda_i f_i+\ldots+0\cdot f_n,
-$$
+$$Af_i=0\cdot f_1+\ldots+\lambda_i f_i+\ldots+0\cdot f_n,$$
 
 поэтому $i$-й столбец — $(0,\ldots,\lambda_i,\ldots,0)^T$. Итого матрица
 
-$$
-A_f=\mathrm{diag}(\lambda_1,\ldots,\lambda_n).
-$$
+$$A_f=\mathrm{diag}(\lambda_1,\ldots,\lambda_n).$$
 
 **Обратно:** если в некотором базисе матрица диагональна, то каждый базисный вектор собственный (с $\lambda$, стоящим на диагонали).
 
@@ -72,15 +60,13 @@ $$
 - есть $n$ различных собственных значений (тогда автоматически $n$ независимых векторов);
 - матрица симметрична (самосопряжённый оператор) — над $\mathbb{R}$ всегда существует ортонормированный собственный базис.
 
-Контрпример: $A=\begin{pmatrix}2 & 1 \cr 0 & 2\end{pmatrix}$ — одно $\lambda=2$ алгебраической кратности $2$, но геометрическая кратность $1$ — собственного базиса $\mathbb{R}^2$ нет.
+Контрпример: $A=\begin{pmatrix}2 & 1 \\\\ 0 & 2\end{pmatrix}$ — одно $\lambda=2$ алгебраической кратности $2$, но геометрическая кратность $1$ — собственного базиса $\mathbb{R}^2$ нет.
 
 ### Связь со сменой базиса
 
 Если столбцы $T$ — координаты собственного базиса в старом, то по формуле вопроса 2
 
-$$
-A'=T^{-1}AT=\mathrm{diag}(\lambda_1,\ldots,\lambda_n).
-$$
+$$A'=T^{-1}AT=\mathrm{diag}(\lambda_1,\ldots,\lambda_n).$$
 
 «Собственный базис распрямляет оператор»: в новых координатах действие — просто умножение каждой координаты на своё $\lambda_i$.
 
@@ -121,97 +107,41 @@ $$
 
 **Задача.** Построить собственный базис оператора с матрицей
 
-$$
-A=\begin{pmatrix}
-2 & 1 & 0 \cr
-1 & 2 & 0 \cr
-0 & 0 & 3
-\end{pmatrix}
-$$
+$$A=\begin{pmatrix} 2 & 1 & 0 \\\\ 1 & 2 & 0 \\\\ 0 & 0 & 3 \end{pmatrix}$$
 
 и записать матрицу оператора в этом базисе. Проверить диагонализацию.
 
 **Шаг 1.** Характеристический многочлен. Удобно разложить по третьей строке/столбцу или заметить блочность:
 
-$$
-\det(A-\lambda E)=(3-\lambda)\det\begin{pmatrix}
-2-\lambda & 1 \cr
-1 & 2-\lambda
-\end{pmatrix}=(3-\lambda)\bigl((2-\lambda)^2-1\bigr).
-$$
+$$\det(A-\lambda E)=(3-\lambda)\det\begin{pmatrix} 2-\lambda & 1 \\\\ 1 & 2-\lambda \end{pmatrix}=(3-\lambda)\bigl((2-\lambda)^2-1\bigr).$$
 
-$$
-(2-\lambda)^2-1=(\lambda-1)(\lambda-3)\implies p(\lambda)=-(3-\lambda)^2(\lambda-1)
-$$
+$$(2-\lambda)^2-1=(\lambda-1)(\lambda-3)\implies p(\lambda)=-(3-\lambda)^2(\lambda-1)$$
 
 (знак зависит от записи; корни:) $\lambda_1=1$ (кратность $1$), $\lambda_2=3$ (кратность $2$).
 
 **Шаг 2а. $\lambda=1$.**
 
-$$
-A-E=\begin{pmatrix}
-1 & 1 & 0 \cr
-1 & 1 & 0 \cr
-0 & 0 & 2
-\end{pmatrix}.
-$$
+$$A-E=\begin{pmatrix} 1 & 1 & 0 \\\\ 1 & 1 & 0 \\\\ 0 & 0 & 2 \end{pmatrix}.$$
 
-Система: $x_1+x_2=0$, $x_3=0$. ФСР: $f_1=\begin{pmatrix}1 \cr -1 \cr 0\end{pmatrix}$.
+Система: $x_1+x_2=0$, $x_3=0$. ФСР: $f_1=\begin{pmatrix}1 \\\\ -1 \\\\ 0\end{pmatrix}$.
 
 **Шаг 2б. $\lambda=3$.**
 
-$$
-A-3E=\begin{pmatrix}
--1 & 1 & 0 \cr
-1 & -1 & 0 \cr
-0 & 0 & 0
-\end{pmatrix}\implies x_1=x_2,\quad x_3\text{ свободна}.
-$$
+$$A-3E=\begin{pmatrix} -1 & 1 & 0 \\\\ 1 & -1 & 0 \\\\ 0 & 0 & 0 \end{pmatrix}\implies x_1=x_2,\quad x_3\text{ свободна}.$$
 
 Два свободных параметра (или один параметр $x_1=x_2$ и $x_3$): геометрическая кратность $2$. Базис:
 
-$$
-f_2=\begin{pmatrix}
-1 \cr
-1 \cr
-0
-\end{pmatrix},\qquad f_3=\begin{pmatrix}
-0 \cr
-0 \cr
-1
-\end{pmatrix}.
-$$
+$$f_2=\begin{pmatrix} 1 \\\\ 1 \\\\ 0 \end{pmatrix},\qquad f_3=\begin{pmatrix} 0 \\\\ 0 \\\\ 1 \end{pmatrix}.$$
 
 **Шаг 3.** Три независимых вектора — собственный базис $\{f_1,f_2,f_3\}$.
 
 **Шаг 4.** В этом базисе
 
-$$
-A_f=\mathrm{diag}(1,3,3)=\begin{pmatrix}
-1 & 0 & 0 \cr
-0 & 3 & 0 \cr
-0 & 0 & 3
-\end{pmatrix}.
-$$
+$$A_f=\mathrm{diag}(1,3,3)=\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 3 & 0 \\\\ 0 & 0 & 3 \end{pmatrix}.$$
 
 **Шаг 5. Проверка.**
 
-$$
-T=\begin{pmatrix}
-1 & 1 & 0 \cr
--1 & 1 & 0 \cr
-0 & 0 & 1
-\end{pmatrix},\qquad
-AT=\begin{pmatrix}
-1 & 3 & 0 \cr
--1 & 3 & 0 \cr
-0 & 0 & 3
-\end{pmatrix}=T\begin{pmatrix}
-1 & 0 & 0 \cr
-0 & 3 & 0 \cr
-0 & 0 & 3
-\end{pmatrix}.
-$$
+$$T=\begin{pmatrix} 1 & 1 & 0 \\\\ -1 & 1 & 0 \\\\ 0 & 0 & 1 \end{pmatrix},\qquad AT=\begin{pmatrix} 1 & 3 & 0 \\\\ -1 & 3 & 0 \\\\ 0 & 0 & 3 \end{pmatrix}=T\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 3 & 0 \\\\ 0 & 0 & 3 \end{pmatrix}.$$
 
 Равенство $AT=T\Lambda$ выполнено. (Матрица симметрична — можно было ортонормировать: $f_1,f_2$ уже ортогональны.)
 
@@ -219,10 +149,10 @@ $$
 
 ## Практика
 
-**1.** $A=\begin{pmatrix}5 & -2 \cr -2 & 5\end{pmatrix}$. Постройте собственный базис и $A'$.  
-*Ответ:* $\lambda=3$, $v=\begin{pmatrix}1 \cr 1\end{pmatrix}$; $\lambda=7$, $v=\begin{pmatrix}1 \cr -1\end{pmatrix}$; $A'=\mathrm{diag}(3,7)$.
+**1.** $A=\begin{pmatrix}5 & -2 \\\\ -2 & 5\end{pmatrix}$. Постройте собственный базис и $A'$.  
+*Ответ:* $\lambda=3$, $v=\begin{pmatrix}1 \\\\ 1\end{pmatrix}$; $\lambda=7$, $v=\begin{pmatrix}1 \\\\ -1\end{pmatrix}$; $A'=\mathrm{diag}(3,7)$.
 
-**2.** $A=\begin{pmatrix}1 & 1 \cr 0 & 1\end{pmatrix}$. Существует ли собственный базис $\mathbb{R}^2$?  
+**2.** $A=\begin{pmatrix}1 & 1 \\\\ 0 & 1\end{pmatrix}$. Существует ли собственный базис $\mathbb{R}^2$?  
 *Ответ:* нет; только одномерное собственное подпространство для $\lambda=1$.
 
 **3.** Объясните, почему при $n$ различных $\lambda$ собственный базис всегда есть.  

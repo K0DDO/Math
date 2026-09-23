@@ -12,9 +12,7 @@
 Система $\mathbf{x}'=A\mathbf{x}+\mathbf{g}(t)$ с **постоянной** матрицей $A$.
 
 **Специальная правая часть** — вектор-функция вида
-$$
-\mathbf{g}(t)=e^{\alpha t}\bigl(\mathbf{P}_m(t)\cos\beta t+\mathbf{Q}_n(t)\sin\beta t\bigr),
-$$
+$$\mathbf{g}(t)=e^{\alpha t}\bigl(\mathbf{P}_m(t)\cos\beta t+\mathbf{Q}_n(t)\sin\beta t\bigr),$$
 где $\mathbf{P}_m$, $\mathbf{Q}_n$ — вектор-многочлены (координаты — обычные многочлены).
 
 Частные случаи:
@@ -35,9 +33,7 @@ $$
 1. Составить $\gamma=\alpha+i\beta$ по виду $\mathbf{g}$.
 2. Найти, является ли $\gamma$ собственным значением $A$, и с какой алгебраической кратностью $s$ ($s=0$, если не является).
 3. Искать
-$$
-\mathbf{x}_{\mathrm{ч}}=t^{s}e^{\alpha t}\bigl(\mathbf{R}_l(t)\cos\beta t+\mathbf{S}_l(t)\sin\beta t\bigr),
-$$
+$$\mathbf{x}_{\mathrm{ч}}=t^{s}e^{\alpha t}\bigl(\mathbf{R}_l(t)\cos\beta t+\mathbf{S}_l(t)\sin\beta t\bigr),$$
 где $l=\max(m,n)$, а $\mathbf{R}_l$, $\mathbf{S}_l$ — вектор-многочлены степени $l$ с неопределёнными коэффициентами.
 4. Подставить в $\mathbf{x}'=A\mathbf{x}+\mathbf{g}$, приравнять коэффициенты при $t^{k}e^{\alpha t}\cos\beta t$, $t^{k}e^{\alpha t}\sin\beta t$ и т.д.
 5. Если $\mathbf{g}=\mathbf{g}_1+\mathbf{g}_2$ — суперпозиция.
@@ -65,47 +61,15 @@ $$
 
 ## Разобранный пример
 
-$$
-\begin{cases}
-x'=3x-y+1, \cr
-y'=4x-y+2.
-\end{cases}
-\qquad
-A=\begin{pmatrix}
-3 & -1 \cr
-4 & -1
-\end{pmatrix},\quad
-\mathbf{g}=\begin{pmatrix}
-1 \cr
-2
-\end{pmatrix}.
-$$
+$$\begin{cases} x'=3x-y+1, \\\\ y'=4x-y+2. \end{cases} \qquad A=\begin{pmatrix} 3 & -1 \\\\ 4 & -1 \end{pmatrix},\quad \mathbf{g}=\begin{pmatrix} 1 \\\\ 2 \end{pmatrix}.$$
 
 **Однородная.** $\det(A-\lambda E)=(3-\lambda)(-1-\lambda)+4=\lambda^{2}-2\lambda+1=(\lambda-1)^{2}$.
 $\lambda=1$ кратности 2. Это однородная часть — как в вопросе 27; для неоднородной правой части важно другое: $\gamma=0$ (постоянная $\mathbf{g}$), является ли $0$ собственным значением? $\det A=3\cdot(-1)-(-1)\cdot 4=1\neq 0$, значит $0$ **не** собственное, $s=0$.
 
-Ищем постоянное частное $\mathbf{x}_{\mathrm{ч}}=\begin{pmatrix}a \cr b\end{pmatrix}$:
-$$
-\mathbf{0}=A\begin{pmatrix}
-a \cr
-b
-\end{pmatrix}+\begin{pmatrix}
-1 \cr
-2
-\end{pmatrix}
-\Rightarrow
-\begin{cases}
-3a-b=-1, \cr
-4a-b=-2.
-\end{cases}
-$$
+Ищем постоянное частное $\mathbf{x}_{\mathrm{ч}}=\begin{pmatrix}a \\\\ b\end{pmatrix}$:
+$$\mathbf{0}=A\begin{pmatrix} a \\\\ b \end{pmatrix}+\begin{pmatrix} 1 \\\\ 2 \end{pmatrix} \Rightarrow \begin{cases} 3a-b=-1, \\\\ 4a-b=-2. \end{cases}$$
 Вычитая: $a=-1$, тогда $-3-b=-1\Rightarrow b=-2$.
-$$
-\mathbf{x}_{\mathrm{ч}}=\begin{pmatrix}
--1 \cr
--2
-\end{pmatrix}.
-$$
+$$\mathbf{x}_{\mathrm{ч}}=\begin{pmatrix} -1 \\\\ -2 \end{pmatrix}.$$
 
 Общее решение: $\mathbf{x}=\mathbf{x}_{\mathrm{о}}+\mathbf{x}_{\mathrm{ч}}$, где $\mathbf{x}_{\mathrm{о}}$ — общее однородной с $\lambda=1$ (кратный случай).
 
@@ -113,8 +77,8 @@ $$
 
 ## Практика
 
-1. Для $\mathbf{x}'=\begin{pmatrix}0&1 \cr 1&0\end{pmatrix}\mathbf{x}+\begin{pmatrix}e^{2t} \cr 0\end{pmatrix}$ какой вид $\mathbf{x}_{\mathrm{ч}}$? ($s=$?)
-2. $\mathbf{g}=\begin{pmatrix}\cos t \cr \sin t\end{pmatrix}$, собственные значения $A$ равны $\pm 2i$. Какой $s$?
+1. Для $\mathbf{x}'=\begin{pmatrix}0&1 \\\\ 1&0\end{pmatrix}\mathbf{x}+\begin{pmatrix}e^{2t} \\\\ 0\end{pmatrix}$ какой вид $\mathbf{x}_{\mathrm{ч}}$? ($s=$?)
+2. $\mathbf{g}=\begin{pmatrix}\cos t \\\\ \sin t\end{pmatrix}$, собственные значения $A$ равны $\pm 2i$. Какой $s$?
 3. Почему при $\mathbf{g}=\mathbf{a}\cos\beta t$ всё равно вводят $\mathbf{u}\cos+\mathbf{v}\sin$?
 4. Когда метод специальной правой части неприменим?
 

@@ -21,39 +21,29 @@
 
 **Линейная форма** на $V$ — функция $L:V\to\mathbb{R}$, линейная:
 
-$$
-L(\alpha\mathbf{x}+\beta\mathbf{y})=\alpha L(\mathbf{x})+\beta L(\mathbf{y}).
-$$
+$$L(\alpha\mathbf{x}+\beta\mathbf{y})=\alpha L(\mathbf{x})+\beta L(\mathbf{y}).$$
 
 В координатах: $L(x)=\alpha_1 x_1+\ldots+\alpha_n x_n=A X$, где $A$ — строка коэффициентов.
 
 **Билинейная форма** — функция $B(\mathbf{x},\mathbf{y})$ от двух векторов, линейная по каждому аргументу отдельно. В координатах
 
-$$
-B(\mathbf{x},\mathbf{y})=X^T B Y=\sum_{i,j}b_{ij}x_i y_j.
-$$
+$$B(\mathbf{x},\mathbf{y})=X^T B Y=\sum_{i,j}b_{ij}x_i y_j.$$
 
 Если $B^T=B$, форма **симметричная**.
 
 **Квадратичная форма** — однородный многочлен второй степени от координат:
 
-$$
-Q(x_1,\ldots,x_n)=\sum_{i=1}^{n}a_{ii}x_i^2+2\sum_{i<j}a_{ij}x_i x_j.
-$$
+$$Q(x_1,\ldots,x_n)=\sum_{i=1}^{n}a_{ii}x_i^2+2\sum_{i<j}a_{ij}x_i x_j.$$
 
 Её можно получить из симметричной билинейной формы: $Q(\mathbf{x})=B(\mathbf{x},\mathbf{x})$.
 
 **Матрица квадратичной формы** — симметрическая матрица $A=(a_{ij})$, для которой
 
-$$
-Q=X^TAX.
-$$
+$$Q=X^TAX.$$
 
 **Канонический вид** квадратичной формы — вид без произведений разных переменных:
 
-$$
-Q=\lambda_1 y_1^2+\lambda_2 y_2^2+\ldots+\lambda_n y_n^2.
-$$
+$$Q=\lambda_1 y_1^2+\lambda_2 y_2^2+\ldots+\lambda_n y_n^2.$$
 
 **Ортогональное преобразование** — замена $X=UY$, где $U^TU=E$ (поворот / отражение осей; сохраняет длины и углы).
 
@@ -70,16 +60,11 @@ $$
 
 Пример: $Q=2x_1^2-4x_1 x_2+5x_2^2$.
 
-$$
-A=\begin{pmatrix}
-2 & -2 \cr
--2 & 5
-\end{pmatrix},
-$$
+$$A=\begin{pmatrix} 2 & -2 \\\\ -2 & 5 \end{pmatrix},$$
 
 потому что $-4x_1x_2$ даёт два симметричных места по $-2$.
 
-Проверка: $X^TAX=\begin{pmatrix}x_1 & x_2\end{pmatrix}\begin{pmatrix}2 & -2 \cr -2 & 5\end{pmatrix}\begin{pmatrix}x_1 \cr x_2\end{pmatrix}=2x_1^2-4x_1x_2+5x_2^2$.
+Проверка: $X^TAX=\begin{pmatrix}x_1 & x_2\end{pmatrix}\begin{pmatrix}2 & -2 \\\\ -2 & 5\end{pmatrix}\begin{pmatrix}x_1 \\\\ x_2\end{pmatrix}=2x_1^2-4x_1x_2+5x_2^2$.
 
 Ранг формы — ранг матрицы $A$. Определитель $\det A$ иногда называют дискриминантом формы (для $n=2$).
 
@@ -91,15 +76,11 @@ $$
 
 Так как $A=A^T$, существует ортонормированный собственный базис: ортогональная матрица $U$ ($U^{-1}=U^T$) из собственных векторов-столбцов такая, что
 
-$$
-U^T A U=\Lambda=\mathrm{diag}(\lambda_1,\ldots,\lambda_n).
-$$
+$$U^T A U=\Lambda=\mathrm{diag}(\lambda_1,\ldots,\lambda_n).$$
 
 Замена переменных $X=UY$ (новые координаты $Y$ — координаты в собственном базисе) даёт
 
-$$
-Q=X^TAX=Y^T(U^T A U)Y=Y^T\Lambda Y=\lambda_1 y_1^2+\ldots+\lambda_n y_n^2.
-$$
+$$Q=X^TAX=Y^T(U^T A U)Y=Y^T\Lambda Y=\lambda_1 y_1^2+\ldots+\lambda_n y_n^2.$$
 
 Это **канонический вид методом ортогонального преобразования**. На mathprofi его выделяют как наиболее «геометричный»: оси поворачивают вдоль главных направлений формы.
 
@@ -134,63 +115,35 @@ $$
 
 **Задача.** Привести к каноническому виду ортогональным преобразованием форму
 
-$$
-Q=5x^2+4xy+2y^2.
-$$
+$$Q=5x^2+4xy+2y^2.$$
 
 **Шаг 1. Матрица.** Коэффициент при $xy$ равен $4$, значит $a_{12}=a_{21}=2$:
 
-$$
-A=\begin{pmatrix}
-5 & 2 \cr
-2 & 2
-\end{pmatrix}.
-$$
+$$A=\begin{pmatrix} 5 & 2 \\\\ 2 & 2 \end{pmatrix}.$$
 
 **Шаг 2. Собственные значения.**
 
-$$
-\det\begin{pmatrix}
-5-\lambda & 2 \cr
-2 & 2-\lambda
-\end{pmatrix}=(5-\lambda)(2-\lambda)-4=\lambda^2-7\lambda+6=0.
-$$
+$$\det\begin{pmatrix} 5-\lambda & 2 \\\\ 2 & 2-\lambda \end{pmatrix}=(5-\lambda)(2-\lambda)-4=\lambda^2-7\lambda+6=0.$$
 
-$$
-(\lambda-1)(\lambda-6)=0\implies\lambda_1=1,\ \lambda_2=6.
-$$
+$$(\lambda-1)(\lambda-6)=0\implies\lambda_1=1,\ \lambda_2=6.$$
 
 **Шаг 3. Собственные векторы.**
 
-Для $\lambda=1$: $(A-E)X=0\Rightarrow\begin{pmatrix}4 & 2 \cr 2 & 1\end{pmatrix}X=0\Rightarrow 2x+y=0$.  
-Вектор $(1,-2)$; длина $\sqrt{5}$. Орт: $u_1=\frac{1}{\sqrt{5}}\begin{pmatrix}1 \cr -2\end{pmatrix}$.
+Для $\lambda=1$: $(A-E)X=0\Rightarrow\begin{pmatrix}4 & 2 \\\\ 2 & 1\end{pmatrix}X=0\Rightarrow 2x+y=0$.  
+Вектор $(1,-2)$; длина $\sqrt{5}$. Орт: $u_1=\frac{1}{\sqrt{5}}\begin{pmatrix}1 \\\\ -2\end{pmatrix}$.
 
-Для $\lambda=6$: $(A-6E)X=0\Rightarrow\begin{pmatrix}-1 & 2 \cr 2 & -4\end{pmatrix}X=0\Rightarrow -x+2y=0$.  
-Вектор $(2,1)$; длина $\sqrt{5}$. Орт: $u_2=\frac{1}{\sqrt{5}}\begin{pmatrix}2 \cr 1\end{pmatrix}$.
+Для $\lambda=6$: $(A-6E)X=0\Rightarrow\begin{pmatrix}-1 & 2 \\\\ 2 & -4\end{pmatrix}X=0\Rightarrow -x+2y=0$.  
+Вектор $(2,1)$; длина $\sqrt{5}$. Орт: $u_2=\frac{1}{\sqrt{5}}\begin{pmatrix}2 \\\\ 1\end{pmatrix}$.
 
 Проверка ортогональности: $1\cdot 2+(-2)\cdot 1=0$.
 
 **Шаг 4. Замена и канон.**
 
-$$
-U=\frac{1}{\sqrt{5}}\begin{pmatrix}
-1 & 2 \cr
--2 & 1
-\end{pmatrix},\qquad
-\begin{pmatrix}
-x \cr
-y
-\end{pmatrix}=U\begin{pmatrix}
-y_1 \cr
-y_2
-\end{pmatrix}.
-$$
+$$U=\frac{1}{\sqrt{5}}\begin{pmatrix} 1 & 2 \\\\ -2 & 1 \end{pmatrix},\qquad \begin{pmatrix} x \\\\ y \end{pmatrix}=U\begin{pmatrix} y_1 \\\\ y_2 \end{pmatrix}.$$
 
 Канонический вид:
 
-$$
-Q=1\cdot y_1^2+6\cdot y_2^2=y_1^2+6y_2^2.
-$$
+$$Q=1\cdot y_1^2+6\cdot y_2^2=y_1^2+6y_2^2.$$
 
 **Проверка следа/определителя:** $\mathrm{tr}\,A=7=1+6$, $\det A=6=1\cdot 6$.
 
@@ -199,13 +152,13 @@ $$
 ## Практика
 
 **1.** Выпишите матрицу формы $Q=x_1^2-6x_1x_2+x_2^2$.  
-*Ответ:* $A=\begin{pmatrix}1 & -3 \cr -3 & 1\end{pmatrix}$.
+*Ответ:* $A=\begin{pmatrix}1 & -3 \\\\ -3 & 1\end{pmatrix}$.
 
 **2.** Приведите $Q=x^2+y^2$ к канону. Что получится?  
 *Ответ:* уже канон; $A=E$, $\lambda=1,1$. Любой ортонормированный базис годится.
 
 **3.** $Q=xy$. Выпишите $A$ и найдите канонический вид через собственные значения.  
-*Ответ:* $A=\begin{pmatrix}0 & 1/2 \cr 1/2 & 0\end{pmatrix}$, $\lambda=\pm\frac12$, канон $\frac12 u^2-\frac12 v^2$ (после ортогональной замены).
+*Ответ:* $A=\begin{pmatrix}0 & 1/2 \\\\ 1/2 & 0\end{pmatrix}$, $\lambda=\pm\frac12$, канон $\frac12 u^2-\frac12 v^2$ (после ортогональной замены).
 
 **4.** Верно ли, что любая квадратичная форма приводится к канону ортогональным преобразованием над $\mathbb{R}$?  
 *Ответ:* да, потому что матрица симметрична и всегда диагонализуема ортогональной матрицей.

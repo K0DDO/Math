@@ -10,54 +10,29 @@
 ## Все понятия с нуля
 
 **Линейная однородная система с постоянными коэффициентами:**
-$$
-\begin{cases}
-x_1'=a_{11}x_1+\cdots+a_{1n}x_n, \cr
-\vdots \cr
-x_n'=a_{n1}x_1+\cdots+a_{nn}x_n,
-\end{cases}
-$$
+$$\begin{cases} x_1'=a_{11}x_1+\cdots+a_{1n}x_n, \\\\ \vdots \\\\ x_n'=a_{n1}x_1+\cdots+a_{nn}x_n, \end{cases}$$
 или коротко
-$$
-\mathbf{x}'=A\mathbf{x},
-$$
+$$\mathbf{x}'=A\mathbf{x},$$
 где $A=(a_{ij})$ — постоянная матрица $n\times n$, $\mathbf{x}=(x_1,\ldots,x_n)^{T}$.
 
 **Собственное значение** $\lambda$ и **собственный вектор** $\mathbf{h}\neq\mathbf{0}$:
-$$
-A\mathbf{h}=\lambda\mathbf{h}\quad\Leftrightarrow\quad (A-\lambda E)\mathbf{h}=\mathbf{0}.
-$$
+$$A\mathbf{h}=\lambda\mathbf{h}\quad\Leftrightarrow\quad (A-\lambda E)\mathbf{h}=\mathbf{0}.$$
 
 **Простые (различные) корни** — все $\lambda_1,\ldots,\lambda_n$ попарно различны. Тогда автоматически есть $n$ линейно независимых собственных векторов.
 
 ## Теория подробно
 
 Ищем решение вида $\mathbf{x}=\mathbf{h}\,e^{\lambda t}$ ($\mathbf{h}$ — постоянный вектор). Подстановка:
-$$
-\lambda\mathbf{h}\,e^{\lambda t}=A\mathbf{h}\,e^{\lambda t}\Rightarrow (A-\lambda E)\mathbf{h}=\mathbf{0}.
-$$
+$$\lambda\mathbf{h}\,e^{\lambda t}=A\mathbf{h}\,e^{\lambda t}\Rightarrow (A-\lambda E)\mathbf{h}=\mathbf{0}.$$
 Ненулевое $\mathbf{h}$ существует $\Leftrightarrow$ $\det(A-\lambda E)=0$ — **характеристическое уравнение** матрицы $A$.
 
 Если $\lambda_1,\ldots,\lambda_n$ различны и $\mathbf{h}_1,\ldots,\mathbf{h}_n$ — соответствующие собственные векторы, то
-$$
-\mathbf{x}_i(t)=\mathbf{h}_i e^{\lambda_i t}
-$$
+$$\mathbf{x}_i(t)=\mathbf{h}_i e^{\lambda_i t}$$
 — ФСР системы, общее решение:
-$$
-\mathbf{x}(t)=C_1\mathbf{h}_1 e^{\lambda_1 t}+\cdots+C_n\mathbf{h}_n e^{\lambda_n t}.
-$$
+$$\mathbf{x}(t)=C_1\mathbf{h}_1 e^{\lambda_1 t}+\cdots+C_n\mathbf{h}_n e^{\lambda_n t}.$$
 
 Для $n=2$:
-$$
-\mathbf{x}(t)=C_1\begin{pmatrix}
-h_{11} \cr
-h_{21}
-\end{pmatrix}e^{\lambda_1 t}
-+C_2\begin{pmatrix}
-h_{12} \cr
-h_{22}
-\end{pmatrix}e^{\lambda_2 t}.
-$$
+$$\mathbf{x}(t)=C_1\begin{pmatrix} h_{11} \\\\ h_{21} \end{pmatrix}e^{\lambda_1 t} +C_2\begin{pmatrix} h_{12} \\\\ h_{22} \end{pmatrix}e^{\lambda_2 t}.$$
 
 Альтернатива на практике — метод исключения (сведение к одному уравнению 2-го порядка), см. mathprofi; матричный путь короче для устного ответа.
 
@@ -71,45 +46,22 @@ $$
 
 ## Разобранный пример
 
-$$
-\begin{cases}
-x'=x+2y, \cr
-y'=2x+y.
-\end{cases}
-\qquad
-A=\begin{pmatrix}
-1 & 2 \cr
-2 & 1
-\end{pmatrix}.
-$$
+$$\begin{cases} x'=x+2y, \\\\ y'=2x+y. \end{cases} \qquad A=\begin{pmatrix} 1 & 2 \\\\ 2 & 1 \end{pmatrix}.$$
 
-$$
-\det\begin{pmatrix}
-1-\lambda & 2 \cr
-2 & 1-\lambda
-\end{pmatrix}
-=(1-\lambda)^{2}-4=\lambda^{2}-2\lambda-3=0.
-$$
-$$
-\lambda_1=3,\quad\lambda_2=-1.
-$$
+$$\det\begin{pmatrix} 1-\lambda & 2 \\\\ 2 & 1-\lambda \end{pmatrix} =(1-\lambda)^{2}-4=\lambda^{2}-2\lambda-3=0.$$
+$$\lambda_1=3,\quad\lambda_2=-1.$$
 
-Для $\lambda=3$: $\begin{pmatrix}-2 & 2 \cr 2 & -2\end{pmatrix}\begin{pmatrix}h_1 \cr h_2\end{pmatrix}=0$ ⇒ $h_2=h_1$. Берём $\mathbf{h}_1=\begin{pmatrix}1 \cr 1\end{pmatrix}$.
+Для $\lambda=3$: $\begin{pmatrix}-2 & 2 \\\\ 2 & -2\end{pmatrix}\begin{pmatrix}h_1 \\\\ h_2\end{pmatrix}=0$ ⇒ $h_2=h_1$. Берём $\mathbf{h}_1=\begin{pmatrix}1 \\\\ 1\end{pmatrix}$.
 
-Для $\lambda=-1$: $\begin{pmatrix}2 & 2 \cr 2 & 2\end{pmatrix}\mathbf{h}=0$ ⇒ $h_2=-h_1$. Берём $\mathbf{h}_2=\begin{pmatrix}1 \cr -1\end{pmatrix}$.
+Для $\lambda=-1$: $\begin{pmatrix}2 & 2 \\\\ 2 & 2\end{pmatrix}\mathbf{h}=0$ ⇒ $h_2=-h_1$. Берём $\mathbf{h}_2=\begin{pmatrix}1 \\\\ -1\end{pmatrix}$.
 
 Общее решение:
-$$
-\begin{cases}
-x=C_1 e^{3t}+C_2 e^{-t}, \cr
-y=C_1 e^{3t}-C_2 e^{-t}.
-\end{cases}
-$$
+$$\begin{cases} x=C_1 e^{3t}+C_2 e^{-t}, \\\\ y=C_1 e^{3t}-C_2 e^{-t}. \end{cases}$$
 
 ## Практика
 
-1. $A=\begin{pmatrix}0 & 1 \cr 1 & 0\end{pmatrix}$ — найти общее решение.
-2. $A=\begin{pmatrix}2 & 0 \cr 0 & -3\end{pmatrix}$ — что будет с координатами?
+1. $A=\begin{pmatrix}0 & 1 \\\\ 1 & 0\end{pmatrix}$ — найти общее решение.
+2. $A=\begin{pmatrix}2 & 0 \\\\ 0 & -3\end{pmatrix}$ — что будет с координатами?
 3. Почему при различных $\lambda$ собственные векторы независимы?
 4. Решить задачу Коши для примера выше: $x(0)=2$, $y(0)=0$.
 

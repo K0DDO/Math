@@ -16,9 +16,7 @@
 
 **Собственный вектор** матрицы (оператора) $A$ — **ненулевой** вектор $\mathbf{x}$, который оператор лишь растягивает / сжимает / меняет знак, **не меняя направления** (в вещественном смысле — остаётся на той же прямой):
 
-$$
-A\mathbf{x}=\lambda\mathbf{x}.
-$$
+$$A\mathbf{x}=\lambda\mathbf{x}.$$
 
 **Собственное значение (собственное число)** — коэффициент $\lambda$ в этом равенстве. Говорят: $\mathbf{x}$ соответствует $\lambda$.
 
@@ -45,15 +43,11 @@ $$
 
 ### Вывод характеристического уравнения
 
-$$
-A\mathbf{x}=\lambda\mathbf{x}\iff (A-\lambda E)\mathbf{x}=\mathbf{0}.
-$$
+$$A\mathbf{x}=\lambda\mathbf{x}\iff (A-\lambda E)\mathbf{x}=\mathbf{0}.$$
 
 Ненулевое решение однородной системы существует $\iff$
 
-$$
-\det(A-\lambda E)=0.
-$$
+$$\det(A-\lambda E)=0.$$
 
 Это и есть характеристическое уравнение. Корни — собственные значения. Для каждого корня $\lambda_i$ решают $(A-\lambda_i E)X=0$ и берут ФСР — базис собственного подпространства.
 
@@ -61,19 +55,13 @@ $$
 
 **Утверждение.** Если $A'=T^{-1}AT$ — матрица того же оператора в другом базисе, то
 
-$$
-\det(A'-\lambda E)=\det(A-\lambda E).
-$$
+$$\det(A'-\lambda E)=\det(A-\lambda E).$$
 
 **Доказательство (кратко).**
 
-$$
-A'-\lambda E=T^{-1}AT-\lambda E=T^{-1}(A-\lambda E)T,
-$$
+$$A'-\lambda E=T^{-1}AT-\lambda E=T^{-1}(A-\lambda E)T,$$
 
-$$
-\det(A'-\lambda E)=\det T^{-1}\cdot\det(A-\lambda E)\cdot\det T=\det(A-\lambda E).
-$$
+$$\det(A'-\lambda E)=\det T^{-1}\cdot\det(A-\lambda E)\cdot\det T=\det(A-\lambda E).$$
 
 Поэтому характеристический многочлен — инвариант оператора; собственные значения не зависят от базиса.
 
@@ -108,65 +96,33 @@ $$
 
 **Задача.** Найти собственные значения и собственные векторы матрицы
 
-$$
-A=\begin{pmatrix}
-3 & -1 \cr
--1 & 3
-\end{pmatrix}.
-$$
+$$A=\begin{pmatrix} 3 & -1 \\\\ -1 & 3 \end{pmatrix}.$$
 
 **Шаг 1. Характеристическое уравнение.**
 
-$$
-A-\lambda E=\begin{pmatrix}
-3-\lambda & -1 \cr
--1 & 3-\lambda
-\end{pmatrix},
-$$
+$$A-\lambda E=\begin{pmatrix} 3-\lambda & -1 \\\\ -1 & 3-\lambda \end{pmatrix},$$
 
-$$
-\det=(3-\lambda)^2-1=9-6\lambda+\lambda^2-1=\lambda^2-6\lambda+8.
-$$
+$$\det=(3-\lambda)^2-1=9-6\lambda+\lambda^2-1=\lambda^2-6\lambda+8.$$
 
-$$
-\lambda^2-6\lambda+8=0\implies (\lambda-2)(\lambda-4)=0.
-$$
+$$\lambda^2-6\lambda+8=0\implies (\lambda-2)(\lambda-4)=0.$$
 
 Значит $\lambda_1=2$, $\lambda_2=4$. Проверка: сумма $6=\mathrm{tr}\,A$, произведение $8=\det A$.
 
 **Шаг 2. Для $\lambda=2$.**
 
-$$
-A-2E=\begin{pmatrix}
-1 & -1 \cr
--1 & 1
-\end{pmatrix}\implies x_1-x_2=0.
-$$
+$$A-2E=\begin{pmatrix} 1 & -1 \\\\ -1 & 1 \end{pmatrix}\implies x_1-x_2=0.$$
 
-Положим $x_2=1$, тогда $x_1=1$. Собственный вектор $\mathbf{v}_1=\begin{pmatrix}1 \cr 1\end{pmatrix}$.
+Положим $x_2=1$, тогда $x_1=1$. Собственный вектор $\mathbf{v}_1=\begin{pmatrix}1 \\\\ 1\end{pmatrix}$.
 
 **Шаг 3. Для $\lambda=4$.**
 
-$$
-A-4E=\begin{pmatrix}
--1 & -1 \cr
--1 & -1
-\end{pmatrix}\implies x_1+x_2=0.
-$$
+$$A-4E=\begin{pmatrix} -1 & -1 \\\\ -1 & -1 \end{pmatrix}\implies x_1+x_2=0.$$
 
-Положим $x_2=-1$, тогда $x_1=1$. Вектор $\mathbf{v}_2=\begin{pmatrix}1 \cr -1\end{pmatrix}$.
+Положим $x_2=-1$, тогда $x_1=1$. Вектор $\mathbf{v}_2=\begin{pmatrix}1 \\\\ -1\end{pmatrix}$.
 
 **Проверка.**
 
-$$
-A\mathbf{v}_1=\begin{pmatrix}
-2 \cr
-2
-\end{pmatrix}=2\mathbf{v}_1,\qquad A\mathbf{v}_2=\begin{pmatrix}
-4 \cr
--4
-\end{pmatrix}=4\mathbf{v}_2.
-$$
+$$A\mathbf{v}_1=\begin{pmatrix} 2 \\\\ 2 \end{pmatrix}=2\mathbf{v}_1,\qquad A\mathbf{v}_2=\begin{pmatrix} 4 \\\\ -4 \end{pmatrix}=4\mathbf{v}_2.$$
 
 Матрица симметрична — векторы ортогональны: $1\cdot 1+1\cdot(-1)=0$.
 
@@ -174,16 +130,16 @@ $$
 
 ## Практика
 
-**1.** $A=\begin{pmatrix}1 & 2 \cr 0 & 3\end{pmatrix}$. Найдите $\lambda$ и собственные векторы.  
-*Ответ:* $\lambda=1$, $\mathbf{v}=\begin{pmatrix}1 \cr 0\end{pmatrix}$; $\lambda=3$, $\mathbf{v}=\begin{pmatrix}1 \cr 1\end{pmatrix}$.
+**1.** $A=\begin{pmatrix}1 & 2 \\\\ 0 & 3\end{pmatrix}$. Найдите $\lambda$ и собственные векторы.  
+*Ответ:* $\lambda=1$, $\mathbf{v}=\begin{pmatrix}1 \\\\ 0\end{pmatrix}$; $\lambda=3$, $\mathbf{v}=\begin{pmatrix}1 \\\\ 1\end{pmatrix}$.
 
-**2.** $A=\begin{pmatrix}2 & 1 \cr 0 & 2\end{pmatrix}$. Сколько независимых собственных векторов? Есть ли собственный базис $\mathbb{R}^2$?  
+**2.** $A=\begin{pmatrix}2 & 1 \\\\ 0 & 2\end{pmatrix}$. Сколько независимых собственных векторов? Есть ли собственный базис $\mathbb{R}^2$?  
 *Ответ:* $\lambda=2$ кратности $2$, но $\ker(A-2E)$ одномерен (только кратные $(1,0)^T$). Собственного базиса нет.
 
 **3.** Докажите, что если $A\mathbf{x}=\lambda\mathbf{x}$ и $A$ обратима, то $A^{-1}\mathbf{x}=\frac1\lambda\mathbf{x}$.  
 *Эскиз:* применить $A^{-1}$ к обеим частям; $\lambda\neq 0$, т.к. иначе $A\mathbf{x}=0$ при $\mathbf{x}\neq 0$.
 
-**4.** Для $A=\begin{pmatrix}0 & -1 \cr 1 & 0\end{pmatrix}$ найдите характеристический многочлен. Есть ли вещественные собственные векторы?  
+**4.** Для $A=\begin{pmatrix}0 & -1 \\\\ 1 & 0\end{pmatrix}$ найдите характеристический многочлен. Есть ли вещественные собственные векторы?  
 *Ответ:* $p(\lambda)=\lambda^2+1=0$, $\lambda=\pm i$. Над $\mathbb{R}$ собственных векторов нет (поворот на $90^\circ$ никого не оставляет на прямой).
 
 ---
