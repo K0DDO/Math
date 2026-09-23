@@ -47,7 +47,7 @@ $$A=\begin{pmatrix}1 & 2 \\\\ 0 & 1\end{pmatrix}$$
 
  → 
 
-$$A^*=A^T=\begin{pmatrix}1 & 0 \\\\ 2 & 1\end{pmatrix}$$
+$$A^{\ast}=A^T=\begin{pmatrix}1 & 0 \\\\ 2 & 1\end{pmatrix}$$
 
 ; $A$ не самосопряжён. 
 
