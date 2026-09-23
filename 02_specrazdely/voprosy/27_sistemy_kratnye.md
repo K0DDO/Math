@@ -4,7 +4,7 @@
 
 - Что меняется, когда $\lambda$ имеет алгебраическую кратность $m>1$.
 - Случай полного набора собственных векторов (диагонализируемость).
-- Случай дефицита: присоединённые векторы, решения вида $\,(\mathbf{h}t+\mathbf{g})e^{\lambda t}$.
+- Случай дефицита: присоединённые векторы, решения вида $(\mathbf{h}t+\mathbf{g})e^{\lambda t}$.
 - Уметь разобрать $n=2$ с двукратным $\lambda$.
 
 ## Все понятия с нуля
@@ -17,7 +17,7 @@
 
 **Присоединённый вектор** $\mathbf{g}$ к собственному $\mathbf{h}$ (для жордановой клетки $2\times 2$):
 
-$$\,(A-\lambda E)\mathbf{g}=\mathbf{h},\qquad (A-\lambda E)\mathbf{h}=\mathbf{0}.$$
+$$(A-\lambda E)\mathbf{g}=\mathbf{h},\qquad (A-\lambda E)\mathbf{h}=\mathbf{0}.$$
 
 ([урок](https://mathprofi.ru/kak_reshit_sistemu_differencialnyh_uravnenii.html))
 ## Теория подробно
@@ -28,7 +28,7 @@ $$\,(A-\lambda E)\mathbf{g}=\mathbf{h},\qquad (A-\lambda E)\mathbf{h}=\mathbf{0}
 
 Если есть $m$ независимых собственных векторов $\mathbf{h}_1,\ldots,\mathbf{h}_m$, то вклад в общее решение такой же, как при простых корнях:
 
-$$\,(C_1\mathbf{h}_1+\cdots+C_m\mathbf{h}_m)e^{\lambda t}.$$
+$$(C_1\mathbf{h}_1+\cdots+C_m\mathbf{h}_m)e^{\lambda t}.$$
 
 Для $n=2$ и $\lambda_1=\lambda_2=\lambda$ это бывает, когда $A=\lambda E$ (тогда любой вектор — собственный).
 
@@ -42,7 +42,7 @@ $$\mathbf{x}_2(t)=(\mathbf{h}\,t+\mathbf{g})e^{\lambda t}.$$
 
 Подстановка даёт:
 
-$$\,(A-\lambda E)\mathbf{h}=\mathbf{0},\qquad (A-\lambda E)\mathbf{g}=\mathbf{h}.$$
+$$(A-\lambda E)\mathbf{h}=\mathbf{0},\qquad (A-\lambda E)\mathbf{g}=\mathbf{h}.$$
 
 Первое решение: $\mathbf{x}_1=\mathbf{h}\,e^{\lambda t}$.
 
@@ -63,8 +63,8 @@ $$x=(a_1+b_1 t)e^{\lambda t},\quad y=(a_2+b_2 t)e^{\lambda t}$$
 ## Как решать / алгоритм ($n=2$, кратный $\lambda$)
 
 1. Найти $\lambda$ из $\det(A-\lambda E)=0$; убедиться, что кратность 2.
-2. Решить $\,(A-\lambda E)\mathbf{h}=0$. Если два независимых $\mathbf{h}$ — случай 1.
-3. Иначе найти $\mathbf{g}$ из $\,(A-\lambda E)\mathbf{g}=\mathbf{h}$ (система совместна).
+2. Решить $(A-\lambda E)\mathbf{h}=0$. Если два независимых $\mathbf{h}$ — случай 1.
+3. Иначе найти $\mathbf{g}$ из $(A-\lambda E)\mathbf{g}=\mathbf{h}$ (система совместна).
 4. Записать $\mathbf{x}=C_1\mathbf{h}e^{\lambda t}+C_2(\mathbf{h}t+\mathbf{g})e^{\lambda t}$.
 5. Проверить подстановкой в исходную систему.
 
@@ -76,7 +76,7 @@ $$\det\begin{pmatrix} 2-\lambda & -1 \\\\ 1 & -\lambda \end{pmatrix} =\lambda^{2
 
 $\lambda=1$ кратности 2.
 
-$$\,(A-E)\mathbf{h}=\begin{pmatrix}1 & -1 \\\\ 1 & -1\end{pmatrix}\mathbf{h}=0$$
+$$(A-E)\mathbf{h}=\begin{pmatrix}1 & -1 \\\\ 1 & -1\end{pmatrix}\mathbf{h}=0$$
 
  ⇒ $h_1=h_2$. Берём 
 
@@ -120,14 +120,14 @@ $$A=\begin{pmatrix}1 & 1 \\\\ 0 & 1\end{pmatrix}$$
 $$A=\begin{pmatrix}3 & 0 \\\\ 0 & 3\end{pmatrix}$$
 
  — какой случай?
-3. Почему уравнение $\,(A-\lambda E)\mathbf{g}=\mathbf{h}$ обязательно совместно, если $\mathbf{h}$ — собственный и клетка жорданова?
+3. Почему уравнение $(A-\lambda E)\mathbf{g}=\mathbf{h}$ обязательно совместно, если $\mathbf{h}$ — собственный и клетка жорданова?
 4. Сравнить вид решения с кратным корнем у скалярного ДУ $y''-2y'+y=0$.
 
 **Ответы:** 1) $\lambda=1$, $\mathbf{h}=(1,0)$, $\mathbf{g}=(0,1)$ (проверить), $x=(C_1+C_2 t)e^{t}$, $y=C_2 e^{t}$; 2) диагонализируемый, $x=C_1 e^{3t}$, $y=C_2 e^{3t}$; 3) $\mathbf{h}\in\mathrm{Im}(A-\lambda E)$ в жордановой теории; 4) множитель $t$ появляется и там, и там.
 
 ## Что сказать устно за 1 минуту
 
-При кратном действительном $\lambda$ смотрим число собственных векторов. Если их столько, сколько кратность — решение как обычно, с $e^{\lambda t}$. Если не хватает — строим присоединённый вектор из $\,(A-\lambda E)\mathbf{g}=\mathbf{h}$ и добавляем решение $\,(\mathbf{h}t+\mathbf{g})e^{\lambda t}$. Для $2\times 2$ это стандартная жорданова клетка.
+При кратном действительном $\lambda$ смотрим число собственных векторов. Если их столько, сколько кратность — решение как обычно, с $e^{\lambda t}$. Если не хватает — строим присоединённый вектор из $(A-\lambda E)\mathbf{g}=\mathbf{h}$ и добавляем решение $(\mathbf{h}t+\mathbf{g})e^{\lambda t}$. Для $2\times 2$ это стандартная жорданова клетка.
 
 ## Источник
 

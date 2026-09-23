@@ -22,7 +22,7 @@ $$y(x_0)=y_0,\quad y'(x_0)=y_0',\quad \ldots,\quad y^{(n-1)}(x_0)=y_0^{(n-1)}.$$
 
 Нужно задать значение функции и все производные до порядка $n-1$ — всего $n$ условий (как $n$ постоянных в общем решении). ([урок](https://mathprofi.ru/differencialnye_uravnenija_primery_reshenii.html))
 
-**Теорема существования и единственности.** Если $f$ и частные производные $\frac{\partial f}{\partial y},\ldots,\frac{\partial f}{\partial y^{(n-1)}}$ непрерывны в области, содержащей точку Коши $\,(x_0,y_0,\ldots,y_0^{(n-1)})$, то в окрестности $x_0$ существует единственное решение задачи Коши. ([урок](https://mathprofi.ru/differencialnye_uravnenija_primery_reshenii.html))
+**Теорема существования и единственности.** Если $f$ и частные производные $\frac{\partial f}{\partial y},\ldots,\frac{\partial f}{\partial y^{(n-1)}}$ непрерывны в области, содержащей точку Коши $(x_0,y_0,\ldots,y_0^{(n-1)})$, то в окрестности $x_0$ существует единственное решение задачи Коши. ([урок](https://mathprofi.ru/differencialnye_uravnenija_primery_reshenii.html))
 
 ### Геометрический смысл (порядок 2)
 

@@ -12,7 +12,7 @@
 
 $$M=\begin{pmatrix} A & B \\\\ C & D \end{pmatrix}.$$
 
-Здесь $A,B,C,D$ сами матрицы подходящих размеров. Например, $A$ размера $m\times m$, $D$ — $n\times n$, тогда $B$ — $m\times n$, $C$ — $n\times m$, а вся $M$ — $\,(m+n)\times(m+n)$. ([урок](https://mathprofi.ru/svoistva_operacij_nad_matricami_matrichnye_vyrazheniya.html))
+Здесь $A,B,C,D$ сами матрицы подходящих размеров. Например, $A$ размера $m\times m$, $D$ — $n\times n$, тогда $B$ — $m\times n$, $C$ — $n\times m$, а вся $M$ — $(m+n)\times(m+n)$. ([урок](https://mathprofi.ru/svoistva_operacij_nad_matricami_matrichnye_vyrazheniya.html))
 
 **Согласованность разбиения** — чтобы операции имели смысл, одинаковые «позиции» должны иметь блоки одного размера (для сложения), а для умножения — как у обычных матриц: ширина левого блока = высота правого.
 

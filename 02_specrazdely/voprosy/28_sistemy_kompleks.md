@@ -25,7 +25,7 @@ $$e^{(\alpha+i\beta)t}=e^{\alpha t}(\cos\beta t+i\sin\beta t).$$
 
 ## Теория подробно
 
-1. Находим $\lambda=\alpha+i\beta$ и комплексный $\mathbf{h}=\mathbf{u}+i\mathbf{v}$ из $\,(A-\lambda E)\mathbf{h}=\mathbf{0}$.
+1. Находим $\lambda=\alpha+i\beta$ и комплексный $\mathbf{h}=\mathbf{u}+i\mathbf{v}$ из $(A-\lambda E)\mathbf{h}=\mathbf{0}$.
 2. Комплексное решение: $\mathbf{z}(t)=\mathbf{h}\,e^{\lambda t}=e^{\alpha t}(\cos\beta t+i\sin\beta t)(\mathbf{u}+i\mathbf{v}).$
 3. Раскрываем: $\begin{aligned} \mathbf{z}&=e^{\alpha t}\bigl[ (\mathbf{u}\cos\beta t-\mathbf{v}\sin\beta t) +i(\mathbf{u}\sin\beta t+\mathbf{v}\cos\beta t) \bigr]. \end{aligned}$
 4. Два действительных независимых решения: $\begin{aligned} \mathbf{x}_1(t)&=e^{\alpha t}(\mathbf{u}\cos\beta t-\mathbf{v}\sin\beta t), \\\\ \mathbf{x}_2(t)&=e^{\alpha t}(\mathbf{u}\sin\beta t+\mathbf{v}\cos\beta t). \end{aligned}$
@@ -38,7 +38,7 @@ $$e^{(\alpha+i\beta)t}=e^{\alpha t}(\cos\beta t+i\sin\beta t).$$
 ## Как решать / алгоритм
 
 1. $\det(A-\lambda E)=0$ → $\lambda=\alpha\pm i\beta$.
-2. Решить $\,(A-(\alpha+i\beta)E)\mathbf{h}=0$; выделить $\mathbf{u}=\mathrm{Re}\,\mathbf{h}$, $\mathbf{v}=\mathrm{Im}\,\mathbf{h}$.
+2. Решить $(A-(\alpha+i\beta)E)\mathbf{h}=0$; выделить $\mathbf{u}=\mathrm{Re}\,\mathbf{h}$, $\mathbf{v}=\mathrm{Im}\,\mathbf{h}$.
 3. Записать $\mathbf{x}_1$, $\mathbf{x}_2$ по формулам выше.
 4. Собрать общее решение; при Коши найти $C_1,C_2$.
 

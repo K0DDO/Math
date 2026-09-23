@@ -20,7 +20,7 @@ $$k^{n}+a_{n-1}k^{n-1}+\cdots+a_1 k+a_0=0.$$
 
 ([урок](https://mathprofi.ru/differencialnye_uravnenija_vtorogo_poryadka.html))
 
-**Корень кратности $m$** — $\,(k-k_0)^{m}$ входит в разложение характеристического многочлена. ([урок](https://mathprofi.ru/linejnye_diffury_vysshih_porjadkov.html))
+**Корень кратности $m$** — $(k-k_0)^{m}$ входит в разложение характеристического многочлена. ([урок](https://mathprofi.ru/linejnye_diffury_vysshih_porjadkov.html))
 
 **Комплексно сопряжённые корни** $\alpha\pm i\beta$ (коэффициенты действительные) всегда идут парами. ([урок](https://mathprofi.ru/differencialnye_uravnenija_vtorogo_poryadka.html))
 
@@ -67,7 +67,7 @@ $$y=C_1 e^{x}+C_2 e^{2x}.$$
 
 **Б) Кратный действительный.** $y''+2y'+y=0$.
 
-$$\,(k+1)^{2}=0,\quad k=-1\ (m=2).$$
+$$(k+1)^{2}=0,\quad k=-1\ (m=2).$$
 
 $$y=(C_1+C_2 x)e^{-x}.$$
 
@@ -88,9 +88,9 @@ $$y=C_1+C_2 x+C_3 e^{x}.$$
 1. $y''-4y=0$.
 2. $y''+4y'+4y=0$.
 3. $y''+9y=0$.
-4. $y^{(4)}+2y''+y=0$ (подсказка: $\,(k^{2}+1)^{2}=0$).
+4. $y^{(4)}+2y''+y=0$ (подсказка: $(k^{2}+1)^{2}=0$).
 
-**Ответы:** 1) $C_1 e^{2x}+C_2 e^{-2x}$; 2) $\,(C_1+C_2 x)e^{-2x}$; 3) $C_1\cos 3x+C_2\sin 3x$; 4) $\,(C_1+C_2 x)\cos x+(C_3+C_4 x)\sin x$.
+**Ответы:** 1) $C_1 e^{2x}+C_2 e^{-2x}$; 2) $(C_1+C_2 x)e^{-2x}$; 3) $C_1\cos 3x+C_2\sin 3x$; 4) $(C_1+C_2 x)\cos x+(C_3+C_4 x)\sin x$.
 
 ## Что сказать устно за 1 минуту
 
