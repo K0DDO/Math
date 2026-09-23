@@ -68,7 +68,11 @@ $$\begin{cases} x'=3x-y+1, \\\\ y'=4x-y+2. \end{cases} \qquad A=\begin{pmatrix} 
 **Однородная.** $\det(A-\lambda E)=(3-\lambda)(-1-\lambda)+4=\lambda^{2}-2\lambda+1=(\lambda-1)^{2}$.
 $\lambda=1$ кратности 2. Это однородная часть — как в вопросе 27; для неоднородной правой части важно другое: $\gamma=0$ (постоянная $\mathbf{g}$), является ли $0$ собственным значением? $\det A=3\cdot(-1)-(-1)\cdot 4=1\neq 0$, значит $0$ **не** собственное, $s=0$.
 
-Ищем постоянное частное $\mathbf{x}_{\mathrm{ч}}=\begin{pmatrix}a \\\\ b\end{pmatrix}$:
+Ищем постоянное частное 
+
+$$\mathbf{x}_{\mathrm{ч}}=\begin{pmatrix}a \\\\ b\end{pmatrix}$$
+
+:
 
 $$\mathbf{0}=A\begin{pmatrix} a \\\\ b \end{pmatrix}+\begin{pmatrix} 1 \\\\ 2 \end{pmatrix} \Rightarrow \begin{cases} 3a-b=-1, \\\\ 4a-b=-2. \end{cases}$$
 
@@ -82,8 +86,16 @@ $$\mathbf{x}_{\mathrm{ч}}=\begin{pmatrix} -1 \\\\ -2 \end{pmatrix}.$$
 
 ## Практика
 
-1. Для $\mathbf{x}'=\begin{pmatrix}0&1 \\\\ 1&0\end{pmatrix}\mathbf{x}+\begin{pmatrix}e^{2t} \\\\ 0\end{pmatrix}$ какой вид $\mathbf{x}_{\mathrm{ч}}$? ($s=$?)
-2. $\mathbf{g}=\begin{pmatrix}\cos t \\\\ \sin t\end{pmatrix}$, собственные значения $A$ равны $\pm 2i$. Какой $s$?
+1. Для 
+
+$$\mathbf{x}'=\begin{pmatrix}0&1 \\\\ 1&0\end{pmatrix}\mathbf{x}+\begin{pmatrix}e^{2t} \\\\ 0\end{pmatrix}$$
+
+ какой вид $\mathbf{x}_{\mathrm{ч}}$? ($s=$?)
+2. 
+
+$$\mathbf{g}=\begin{pmatrix}\cos t \\\\ \sin t\end{pmatrix}$$
+
+, собственные значения $A$ равны $\pm 2i$. Какой $s$?
 3. Почему при $\mathbf{g}=\mathbf{a}\cos\beta t$ всё равно вводят $\mathbf{u}\cos+\mathbf{v}\sin$?
 4. Когда метод специальной правой части неприменим?
 

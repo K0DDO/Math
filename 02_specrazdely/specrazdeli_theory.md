@@ -45,7 +45,11 @@ $$A(x+y)=A(x)+A(y),\quad A(\alpha x)=\alpha A(x)\quad\forall x,y\in V,\ \alpha\i
 
 $$A e_j = \sum_{i=1}^n a_{ij} e_i,\quad A = (a_{ij})_{n\times n}.$$
 
-Тогда для $x$ с столбцом $X$: $Y = A X$, где $Y$ — координаты $A x$. Правило: «последовательно применяем к базисным векторам, результаты — в столбцы слева направо». Пример в базисе $e_1=(1,0), e_2=(0,1)$ для $A(x_1,x_2)=(2x_1+x_2,\;x_1-x_2)$ матрица $\begin{pmatrix}2 & 1 \\\\ 1 & -1\end{pmatrix}$.
+Тогда для $x$ с столбцом $X$: $Y = A X$, где $Y$ — координаты $A x$. Правило: «последовательно применяем к базисным векторам, результаты — в столбцы слева направо». Пример в базисе $e_1=(1,0), e_2=(0,1)$ для $A(x_1,x_2)=(2x_1+x_2,\;x_1-x_2)$ матрица 
+
+$$\begin{pmatrix}2 & 1 \\\\ 1 & -1\end{pmatrix}$$
+
+.
 
 **Ядро и образ.** 
 - $\ker A =\{x: Ax=0\}$ — подпространство. Размерность $k=\dim\ker A$ — **дефект** $def A$.
@@ -73,7 +77,11 @@ $$A_{e'} = C^{-1} A_e C.$$
 
 **Смысл:** меняем точку зрения, но оператор тот же. Определитель и след сохраняются: $\det A_{e'}=\det A_e$, $\mathrm{tr} A_{e'}=\mathrm{tr} A_e$ — инварианты.
 
-*Пример:* поворот на $90^\circ$ в стандартном базисе $\begin{pmatrix}0 & -1 \\\\ 1 & 0\end{pmatrix}$, в базисе из собственных (комплексных) — диагонален.
+*Пример:* поворот на $90^\circ$ в стандартном базисе 
+
+$$\begin{pmatrix}0 & -1 \\\\ 1 & 0\end{pmatrix}$$
+
+, в базисе из собственных (комплексных) — диагонален.
 
 Доказательство — из $Y = A X$, $Y=CY'$, $X=CX'$ $\Rightarrow$ $C Y' = A C X'$ $\Rightarrow$ $Y' = C^{-1} AC X'$.
 
@@ -142,7 +150,11 @@ $$Q(x)=\sum_{i=1}^n a_{ii}x_i^2 + 2\sum_{i<j} a_{ij}x_i x_j,$$
 - на диагонали — коэффициенты при $x_i^2$,
 - $a_{ij}=a_{ji}= (\text{коэфф. при }x_i x_j)/2$, занимает два симметричных места.
 
-Пример $Q=2x_1^2-4x_1x_2+5x_2^2$: $A=\begin{pmatrix}2 & -2 \\\\ -2 & 5\end{pmatrix}$. Ранг — ранг $A$, дискриминант $\det A$.
+Пример $Q=2x_1^2-4x_1x_2+5x_2^2$: 
+
+$$A=\begin{pmatrix}2 & -2 \\\\ -2 & 5\end{pmatrix}$$
+
+. Ранг — ранг $A$, дискриминант $\det A$.
 
 **Диагонализация с помощью собственных чисел .** Так как $A$ симметрична, существует ортогональная $U$ ($U^T U=E$) из собственных векторов, что
 
@@ -205,7 +217,11 @@ $$Q = \frac{\Delta_1}{\Delta_0} y_1^2 + \frac{\Delta_2}{\Delta_1} y_2^2 + ... + 
 - $Q$ отрицательно определена $\iff$ знаки чередуются: $\Delta_1<0,\ \Delta_2>0,\ \Delta_3<0,...$ $((-1)^k\Delta_k>0)$.
 - Если какой-то $\Delta_k=0$ или условие нарушено — нужна дополнительная проверка (Сильвестр не даёт ответа для полуопределённости). Тогда смотрят на другие миноры или приводят к канону.
 
-*Пример:* $A=\begin{pmatrix}2 & -1 \\\\ -1 & 2\end{pmatrix}$, $\Delta_1=2>0$, $\Delta_2=3>0$ → положительно определена.
+*Пример:* 
+
+$$A=\begin{pmatrix}2 & -1 \\\\ -1 & 2\end{pmatrix}$$
+
+, $\Delta_1=2>0$, $\Delta_2=3>0$ → положительно определена.
 
 Следствие — определитель положительно определённой $>0$.
 
@@ -246,12 +262,26 @@ $$M = \begin{pmatrix} A & B \\\\ C & D \end{pmatrix},\quad A\ (m\times m),\ D\ (
 
 **Операции:** если блоки согласованы по размерам, с ними работают как с числами, но с учётом некоммутативности умножения.
 
-- Сложение: $\begin{pmatrix}A & B \\\\ C & D\end{pmatrix}+\begin{pmatrix}A' & B' \\\\ C' & D'\end{pmatrix}= \begin{pmatrix}A+A' & B+B' \\\\ C+C' & D+D'\end{pmatrix}$.
-- Умножение на число: $\lambda M = \begin{pmatrix}\lambda A & \lambda B \\\\ \lambda C & \lambda D\end{pmatrix}$.
-- Умножение: $\begin{pmatrix} A & B \\\\ C & D \end{pmatrix}\begin{pmatrix} P & Q \\\\ R & S \end{pmatrix}= \begin{pmatrix} AP+BR & AQ+BS \\\\ CP+DR & CQ+DS \end{pmatrix},$
+- Сложение: 
+
+$$\begin{pmatrix}A & B \\\\ C & D\end{pmatrix}+\begin{pmatrix}A' & B' \\\\ C' & D'\end{pmatrix}= \begin{pmatrix}A+A' & B+B' \\\\ C+C' & D+D'\end{pmatrix}$$
+
+.
+- Умножение на число: 
+
+$$\lambda M = \begin{pmatrix}\lambda A & \lambda B \\\\ \lambda C & \lambda D\end{pmatrix}$$
+
+.
+- Умножение: 
+
+$$\begin{pmatrix} A & B \\\\ C & D \end{pmatrix}\begin{pmatrix} P & Q \\\\ R & S \end{pmatrix}= \begin{pmatrix} AP+BR & AQ+BS \\\\ CP+DR & CQ+DS \end{pmatrix},$$
 
  требуется совместимость $A_{m\times k} P_{k\times p}$ и тд. Порядок важен!
-- Транспонирование: $\begin{pmatrix}A & B \\\\ C & D\end{pmatrix}^T = \begin{pmatrix}A^T & C^T \\\\ B^T & D^T\end{pmatrix}$.
+- Транспонирование: 
+
+$$\begin{pmatrix}A & B \\\\ C & D\end{pmatrix}^T = \begin{pmatrix}A^T & C^T \\\\ B^T & D^T\end{pmatrix}$$
+
+.
 - Определитель (при $A$ невырождена): $\det M = \det A\cdot\det(D-CA^{-1}B)$ — формула Шура.
 - Обратная (блочная): при способах — через дополнения, часто используют метод Гаусса по блокам.
 
@@ -270,7 +300,11 @@ $$M = \begin{pmatrix} A & B \\\\ C & D \end{pmatrix},\quad A\ (m\times m),\ D\ (
 3. **Проверяем количество:** всего получено $k$ векторов. Если $k=n$ — они образуют собственный базис (линейно независимы, т.к. для разных $\lambda$ — автоматически). Если $k<n$ — собственного базиса нет, оператор дефектен (жорданова форма).
 4. **Формируем матрицу $C$** из векторов-столбцов $C=(f_1|...|f_n)$, тогда $C^{-1}AC = \mathrm{diag}(\lambda_i)$ (с учётом кратности). Для симметричной матрицы дополнительно ортонормируем — получаем ортогональный собственный базис $U$.
 
-*Пример:* $A=\begin{pmatrix}2 & 1 \\\\ 1 & 2\end{pmatrix}$, $p=(2-\lambda)^2-1=0$, $\lambda_1=1,\lambda_2=3$, $f_1=(1,-1)^T$, $f_2=(1,1)^T$ — собственный базис $\mathbb R^2$.
+*Пример:* 
+
+$$A=\begin{pmatrix}2 & 1 \\\\ 1 & 2\end{pmatrix}$$
+
+, $p=(2-\lambda)^2-1=0$, $\lambda_1=1,\lambda_2=3$, $f_1=(1,-1)^T$, $f_2=(1,1)^T$ — собственный базис $\mathbb R^2$.
 
 Если матрица $3\times3$ с $\lambda=2$ кратности 2 и нашли 2 независимых вектора — дополняем третьим для $\lambda_3$.
 
@@ -644,7 +678,11 @@ $$\begin{cases} x'_1 = f_1(t,x_1,...,x_n) \\\\ ... \\\\ x'_n = f_n(t,x_1,...,x_n
 
 **Векторно-матричная запись:** $\mathbf{x}' = A\mathbf{x}$, где $A$ $n\times n$ постоянная, $\mathbf{x}=(x_1,...,x_n)^T$.
 
-Для $n=2$: $\begin{pmatrix}x' \\\\ y'\end{pmatrix}= \begin{pmatrix}a_{11} & a_{12} \\\\ a_{21} & a_{22}\end{pmatrix}\begin{pmatrix}x \\\\ y\end{pmatrix}$.
+Для $n=2$: 
+
+$$\begin{pmatrix}x' \\\\ y'\end{pmatrix}= \begin{pmatrix}a_{11} & a_{12} \\\\ a_{21} & a_{22}\end{pmatrix}\begin{pmatrix}x \\\\ y\end{pmatrix}$$
+
+.
 
 **Решение через собственные числа (простые корни характеристического уравнения).**
 
@@ -656,7 +694,11 @@ $$\begin{cases} x'_1 = f_1(t,x_1,...,x_n) \\\\ ... \\\\ x'_n = f_n(t,x_1,...,x_n
 
 Общее: $\mathbf{x}(t)= C_1 h_1 e^{\lambda_1 t}+...+C_n h_n e^{\lambda_n t}$.
 
-*Пример:* $A=\begin{pmatrix}1 & 2 \\\\ 2 & 1\end{pmatrix}$, $\lambda_1=3, h_1=(1,1)$, $\lambda_2=-1, h_2=(1,-1)$ → $x=C_1 e^{3t}+C_2 e^{-t}$, $y=C_1 e^{3t}-C_2 e^{-t}$.
+*Пример:* 
+
+$$A=\begin{pmatrix}1 & 2 \\\\ 2 & 1\end{pmatrix}$$
+
+, $\lambda_1=3, h_1=(1,1)$, $\lambda_2=-1, h_2=(1,-1)$ → $x=C_1 e^{3t}+C_2 e^{-t}$, $y=C_1 e^{3t}-C_2 e^{-t}$.
 
 Проверка — подстановкой.
 
@@ -676,7 +718,11 @@ $$\begin{cases} x'_1 = f_1(t,x_1,...,x_n) \\\\ ... \\\\ x'_n = f_n(t,x_1,...,x_n
 
 Общее $ \mathbf{x}=C_1 h e^{\lambda t}+ C_2 (h t+g)e^{\lambda t}$.
 
-*Пример:* $A=\begin{pmatrix}2 & -1 \\\\ 1 & 0\end{pmatrix}$, $\lambda=1$ двукратный, $h=(1,1)$, $g=(1,0)$ → $x=(C_1+C_2 t)e^t$, ...
+*Пример:* 
+
+$$A=\begin{pmatrix}2 & -1 \\\\ 1 & 0\end{pmatrix}$$
+
+, $\lambda=1$ двукратный, $h=(1,1)$, $g=(1,0)$ → $x=(C_1+C_2 t)e^t$, ...
 
 Для $n>2$ аналогично строят цепочки Жордана длины $m$.
 
@@ -696,7 +742,11 @@ $$\mathbf{x}_1 = e^{\alpha t}(u\cos\beta t - v\sin\beta t),\quad \mathbf{x}_2 = 
 
 Общее: $\mathbf{x}= C_1\mathbf{x}_1 + C_2\mathbf{x}_2$.
 
-*Пример:* $A=\begin{pmatrix}0 & -1 \\\\ 1 & 0\end{pmatrix}$, $\lambda=\pm i$, $h=(1,-i)$ → $x=C_1\cos t+C_2\sin t$, $y=C_1\sin t -C_2\cos t$ (окружности).
+*Пример:* 
+
+$$A=\begin{pmatrix}0 & -1 \\\\ 1 & 0\end{pmatrix}$$
+
+, $\lambda=\pm i$, $h=(1,-i)$ → $x=C_1\cos t+C_2\sin t$, $y=C_1\sin t -C_2\cos t$ (окружности).
 
 При кратном комплексном — аналогично с $t$.
 

@@ -169,7 +169,11 @@ $$E=\begin{pmatrix} 1 & 0 & \ldots & 0 \\\\ 0 & 1 & \ldots & 0 \\\\ \vdots & \vd
 
 $$\det\begin{pmatrix} a & b \\\\ c & d \end{pmatrix}=ad-bc.$$
 
-Пример: $\det\begin{pmatrix}2 & 3 \\\\ 1 & 4\end{pmatrix}=8-3=5$.
+Пример: 
+
+$$\det\begin{pmatrix}2 & 3 \\\\ 1 & 4\end{pmatrix}=8-3=5$$
+
+.
 
 ### Как считать $3\times 3$
 

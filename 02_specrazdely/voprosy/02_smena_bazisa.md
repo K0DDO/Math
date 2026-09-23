@@ -120,14 +120,42 @@ $$A'=T^{-1}(AT)=\begin{pmatrix} 1 & -1 \\\\ 0 & 1 \end{pmatrix}\begin{pmatrix} 1
 
 ## Практика
 
-**1.** $A=\begin{pmatrix}2 & 0 \\\\ 0 & 5\end{pmatrix}$, новый базис $\mathbf{e}'_1=(1,1)$, $\mathbf{e}'_2=(-1,1)$ (координаты в старом). Найдите $A'$.  
-*Эскиз:* $T=\begin{pmatrix}1 & -1 \\\\ 1 & 1\end{pmatrix}$, $T^{-1}=\frac12\begin{pmatrix}1 & 1 \\\\ -1 & 1\end{pmatrix}$, $A'=T^{-1}AT=\begin{pmatrix}7/2 & -3/2 \\\\ -3/2 & 7/2\end{pmatrix}$ (проверка: след $7$).
+**1.** 
+
+$$A=\begin{pmatrix}2 & 0 \\\\ 0 & 5\end{pmatrix}$$
+
+, новый базис $\mathbf{e}'_1=(1,1)$, $\mathbf{e}'_2=(-1,1)$ (координаты в старом). Найдите $A'$.  
+*Эскиз:* 
+
+$$T=\begin{pmatrix}1 & -1 \\\\ 1 & 1\end{pmatrix}$$
+
+, 
+
+$$T^{-1}=\frac12\begin{pmatrix}1 & 1 \\\\ -1 & 1\end{pmatrix}$$
+
+, 
+
+$$A'=T^{-1}AT=\begin{pmatrix}7/2 & -3/2 \\\\ -3/2 & 7/2\end{pmatrix}$$
+
+ (проверка: след $7$).
 
 **2.** Докажите, что если $A'=T^{-1}AT$, то $\det(A'-\lambda E)=\det(A-\lambda E)$.  
 *Эскиз:* $A'-\lambda E=T^{-1}(A-\lambda E)T$, определители перемножаются.
 
-**3.** Матрица перехода $T=\begin{pmatrix}1 & 1 \\\\ 0 & 1\end{pmatrix}$, $A=\begin{pmatrix}0 & -1 \\\\ 1 & 0\end{pmatrix}$ (поворот на $90^\circ$). Найдите $A'$.  
-*Ответ:* $A'=\begin{pmatrix}1 & -2 \\\\ 1 & -1\end{pmatrix}$ (проверить умножением; след $0$, $\det=1$).
+**3.** Матрица перехода 
+
+$$T=\begin{pmatrix}1 & 1 \\\\ 0 & 1\end{pmatrix}$$
+
+, 
+
+$$A=\begin{pmatrix}0 & -1 \\\\ 1 & 0\end{pmatrix}$$
+
+ (поворот на $90^\circ$). Найдите $A'$.  
+*Ответ:* 
+
+$$A'=\begin{pmatrix}1 & -2 \\\\ 1 & -1\end{pmatrix}$$
+
+ (проверить умножением; след $0$, $\det=1$).
 
 **4.** Верно ли, что любая матрица, подобная $E$, равна $E$?  
 *Ответ:* да, $T^{-1}ET=E$.

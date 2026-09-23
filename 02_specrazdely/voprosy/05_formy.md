@@ -68,7 +68,11 @@ $$A=\begin{pmatrix} 2 & -2 \\\\ -2 & 5 \end{pmatrix},$$
 
 потому что $-4x_1x_2$ даёт два симметричных места по $-2$.
 
-Проверка: $X^TAX=\begin{pmatrix}x_1 & x_2\end{pmatrix}\begin{pmatrix}2 & -2 \\\\ -2 & 5\end{pmatrix}\begin{pmatrix}x_1 \\\\ x_2\end{pmatrix}=2x_1^2-4x_1x_2+5x_2^2$.
+Проверка: 
+
+$$X^TAX=\begin{pmatrix}x_1 & x_2\end{pmatrix}\begin{pmatrix}2 & -2 \\\\ -2 & 5\end{pmatrix}\begin{pmatrix}x_1 \\\\ x_2\end{pmatrix}=2x_1^2-4x_1x_2+5x_2^2$$
+
+.
 
 Ранг формы — ранг матрицы $A$. Определитель $\det A$ иногда называют дискриминантом формы (для $n=2$).
 
@@ -133,11 +137,27 @@ $$(\lambda-1)(\lambda-6)=0\implies\lambda_1=1,\ \lambda_2=6.$$
 
 **Шаг 3. Собственные векторы.**
 
-Для $\lambda=1$: $(A-E)X=0\Rightarrow\begin{pmatrix}4 & 2 \\\\ 2 & 1\end{pmatrix}X=0\Rightarrow 2x+y=0$.  
-Вектор $(1,-2)$; длина $\sqrt{5}$. Орт: $u_1=\frac{1}{\sqrt{5}}\begin{pmatrix}1 \\\\ -2\end{pmatrix}$.
+Для $\lambda=1$: 
 
-Для $\lambda=6$: $(A-6E)X=0\Rightarrow\begin{pmatrix}-1 & 2 \\\\ 2 & -4\end{pmatrix}X=0\Rightarrow -x+2y=0$.  
-Вектор $(2,1)$; длина $\sqrt{5}$. Орт: $u_2=\frac{1}{\sqrt{5}}\begin{pmatrix}2 \\\\ 1\end{pmatrix}$.
+$$(A-E)X=0\Rightarrow\begin{pmatrix}4 & 2 \\\\ 2 & 1\end{pmatrix}X=0\Rightarrow 2x+y=0$$
+
+.  
+Вектор $(1,-2)$; длина $\sqrt{5}$. Орт: 
+
+$$u_1=\frac{1}{\sqrt{5}}\begin{pmatrix}1 \\\\ -2\end{pmatrix}$$
+
+.
+
+Для $\lambda=6$: 
+
+$$(A-6E)X=0\Rightarrow\begin{pmatrix}-1 & 2 \\\\ 2 & -4\end{pmatrix}X=0\Rightarrow -x+2y=0$$
+
+.  
+Вектор $(2,1)$; длина $\sqrt{5}$. Орт: 
+
+$$u_2=\frac{1}{\sqrt{5}}\begin{pmatrix}2 \\\\ 1\end{pmatrix}$$
+
+.
 
 Проверка ортогональности: $1\cdot 2+(-2)\cdot 1=0$.
 
@@ -156,13 +176,21 @@ $$Q=1\cdot y_1^2+6\cdot y_2^2=y_1^2+6y_2^2.$$
 ## Практика
 
 **1.** Выпишите матрицу формы $Q=x_1^2-6x_1x_2+x_2^2$.  
-*Ответ:* $A=\begin{pmatrix}1 & -3 \\\\ -3 & 1\end{pmatrix}$.
+*Ответ:* 
+
+$$A=\begin{pmatrix}1 & -3 \\\\ -3 & 1\end{pmatrix}$$
+
+.
 
 **2.** Приведите $Q=x^2+y^2$ к канону. Что получится?  
 *Ответ:* уже канон; $A=E$, $\lambda=1,1$. Любой ортонормированный базис годится.
 
 **3.** $Q=xy$. Выпишите $A$ и найдите канонический вид через собственные значения.  
-*Ответ:* $A=\begin{pmatrix}0 & 1/2 \\\\ 1/2 & 0\end{pmatrix}$, $\lambda=\pm\frac12$, канон $\frac12 u^2-\frac12 v^2$ (после ортогональной замены).
+*Ответ:* 
+
+$$A=\begin{pmatrix}0 & 1/2 \\\\ 1/2 & 0\end{pmatrix}$$
+
+, $\lambda=\pm\frac12$, канон $\frac12 u^2-\frac12 v^2$ (после ортогональной замены).
 
 **4.** Верно ли, что любая квадратичная форма приводится к канону ортогональным преобразованием над $\mathbb{R}$?  
 *Ответ:* да, потому что матрица симметрична и всегда диагонализуема ортогональной матрицей.

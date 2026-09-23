@@ -29,39 +29,119 @@
 
 **Пример 1.** Проверить линейность $A(x_1,x_2)=(x_1+2x_2, 3x_1-x_2)$. $A(ax+by)=aAx+bAy$ — выполняется.
 
-**Пример 2.** Матрица оператора $A(x_1,x_2)=(2x_1+x_2, x_1-x_2)$ в базисе $e_1,e_2$: $Ae_1=(2,1)$ → 1-й столбец $(2,1)^T$, $Ae_2=(1,-1)$ → 2-й столбец → $\begin{pmatrix}2 & 1 \\\\ 1 & -1\end{pmatrix}$.
+**Пример 2.** Матрица оператора $A(x_1,x_2)=(2x_1+x_2, x_1-x_2)$ в базисе $e_1,e_2$: $Ae_1=(2,1)$ → 1-й столбец $(2,1)^T$, $Ae_2=(1,-1)$ → 2-й столбец → 
 
-**Пример 3.** $A=\begin{pmatrix}1 & 2 \\\\ 2 & 4\end{pmatrix}$: $\ker A$ — решение $x+2y=0$ → базис $(-2,1)$, $def=1$, $rang=1$, $rang+def=2$.
+$$\begin{pmatrix}2 & 1 \\\\ 1 & -1\end{pmatrix}$$
 
-**Пример 4.** В $\mathbb R^2$ со скалярным $(x,y)=x_1y_1+x_2y_2$, $A=\begin{pmatrix}1 & 2 \\\\ 0 & 1\end{pmatrix}$ → $A^*=A^T=\begin{pmatrix}1 & 0 \\\\ 2 & 1\end{pmatrix}$; $A$ не самосопряжён. $B=\begin{pmatrix}2 & -1 \\\\ -1 & 3\end{pmatrix}$ — симметрична → самосопряжён.
+.
+
+**Пример 3.** 
+
+$$A=\begin{pmatrix}1 & 2 \\\\ 2 & 4\end{pmatrix}$$
+
+: $\ker A$ — решение $x+2y=0$ → базис $(-2,1)$, $def=1$, $rang=1$, $rang+def=2$.
+
+**Пример 4.** В $\mathbb R^2$ со скалярным $(x,y)=x_1y_1+x_2y_2$, 
+
+$$A=\begin{pmatrix}1 & 2 \\\\ 0 & 1\end{pmatrix}$$
+
+ → 
+
+$$A^*=A^T=\begin{pmatrix}1 & 0 \\\\ 2 & 1\end{pmatrix}$$
+
+; $A$ не самосопряжён. 
+
+$$B=\begin{pmatrix}2 & -1 \\\\ -1 & 3\end{pmatrix}$$
+
+ — симметрична → самосопряжён.
 
 ## 2. Изменение матрицы при переходе — практика — [лекция](https://mathprofi.ru/linejnye_preobrazovanija.html)
 
-**Пример.** $A_e=\begin{pmatrix}0 & -1 \\\\ 1 & 0\end{pmatrix}$ (поворот $90°$), новый базис $e'_1=(1,1), e'_2=(1,-1)$ → $C=\begin{pmatrix}1 & 1 \\\\ 1 & -1\end{pmatrix}$, $C^{-1}=\frac{1}{2}\begin{pmatrix}1 & 1 \\\\ 1 & -1\end{pmatrix}$, $A_{e'}=C^{-1}AC =\begin{pmatrix}0 & 1 \\\\ -1 & 0\end{pmatrix}$.
+**Пример.** 
+
+$$A_e=\begin{pmatrix}0 & -1 \\\\ 1 & 0\end{pmatrix}$$
+
+ (поворот $90°$), новый базис $e'_1=(1,1), e'_2=(1,-1)$ → 
+
+$$C=\begin{pmatrix}1 & 1 \\\\ 1 & -1\end{pmatrix}$$
+
+, 
+
+$$C^{-1}=\frac{1}{2}\begin{pmatrix}1 & 1 \\\\ 1 & -1\end{pmatrix}$$
+
+, 
+
+$$A_{e'}=C^{-1}AC =\begin{pmatrix}0 & 1 \\\\ -1 & 0\end{pmatrix}$$
+
+.
 
 **Пример.** Диагонализация поворота не над $\mathbb R$.
 
 ## 3. Собственные числа/векторы, характеристический многочлен — практика — [лекция](https://mathprofi.ru/sobstvennye_znachenija_i_sobstvennye_vektory.html)
 
-**Пример 1.** $A=\begin{pmatrix}2 & 1 \\\\ 1 & 2\end{pmatrix}$: $p(λ)=\det\begin{pmatrix}2-λ & 1 \\\\ 1 & 2-λ\end{pmatrix}=(2-λ)^2-1=λ^2-4λ+3=0$ → $λ_1=1$, $λ_2=3$. Для $λ_1=1$: $(A-E)X=0$ → $x+y=0$ → $h_1=(1,-1)$; $λ_2=3$: $h_2=(1,1)$. $tr=4=1+3$, $det=3=1·3$.
+**Пример 1.** 
 
-**Пример 2.** $A=\begin{pmatrix}0 & 1 \\\\ -1 & 0\end{pmatrix}$ → $p=λ^2+1=0$ → $λ=±i$ (комплексные).
+$$A=\begin{pmatrix}2 & 1 \\\\ 1 & 2\end{pmatrix}$$
 
-**Пример 3.** $A=\begin{pmatrix}2 & 1 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 3\end{pmatrix}$ → $λ=2$ кратн.2, $λ=3$.
+: 
+
+$$p(λ)=\det\begin{pmatrix}2-λ & 1 \\\\ 1 & 2-λ\end{pmatrix}=(2-λ)^2-1=λ^2-4λ+3=0$$
+
+ → $λ_1=1$, $λ_2=3$. Для $λ_1=1$: $(A-E)X=0$ → $x+y=0$ → $h_1=(1,-1)$; $λ_2=3$: $h_2=(1,1)$. $tr=4=1+3$, $det=3=1·3$.
+
+**Пример 2.** 
+
+$$A=\begin{pmatrix}0 & 1 \\\\ -1 & 0\end{pmatrix}$$
+
+ → $p=λ^2+1=0$ → $λ=±i$ (комплексные).
+
+**Пример 3.** 
+
+$$A=\begin{pmatrix}2 & 1 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 3\end{pmatrix}$$
+
+ → $λ=2$ кратн.2, $λ=3$.
 
 ## 4. Собственный базис, диагональная матрица — практика — [лекция](https://mathprofi.ru/sobstvennye_znachenija_i_sobstvennye_vektory.html)
 
-**Пример.** Для предыдущего $A=\begin{pmatrix}2 & 1 \\\\ 1 & 2\end{pmatrix}$, $C=(h_1|h_2)=\begin{pmatrix}1 & 1 \\\\ -1 & 1\end{pmatrix}$, $C^{-1}AC=\mathrm{diag}(1,3)$. В базисе $f_1,f_2$ оператор действует как $Af_1=1·f_1$, $Af_2=3·f_2$.
+**Пример.** Для предыдущего 
 
-**Пример.** $A=\begin{pmatrix}1 & 1 \\\\ 0 & 1\end{pmatrix}$ — только один собственный вектор $(1,0)$ → собственного базиса нет (дефект).
+$$A=\begin{pmatrix}2 & 1 \\\\ 1 & 2\end{pmatrix}$$
+
+, 
+
+$$C=(h_1|h_2)=\begin{pmatrix}1 & 1 \\\\ -1 & 1\end{pmatrix}$$
+
+, $C^{-1}AC=\mathrm{diag}(1,3)$. В базисе $f_1,f_2$ оператор действует как $Af_1=1·f_1$, $Af_2=3·f_2$.
+
+**Пример.** 
+
+$$A=\begin{pmatrix}1 & 1 \\\\ 0 & 1\end{pmatrix}$$
+
+ — только один собственный вектор $(1,0)$ → собственного базиса нет (дефект).
 
 ## 5. Билинейные/квадратичные, матрица, диагонализация собственными — практика — [лекция](https://mathprofi.ru/kvadratichnye_formy.html)
 
-**Пример 1.** $Q=2x_1^2+4x_1x_2+5x_2^2$: $A=\begin{pmatrix}2 & 2 \\\\ 2 & 5\end{pmatrix}$, $Q=X^TAX$.
+**Пример 1.** $Q=2x_1^2+4x_1x_2+5x_2^2$: 
 
-**Пример 2.** Восстановить по матрице $A=\begin{pmatrix}1 & -1 \\\\ -1 & 2\end{pmatrix}$: $Q=x_1^2-2x_1x_2+2x_2^2$.
+$$A=\begin{pmatrix}2 & 2 \\\\ 2 & 5\end{pmatrix}$$
 
-**Пример 3 (ортогональная диагонализация).** $A=\begin{pmatrix}2 & 1 \\\\ 1 & 2\end{pmatrix}$, $λ_1=1$, $λ_2=3$, нормированные $u_1=\frac1{\sqrt2}(1,-1)$, $u_2=\frac1{\sqrt2}(1,1)$ → $U=\frac1{\sqrt2}\begin{pmatrix}1 & 1 \\\\ -1 & 1\end{pmatrix}$, $U^T A U=\mathrm{diag}(1,3)$, замена $X=UY$ → $Q=y_1^2+3y_2^2$.
+, $Q=X^TAX$.
+
+**Пример 2.** Восстановить по матрице 
+
+$$A=\begin{pmatrix}1 & -1 \\\\ -1 & 2\end{pmatrix}$$
+
+: $Q=x_1^2-2x_1x_2+2x_2^2$.
+
+**Пример 3 (ортогональная диагонализация).** 
+
+$$A=\begin{pmatrix}2 & 1 \\\\ 1 & 2\end{pmatrix}$$
+
+, $λ_1=1$, $λ_2=3$, нормированные $u_1=\frac1{\sqrt2}(1,-1)$, $u_2=\frac1{\sqrt2}(1,1)$ → 
+
+$$U=\frac1{\sqrt2}\begin{pmatrix}1 & 1 \\\\ -1 & 1\end{pmatrix}$$
+
+, $U^T A U=\mathrm{diag}(1,3)$, замена $X=UY$ → $Q=y_1^2+3y_2^2$.
 
 ## 6. Лагранж и Якоби — практика — [лекция](https://mathprofi.ru/kak_privesti_kf_k_kanonicheskomu_vidu.html)
 
@@ -69,41 +149,105 @@
 
 **Лагранж Пример 2.** $Q=x_1x_2$ (нет квадратов): $x_1=y_1+y_2$, $x_2=y_1-y_2$ → $Q=y_1^2-y_2^2$.
 
-**Якоби Пример.** $A=\begin{pmatrix}2 & 1 & 0 \\\\ 1 & 2 & 1 \\\\ 0 & 1 & 2\end{pmatrix}$, $\Delta_1=2$, $\Delta_2=3$, $\Delta_3=4$ → $Q=2y_1^2+\frac{3}{2} y_2^2+\frac{4}{3} y_3^2$. Если все $\Delta_k≠0$ — быстро.
+**Якоби Пример.** 
+
+$$A=\begin{pmatrix}2 & 1 & 0 \\\\ 1 & 2 & 1 \\\\ 0 & 1 & 2\end{pmatrix}$$
+
+, $\Delta_1=2$, $\Delta_2=3$, $\Delta_3=4$ → $Q=2y_1^2+\frac{3}{2} y_2^2+\frac{4}{3} y_3^2$. Если все $\Delta_k≠0$ — быстро.
 
 ## 7. Сильвестр — практика — [лекция](https://mathprofi.ru/kvadratichnye_formy.html)
 
-**Пример 1.** $A=\begin{pmatrix}2 & -1 \\\\ -1 & 2\end{pmatrix}$: $\Delta_1=2>0$, $\Delta_2=3>0$ → положительно определена, $Q>0$.
+**Пример 1.** 
 
-**Пример 2.** $A=\begin{pmatrix}-1 & 1 \\\\ 1 & -2\end{pmatrix}$: $\Delta_1=-1<0$, $\Delta_2=1>0$ → отрицательно определена.
+$$A=\begin{pmatrix}2 & -1 \\\\ -1 & 2\end{pmatrix}$$
 
-**Пример 3.** $A=\begin{pmatrix}1 & 2 \\\\ 2 & 1\end{pmatrix}$: $\Delta_1=1>0$, $\Delta_2=-3<0$ → неопределённая (седло).
+: $\Delta_1=2>0$, $\Delta_2=3>0$ → положительно определена, $Q>0$.
 
-**Пример 4.** $A=\begin{pmatrix}1 & 1 \\\\ 1 & 1\end{pmatrix}$: $\Delta_1=1>0$, $\Delta_2=0$ → полуопределённая, Сильвестр не решает окончательно → приводим к канону $Q=(x_1+x_2)^2≥0$.
+**Пример 2.** 
+
+$$A=\begin{pmatrix}-1 & 1 \\\\ 1 & -2\end{pmatrix}$$
+
+: $\Delta_1=-1<0$, $\Delta_2=1>0$ → отрицательно определена.
+
+**Пример 3.** 
+
+$$A=\begin{pmatrix}1 & 2 \\\\ 2 & 1\end{pmatrix}$$
+
+: $\Delta_1=1>0$, $\Delta_2=-3<0$ → неопределённая (седло).
+
+**Пример 4.** 
+
+$$A=\begin{pmatrix}1 & 1 \\\\ 1 & 1\end{pmatrix}$$
+
+: $\Delta_1=1>0$, $\Delta_2=0$ → полуопределённая, Сильвестр не решает окончательно → приводим к канону $Q=(x_1+x_2)^2≥0$.
 
 ## 8. Приведение кривых/поверхностей 2 порядка — практика — [лекция](https://mathprofi.ru/kak_privesti_uravnenie_linii_2_poryadka_k_kanonicheskomu_vidu.html)
 
-**Пример кривой.** $2x^2+4xy+5y^2-4x-4y-1=0$: $A=\begin{pmatrix}2 & 2 \\\\ 2 & 5\end{pmatrix}$, $λ=1,6$, $U$ как выше → после поворота $y_1^2+6y_2^2+ b'_1y_1+...=0$ → выделяем квадраты → эллипс центр $(...)$ полуоси $a=\sqrt{...}$.
+**Пример кривой.** $2x^2+4xy+5y^2-4x-4y-1=0$: 
+
+$$A=\begin{pmatrix}2 & 2 \\\\ 2 & 5\end{pmatrix}$$
+
+, $λ=1,6$, $U$ как выше → после поворота $y_1^2+6y_2^2+ b'_1y_1+...=0$ → выделяем квадраты → эллипс центр $(...)$ полуоси $a=\sqrt{...}$.
 
 **Пример.** $x^2+ y^2 +2xy =1$ → $A$ имеет $λ_1=0$, $λ_2=2$ → парабола/пара прямых — вырожденный.
 
-**Поверхность.** $x^2+y^2+z^2+4xy=1$ → $A=\begin{pmatrix}1 & 2 & 0 \\\\ 2 & 1 & 0 \\\\ 0 & 0 & 1\end{pmatrix}$, $λ=-1,3,1$ → гиперболоид.
+**Поверхность.** $x^2+y^2+z^2+4xy=1$ → 
+
+$$A=\begin{pmatrix}1 & 2 & 0 \\\\ 2 & 1 & 0 \\\\ 0 & 0 & 1\end{pmatrix}$$
+
+, $λ=-1,3,1$ → гиперболоид.
 
 ## 9. Блочные матрицы — практика — [лекция](https://mathprofi.ru/svoistva_operacij_nad_matricami_matrichnye_vyrazheniya.html)
 
-**Пример сложения.** $\begin{pmatrix}A & B \\\\ 0 & D\end{pmatrix}+\begin{pmatrix}A' & B' \\\\ 0 & D'\end{pmatrix}=\begin{pmatrix}A+A' & B+B' \\\\ 0 & D+D'\end{pmatrix}$.
+**Пример сложения.** 
 
-**Умножение.** $M=\begin{pmatrix}I & A \\\\ 0 & I\end{pmatrix}$, $N=\begin{pmatrix}I & B \\\\ 0 & I\end{pmatrix}$ → $MN=\begin{pmatrix}I & A+B \\\\ 0 & I\end{pmatrix}$.
+$$\begin{pmatrix}A & B \\\\ 0 & D\end{pmatrix}+\begin{pmatrix}A' & B' \\\\ 0 & D'\end{pmatrix}=\begin{pmatrix}A+A' & B+B' \\\\ 0 & D+D'\end{pmatrix}$$
 
-**Определитель Шура.** $M=\begin{pmatrix}2 & 1 & | & 0 \\\\ 1 & 2 & | & 1 \\\\ \hline0 & 1 & | & 3\end{pmatrix}$ → $\det M =\det A·\det(D-CA^{-1}B)$.
+.
 
-**Обратная блочная.** $\begin{pmatrix}I & X \\\\ 0 & I\end{pmatrix}^{-1}=\begin{pmatrix}I & -X \\\\ 0 & I\end{pmatrix}$.
+**Умножение.** 
+
+$$M=\begin{pmatrix}I & A \\\\ 0 & I\end{pmatrix}$$
+
+, 
+
+$$N=\begin{pmatrix}I & B \\\\ 0 & I\end{pmatrix}$$
+
+ → 
+
+$$MN=\begin{pmatrix}I & A+B \\\\ 0 & I\end{pmatrix}$$
+
+.
+
+**Определитель Шура.** 
+
+$$M=\begin{pmatrix}2 & 1 & | & 0 \\\\ 1 & 2 & | & 1 \\\\ \hline0 & 1 & | & 3\end{pmatrix}$$
+
+ → $\det M =\det A·\det(D-CA^{-1}B)$.
+
+**Обратная блочная.** 
+
+$$\begin{pmatrix}I & X \\\\ 0 & I\end{pmatrix}^{-1}=\begin{pmatrix}I & -X \\\\ 0 & I\end{pmatrix}$$
+
+.
 
 ## 10. Построение собственного базиса — практика — [лекция](https://mathprofi.ru/sobstvennye_znachenija_i_sobstvennye_vektory.html)
 
-**Пример.** $A=\begin{pmatrix}1 & 2 & 0 \\\\ 0 & 3 & 0 \\\\ 0 & 0 & 2\end{pmatrix}$: $p=(1-λ)(3-λ)(2-λ)=0$ → $λ=1,2,3$ три различных → три вектора $(1,0,0)$, $(0,0,1)$, $(2,1,0)$? решаем $(A-3E)X=0$ → $h_3=(1,1,0)$ — базис.
+**Пример.** 
 
-**Пример с кратностью.** $A=\begin{pmatrix}3 & 0 & 0 \\\\ 0 & 2 & 1 \\\\ 0 & 0 & 2\end{pmatrix}$: $λ=2$ кратн.2, ранг $(A-2E)=1$ → дефект 2 → два вектора $(0,1,0),(0,0,1)$? фактически $h_1=(1,0,0)$ для $3$, $h_2=(0,1,0)$, $h_3=(0,0,1)$ — базис есть; если Жорданова клетка $\begin{pmatrix}2 & 1 \\\\ 0 & 2\end{pmatrix}$ — только один вектор → базиса нет.
+$$A=\begin{pmatrix}1 & 2 & 0 \\\\ 0 & 3 & 0 \\\\ 0 & 0 & 2\end{pmatrix}$$
+
+: $p=(1-λ)(3-λ)(2-λ)=0$ → $λ=1,2,3$ три различных → три вектора $(1,0,0)$, $(0,0,1)$, $(2,1,0)$? решаем $(A-3E)X=0$ → $h_3=(1,1,0)$ — базис.
+
+**Пример с кратностью.** 
+
+$$A=\begin{pmatrix}3 & 0 & 0 \\\\ 0 & 2 & 1 \\\\ 0 & 0 & 2\end{pmatrix}$$
+
+: $λ=2$ кратн.2, ранг $(A-2E)=1$ → дефект 2 → два вектора $(0,1,0),(0,0,1)$? фактически $h_1=(1,0,0)$ для $3$, $h_2=(0,1,0)$, $h_3=(0,0,1)$ — базис есть; если Жорданова клетка 
+
+$$\begin{pmatrix}2 & 1 \\\\ 0 & 2\end{pmatrix}$$
+
+ — только один вектор → базиса нет.
 
 ---
 
@@ -177,7 +321,11 @@
 
 ## 19. Вронский, независимость — практика — [лекция](https://mathprofi.ru/differencialnye_uravnenija_vtorogo_poryadka.html)
 
-**Пример 1.** $y_1=e^x$, $y_2=e^{2x}$: $W=\begin{vmatrix}e^x&e^{2x} \\\\ e^x&2e^{2x}\end{vmatrix}=e^{3x}≠0$ → независимы.
+**Пример 1.** $y_1=e^x$, $y_2=e^{2x}$: 
+
+$$W=\begin{vmatrix}e^x&e^{2x} \\\\ e^x&2e^{2x}\end{vmatrix}=e^{3x}≠0$$
+
+ → независимы.
 
 **Пример 2.** $y_1=x$, $y_2= x^2$ для $y''-2y'/x+...$? $W= x^2≠0$ → независимы.
 
@@ -227,7 +375,11 @@
 
 ## 25. Системы в нормальной форме — практика — [лекция](https://mathprofi.ru/sistemy_differencialnyh_uravnenij.html)
 
-**Пример.** $\begin{cases}x'=y \\\\ y'=-x\end{cases}$ → $x''=y'=-x$ → $x''+x=0$ → $x=C_1\cos t+C_2\sin t$, $y=x'= -C_1\sin t+C_2\cos t$.
+**Пример.** 
+
+$$\begin{cases}x'=y \\\\ y'=-x\end{cases}$$
+
+ → $x''=y'=-x$ → $x''+x=0$ → $x=C_1\cos t+C_2\sin t$, $y=x'= -C_1\sin t+C_2\cos t$.
 
 **Обратно.** $y'''=y''+x$ → $x_1=y$, $x_2=y'$, $x_3=y''$ → система.
 
@@ -235,29 +387,53 @@
 
 ## 26. Линейные однородные системы, простые корни — практика — [лекция](https://mathprofi.ru/sistemy_differencialnyh_uravnenij.html)
 
-**Пример.** $\begin{pmatrix}x' \\\\ y'\end{pmatrix}=\begin{pmatrix}1 & 2 \\\\ 2 & 1\end{pmatrix}\begin{pmatrix}x \\\\ y\end{pmatrix}$: $p(λ)=(1-λ)^2-4=0$ → $λ_1=3$, $h_1=(1,1)$ → $\mathbf{x}_1=(1,1)e^{3t}$, $λ_2=-1$, $h_2=(1,-1)$ → $\mathbf{x}_2=(1,-1)e^{-t}$ → общее $C_1(1,1)e^{3t}+C_2(1,-1)e^{-t}$.
+**Пример.** 
+
+$$\begin{pmatrix}x' \\\\ y'\end{pmatrix}=\begin{pmatrix}1 & 2 \\\\ 2 & 1\end{pmatrix}\begin{pmatrix}x \\\\ y\end{pmatrix}$$
+
+: $p(λ)=(1-λ)^2-4=0$ → $λ_1=3$, $h_1=(1,1)$ → $\mathbf{x}_1=(1,1)e^{3t}$, $λ_2=-1$, $h_2=(1,-1)$ → $\mathbf{x}_2=(1,-1)e^{-t}$ → общее $C_1(1,1)e^{3t}+C_2(1,-1)e^{-t}$.
 
 ## 27. Кратные действительные — практика — [лекция](https://mathprofi.ru/sistemy_differencialnyh_uravnenij.html)
 
 **Пример 1 (диагонализируемая).** $A=3I$ → любой вектор собственный → $\mathbf{x}=e^{3t}C$.
 
-**Пример 2 (дефектная).** $A=\begin{pmatrix}2 & -1 \\\\ 1 & 0\end{pmatrix}$: $λ=1$ кратн.2, $h=(1,1)$, $(A-I)g=h$ → $g=(1,0)$ → $\mathbf{x}_1= h e^{t}$, $\mathbf{x}_2=(ht+g)e^{t}$ → $x=(C_1+C_2 t +C_2)e^{t}$, $y=(C_1+C_2 t)e^{t}$.
+**Пример 2 (дефектная).** 
+
+$$A=\begin{pmatrix}2 & -1 \\\\ 1 & 0\end{pmatrix}$$
+
+: $λ=1$ кратн.2, $h=(1,1)$, $(A-I)g=h$ → $g=(1,0)$ → $\mathbf{x}_1= h e^{t}$, $\mathbf{x}_2=(ht+g)e^{t}$ → $x=(C_1+C_2 t +C_2)e^{t}$, $y=(C_1+C_2 t)e^{t}$.
 
 ## 28. Комплексные — практика — [лекция](https://mathprofi.ru/sistemy_differencialnyh_uravnenij.html)
 
-**Пример.** $A=\begin{pmatrix}0 & -1 \\\\ 1 & 0\end{pmatrix}$: $λ=±i$, $h=(1,-i)= (1,0)+i(0,-1)$ → $u=(1,0)$, $v=(0,-1)$ → $\mathbf{x}_1=e^{0}(u\cos t -v\sin t)=(\cos t, -\sin t?)$ → решение $x=C_1\cos t+C_2\sin t$, $y=C_1\sin t -C_2\cos t$ — окружность.
+**Пример.** 
 
-**Пример.** $A=\begin{pmatrix}1 & -2 \\\\ 2 & 1\end{pmatrix}$: $λ=1±2i$ → $x=e^{t}(C_1\cos2t+C_2\sin2t)$.
+$$A=\begin{pmatrix}0 & -1 \\\\ 1 & 0\end{pmatrix}$$
+
+: $λ=±i$, $h=(1,-i)= (1,0)+i(0,-1)$ → $u=(1,0)$, $v=(0,-1)$ → $\mathbf{x}_1=e^{0}(u\cos t -v\sin t)=(\cos t, -\sin t?)$ → решение $x=C_1\cos t+C_2\sin t$, $y=C_1\sin t -C_2\cos t$ — окружность.
+
+**Пример.** 
+
+$$A=\begin{pmatrix}1 & -2 \\\\ 2 & 1\end{pmatrix}$$
+
+: $λ=1±2i$ → $x=e^{t}(C_1\cos2t+C_2\sin2t)$.
 
 ## 29. Неоднородные системы, вариация — практика — [лекция](https://mathprofi.ru/sistemy_differencialnyh_uravnenij.html)
 
-**Пример.** $\mathbf{x}'=\begin{pmatrix}1 & 0 \\\\ 0 & 2\end{pmatrix}\mathbf{x}+\begin{pmatrix}e^t \\\\ t\end{pmatrix}$: $Φ=\mathrm{diag}(e^{t},e^{2t})$, $Φ^{-1}g=(1, t e^{-2t})$ → $C_1=t$, $C_2=\int t e^{-2t}dt$ → частное $ΦC(t)$.
+**Пример.** 
+
+$$\mathbf{x}'=\begin{pmatrix}1 & 0 \\\\ 0 & 2\end{pmatrix}\mathbf{x}+\begin{pmatrix}e^t \\\\ t\end{pmatrix}$$
+
+: $Φ=\mathrm{diag}(e^{t},e^{2t})$, $Φ^{-1}g=(1, t e^{-2t})$ → $C_1=t$, $C_2=\int t e^{-2t}dt$ → частное $ΦC(t)$.
 
 **Пример 2×2.** $x'=x+y+ t$, $y'=x+y+1$ — $Φ$ из однородной → $C'=Φ^{-1}g$.
 
 ## 30. Неоднородные, спец. правая часть — практика — [лекция](https://mathprofi.ru/sistemy_differencialnyh_uravnenij.html)
 
-**Пример.** $\mathbf{x}'=\begin{pmatrix}0 & 1 \\\\ -1 & 0\end{pmatrix}\mathbf{x}+\begin{pmatrix}0 \\\\ \cos t\end{pmatrix}$: $γ=i$ собственный → $s=1$ → ищем $\mathbf{x}_p = t(a\cos t+b\sin t)$.
+**Пример.** 
+
+$$\mathbf{x}'=\begin{pmatrix}0 & 1 \\\\ -1 & 0\end{pmatrix}\mathbf{x}+\begin{pmatrix}0 \\\\ \cos t\end{pmatrix}$$
+
+: $γ=i$ собственный → $s=1$ → ищем $\mathbf{x}_p = t(a\cos t+b\sin t)$.
 
 **Пример.** $\mathbf{x}'=A\mathbf{x}+ \mathbf{p} e^{2t}$, $2$ не собственное → $\mathbf{x}_p = \mathbf{q} e^{2t}$, $(2I-A)q=p$ → решают.
 

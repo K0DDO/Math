@@ -114,13 +114,21 @@ $$\lambda^2-6\lambda+8=0\implies (\lambda-2)(\lambda-4)=0.$$
 
 $$A-2E=\begin{pmatrix} 1 & -1 \\\\ -1 & 1 \end{pmatrix}\implies x_1-x_2=0.$$
 
-Положим $x_2=1$, тогда $x_1=1$. Собственный вектор $\mathbf{v}_1=\begin{pmatrix}1 \\\\ 1\end{pmatrix}$.
+Положим $x_2=1$, тогда $x_1=1$. Собственный вектор 
+
+$$\mathbf{v}_1=\begin{pmatrix}1 \\\\ 1\end{pmatrix}$$
+
+.
 
 **Шаг 3. Для $\lambda=4$.**
 
 $$A-4E=\begin{pmatrix} -1 & -1 \\\\ -1 & -1 \end{pmatrix}\implies x_1+x_2=0.$$
 
-Положим $x_2=-1$, тогда $x_1=1$. Вектор $\mathbf{v}_2=\begin{pmatrix}1 \\\\ -1\end{pmatrix}$.
+Положим $x_2=-1$, тогда $x_1=1$. Вектор 
+
+$$\mathbf{v}_2=\begin{pmatrix}1 \\\\ -1\end{pmatrix}$$
+
+.
 
 **Проверка.**
 
@@ -132,16 +140,36 @@ $$A\mathbf{v}_1=\begin{pmatrix} 2 \\\\ 2 \end{pmatrix}=2\mathbf{v}_1,\qquad A\ma
 
 ## Практика
 
-**1.** $A=\begin{pmatrix}1 & 2 \\\\ 0 & 3\end{pmatrix}$. Найдите $\lambda$ и собственные векторы.  
-*Ответ:* $\lambda=1$, $\mathbf{v}=\begin{pmatrix}1 \\\\ 0\end{pmatrix}$; $\lambda=3$, $\mathbf{v}=\begin{pmatrix}1 \\\\ 1\end{pmatrix}$.
+**1.** 
 
-**2.** $A=\begin{pmatrix}2 & 1 \\\\ 0 & 2\end{pmatrix}$. Сколько независимых собственных векторов? Есть ли собственный базис $\mathbb{R}^2$?  
+$$A=\begin{pmatrix}1 & 2 \\\\ 0 & 3\end{pmatrix}$$
+
+. Найдите $\lambda$ и собственные векторы.  
+*Ответ:* $\lambda=1$, 
+
+$$\mathbf{v}=\begin{pmatrix}1 \\\\ 0\end{pmatrix}$$
+
+; $\lambda=3$, 
+
+$$\mathbf{v}=\begin{pmatrix}1 \\\\ 1\end{pmatrix}$$
+
+.
+
+**2.** 
+
+$$A=\begin{pmatrix}2 & 1 \\\\ 0 & 2\end{pmatrix}$$
+
+. Сколько независимых собственных векторов? Есть ли собственный базис $\mathbb{R}^2$?  
 *Ответ:* $\lambda=2$ кратности $2$, но $\ker(A-2E)$ одномерен (только кратные $(1,0)^T$). Собственного базиса нет.
 
 **3.** Докажите, что если $A\mathbf{x}=\lambda\mathbf{x}$ и $A$ обратима, то $A^{-1}\mathbf{x}=\frac1\lambda\mathbf{x}$.  
 *Эскиз:* применить $A^{-1}$ к обеим частям; $\lambda\neq 0$, т.к. иначе $A\mathbf{x}=0$ при $\mathbf{x}\neq 0$.
 
-**4.** Для $A=\begin{pmatrix}0 & -1 \\\\ 1 & 0\end{pmatrix}$ найдите характеристический многочлен. Есть ли вещественные собственные векторы?  
+**4.** Для 
+
+$$A=\begin{pmatrix}0 & -1 \\\\ 1 & 0\end{pmatrix}$$
+
+ найдите характеристический многочлен. Есть ли вещественные собственные векторы?  
 *Ответ:* $p(\lambda)=\lambda^2+1=0$, $\lambda=\pm i$. Над $\mathbb{R}$ собственных векторов нет (поворот на $90^\circ$ никого не оставляет на прямой).
 
 ---

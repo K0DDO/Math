@@ -66,9 +66,25 @@ $$\det\begin{pmatrix} 1-\lambda & 2 \\\\ 2 & 1-\lambda \end{pmatrix} =(1-\lambda
 
 $$\lambda_1=3,\quad\lambda_2=-1.$$
 
-Для $\lambda=3$: $\begin{pmatrix}-2 & 2 \\\\ 2 & -2\end{pmatrix}\begin{pmatrix}h_1 \\\\ h_2\end{pmatrix}=0$ ⇒ $h_2=h_1$. Берём $\mathbf{h}_1=\begin{pmatrix}1 \\\\ 1\end{pmatrix}$.
+Для $\lambda=3$: 
 
-Для $\lambda=-1$: $\begin{pmatrix}2 & 2 \\\\ 2 & 2\end{pmatrix}\mathbf{h}=0$ ⇒ $h_2=-h_1$. Берём $\mathbf{h}_2=\begin{pmatrix}1 \\\\ -1\end{pmatrix}$.
+$$\begin{pmatrix}-2 & 2 \\\\ 2 & -2\end{pmatrix}\begin{pmatrix}h_1 \\\\ h_2\end{pmatrix}=0$$
+
+ ⇒ $h_2=h_1$. Берём 
+
+$$\mathbf{h}_1=\begin{pmatrix}1 \\\\ 1\end{pmatrix}$$
+
+.
+
+Для $\lambda=-1$: 
+
+$$\begin{pmatrix}2 & 2 \\\\ 2 & 2\end{pmatrix}\mathbf{h}=0$$
+
+ ⇒ $h_2=-h_1$. Берём 
+
+$$\mathbf{h}_2=\begin{pmatrix}1 \\\\ -1\end{pmatrix}$$
+
+.
 
 Общее решение:
 
@@ -76,8 +92,16 @@ $$\begin{cases} x=C_1 e^{3t}+C_2 e^{-t}, \\\\ y=C_1 e^{3t}-C_2 e^{-t}. \end{case
 
 ## Практика
 
-1. $A=\begin{pmatrix}0 & 1 \\\\ 1 & 0\end{pmatrix}$ — найти общее решение.
-2. $A=\begin{pmatrix}2 & 0 \\\\ 0 & -3\end{pmatrix}$ — что будет с координатами?
+1. 
+
+$$A=\begin{pmatrix}0 & 1 \\\\ 1 & 0\end{pmatrix}$$
+
+ — найти общее решение.
+2. 
+
+$$A=\begin{pmatrix}2 & 0 \\\\ 0 & -3\end{pmatrix}$$
+
+ — что будет с координатами?
 3. Почему при различных $\lambda$ собственные векторы независимы?
 4. Решить задачу Коши для примера выше: $x(0)=2$, $y(0)=0$.
 

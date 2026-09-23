@@ -58,7 +58,11 @@ $$\begin{pmatrix} E & X \\\\ O & E \end{pmatrix}^{-1}=\begin{pmatrix} E & -X \\\
 
 Проверка: произведение даёт $E$. ([урок](https://mathprofi.ru/svoistva_operacij_nad_matricami_matrichnye_vyrazheniya.html))
 
-Для общего $\begin{pmatrix}A & B \\\\ C & D\end{pmatrix}$ обратная выражается через дополнения Шура (на экзамене чаще просят идею или простой случай).
+Для общего 
+
+$$\begin{pmatrix}A & B \\\\ C & D\end{pmatrix}$$
+
+ обратная выражается через дополнения Шура (на экзамене чаще просят идею или простой случай).
 
 ## Как решать / алгоритм
 
@@ -80,16 +84,44 @@ $$MN=\begin{pmatrix} E\cdot E+A\cdot O & E\cdot B+A\cdot E \\\\ O\cdot E+E\cdot 
 
 Интерпретация: «сдвиги» складываются.
 
-**Транспонирование.** $\begin{pmatrix}A & B \\\\ O & D\end{pmatrix}^T=\begin{pmatrix}A^T & O \\\\ B^T & D^T\end{pmatrix}$.
+**Транспонирование.** 
 
-**Определитель.** Для верхнетреугольной блочной $\begin{pmatrix}A & B \\\\ O & D\end{pmatrix}$ имеем $\det=\det A\cdot\det D$ (как частный случай Шура при $C=O$).
+$$\begin{pmatrix}A & B \\\\ O & D\end{pmatrix}^T=\begin{pmatrix}A^T & O \\\\ B^T & D^T\end{pmatrix}$$
+
+.
+
+**Определитель.** Для верхнетреугольной блочной 
+
+$$\begin{pmatrix}A & B \\\\ O & D\end{pmatrix}$$
+
+ имеем $\det=\det A\cdot\det D$ (как частный случай Шура при $C=O$).
 
 ## Практика
 
-1. Вычислить $\begin{pmatrix}I & A \\\\ O & I\end{pmatrix}\begin{pmatrix}I & B \\\\ O & I\end{pmatrix}$.
-2. Найти обратную к $\begin{pmatrix}I & X \\\\ O & I\end{pmatrix}$.
-3. Проверить согласованность: можно ли умножить $\begin{pmatrix}A_{2\times 2} & B_{2\times 3} \\\\ C_{1\times 2} & D_{1\times 3}\end{pmatrix}$ на себя? (Ответ: нет — размеры «не квадратные» согласованно для такого же разбиения.)
-4. По формуле Шура оценить идею вычисления $\det\begin{pmatrix}2 & 1 & 0 \\\\ 1 & 2 & 1 \\\\ 0 & 1 & 3\end{pmatrix}$ с блоком $A=\begin{pmatrix}2 & 1 \\\\ 1 & 2\end{pmatrix}$.
+1. Вычислить 
+
+$$\begin{pmatrix}I & A \\\\ O & I\end{pmatrix}\begin{pmatrix}I & B \\\\ O & I\end{pmatrix}$$
+
+.
+2. Найти обратную к 
+
+$$\begin{pmatrix}I & X \\\\ O & I\end{pmatrix}$$
+
+.
+3. Проверить согласованность: можно ли умножить 
+
+$$\begin{pmatrix}A_{2\times 2} & B_{2\times 3} \\\\ C_{1\times 2} & D_{1\times 3}\end{pmatrix}$$
+
+ на себя? (Ответ: нет — размеры «не квадратные» согласованно для такого же разбиения.)
+4. По формуле Шура оценить идею вычисления 
+
+$$\det\begin{pmatrix}2 & 1 & 0 \\\\ 1 & 2 & 1 \\\\ 0 & 1 & 3\end{pmatrix}$$
+
+ с блоком 
+
+$$A=\begin{pmatrix}2 & 1 \\\\ 1 & 2\end{pmatrix}$$
+
+.
 
 ## Что сказать устно за 1 минуту
 

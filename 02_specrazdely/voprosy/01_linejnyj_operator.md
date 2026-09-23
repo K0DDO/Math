@@ -76,7 +76,10 @@ $$Y=AX.$$
 
 1. $A(x_1,x_2)=(x_1+2x_2,\,3x_1-x_2)$ в $\mathbb{R}^2$.
 2. Растяжение / сжатие: $A\mathbf{x}=k\mathbf{x}$ (гомотетия); матрица $kE$.
-3. Поворот плоскости на угол $\varphi$: $\begin{pmatrix} \cos\varphi & -\sin\varphi \\\\ \sin\varphi & \cos\varphi \end{pmatrix}.$
+3. Поворот плоскости на угол $\varphi$: 
+
+$$\begin{pmatrix} \cos\varphi & -\sin\varphi \\\\ \sin\varphi & \cos\varphi \end{pmatrix}.$$
+
 4. Проектирование на ось $Ox$: $A(x,y)=(x,0)$.
 5. Дифференцирование многочленов: $D(p)=p'$ (на пространстве многочленов степени $\le n$).
 6. Транспонирование квадратных матриц фиксированного размера.
@@ -184,13 +187,29 @@ $$A^T=\begin{pmatrix} 2 & 1 \\\\ 1 & -1 \end{pmatrix}=A.$$
 *Ответ:* не линеен (произведение координат). Например, $A(1,1)=(2,1)$, а $A(1,0)+A(0,1)=(1,0)+(1,0)=(2,0)\neq(2,1)$.
 
 **2.** Найдите матрицу проектирования $P(x,y)=(x,0)$ в стандартном базисе, ядро и образ.  
-*Ответ:* $P=\begin{pmatrix}1 & 0 \\\\ 0 & 0\end{pmatrix}$, $\ker P=\mathrm{span}\{(0,1)\}$, $\mathrm{Im}\,P=\mathrm{span}\{(1,0)\}$, $\mathrm{rang}=1$, $\mathrm{def}=1$.
+*Ответ:* 
 
-**3.** Для $A=\begin{pmatrix}1 & 2 \\\\ 2 & 4\end{pmatrix}$ найдите $\mathrm{rang}$, $\mathrm{def}$, базис ядра. Самосопряжён ли оператор?  
-*Ответ:* $\mathrm{rang}=1$, $\mathrm{def}=1$, $\ker$: $x_1+2x_2=0$, базис $\begin{pmatrix}-2 \\\\ 1\end{pmatrix}$. Да, $A^T=A$.
+$$P=\begin{pmatrix}1 & 0 \\\\ 0 & 0\end{pmatrix}$$
+
+, $\ker P=\mathrm{span}\{(0,1)\}$, $\mathrm{Im}\,P=\mathrm{span}\{(1,0)\}$, $\mathrm{rang}=1$, $\mathrm{def}=1$.
+
+**3.** Для 
+
+$$A=\begin{pmatrix}1 & 2 \\\\ 2 & 4\end{pmatrix}$$
+
+ найдите $\mathrm{rang}$, $\mathrm{def}$, базис ядра. Самосопряжён ли оператор?  
+*Ответ:* $\mathrm{rang}=1$, $\mathrm{def}=1$, $\ker$: $x_1+2x_2=0$, базис 
+
+$$\begin{pmatrix}-2 \\\\ 1\end{pmatrix}$$
+
+. Да, $A^T=A$.
 
 **4.** $A(x_1,x_2,x_3)=(x_1+x_2,\,x_2+x_3,\,0)$. Найдите матрицу и дефект.  
-*Ответ:* $A=\begin{pmatrix}1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 0\end{pmatrix}$, $\mathrm{rang}=2$, $\mathrm{def}=1$.
+*Ответ:* 
+
+$$A=\begin{pmatrix}1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 0\end{pmatrix}$$
+
+, $\mathrm{rang}=2$, $\mathrm{def}=1$.
 
 ---
 
