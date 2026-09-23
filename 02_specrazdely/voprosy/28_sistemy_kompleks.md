@@ -1,106 +1,181 @@
-# Вопрос 28. Линейные однородные системы: комплексные собственные значения
+# Вопрос 28. Система $X'=AX$: комплексные собственные значения
 
-## Что спрашивают на экзамене
+## Зачем это в жизни и на экзамене
 
-- Что делать, если $\lambda=\alpha\pm i\beta$ — комплексно сопряжённая пара.
-- Как из комплексного решения получить два действительных.
-- Формулы с $\mathbf{u},\mathbf{v}$ (действительная и мнимая части собственного вектора).
-- Пример с числами (часто «вращение» / колебания).
+Комплексная пара $\alpha\pm i\beta$ у матрицы $A$ — источник **вращения** в фазовой плоскости: окружности, спирали, затухающие или раскручивающиеся колебания. Так выглядят гармонический осциллятор в переменных «положение–скорость», RLC-контур, орбиты около фокуса. На экзамене нужно уметь из комплексного собственного вектора достать две действительные решения через вещественную и мнимую части. Это векторный аналог вопроса 23 с $\sin/\cos$.
+
+На экзамене обычно спрашивают:
+
+- что делать с парой $\alpha\pm i\beta$;
+- как из $e^{(\alpha+i\beta)t}(U+iW)$ получить два действительных решения;
+- вид общего действительного решения;
+- качественная картина: центр, устойчивый / неустойчивый фокус.
+
+## Интуиция на пальцах
+
+Чистый осциллятор $x''+x=0$ в фазовой плоскости $\bigl(x,x'\bigr)$ рисует окружности (эллипсы) — центр. С трением — спираль к нулю (устойчивый фокус). Комплексные собственные значения — алгебраический ярлык «здесь есть вращение с угловой скоростью $\beta$ и радиальный множитель $e^{\alpha t}$».
+
+В RLC ток и напряжение «крутятся» друг относительно друга с фазовым сдвигом — ровно эта геометрия.
 
 ## Все понятия с нуля
 
-При действительной матрице $A$ комплексные собственные значения идут **парами** $\alpha\pm i\beta$, $\beta\neq 0$.
+### Комплексно сопряжённые собственные значения
 
-**Комплексный собственный вектор** $\mathbf{h}=\mathbf{u}+i\mathbf{v}$, где $\mathbf{u},\mathbf{v}$ — действительные векторы:
+**Интуиция.** У действительной матрицы комплексные корни идут парами.
 
-$$A\mathbf{h}=\lambda\mathbf{h},\qquad\lambda=\alpha+i\beta.$$
+**Определение.** Пара $\alpha\pm i\beta$ ($\beta\neq 0$) у действительной матрицы $A$. ([урок](https://mathprofi.ru/sobstvennye_znachenija_i_sobstvennye_vektory.html))
 
-([урок](https://mathprofi.ru/sobstvennye_znachenija_i_sobstvennye_vektory.html))
+**Как найти.** Из $\det(A-\lambda E)=0$; если появился $\alpha+i\beta$, есть и $\alpha-i\beta$.
 
-Комплексная экспонента:
+### Комплексный собственный вектор
 
-$$e^{(\alpha+i\beta)t}=e^{\alpha t}(\cos\beta t+i\sin\beta t).$$
+**Интуиция.** Направление в $\mathbb{C}^{n}$, которое $A$ масштабирует на $\alpha+i\beta$.
 
-**Действительная ФСР** получается разделением комплексного решения на действительную и мнимую части (линейность системы с действительными коэффициентами это позволяет). ([урок](https://mathprofi.ru/kak_reshit_sistemu_differencialnyh_uravnenii.html))
+**Определение.** $V=U+iW$, где $U,W$ — действительные столбцы, $AV=(\alpha+i\beta)V$. ([урок](https://mathprofi.ru/sobstvennye_znachenija_i_sobstvennye_vektory.html))
+
+**Как найти.** Решить $\bigl(A-(\alpha+i\beta)E\bigr)V=0$ над комплексными числами, затем разделить на Re/Im.
+
+### Комплексное решение и переход к действительным
+
+**Интуиция.** Формула Эйлера + Re/Im дают две действительные моды.
+
+**Определение.** $X_{\mathbb{C}}(t)=e^{(\alpha+i\beta)t}V$. Поскольку коэффициенты действительные, $\mathrm{Re}\,X_{\mathbb{C}}$ и $\mathrm{Im}\,X_{\mathbb{C}}$ — действительные решения системы. ([урок](https://mathprofi.ru/kak_reshit_sistemu_differencialnyh_uravnenii.html))
+
+**Как получить ФСР.** Взять пару Re и Im из одного $X_{\mathbb{C}}$; сопряжённый корень отдельно решать не нужно.
+
+### Фокус и центр
+
+**Интуиция.** Крутим с огибающей $e^{\alpha t}$.
+
+**Определение.**
+
+- $\alpha=0$ — центр (замкнутые орбиты в линейном приближении);
+- $\alpha<0$ — устойчивый фокус (спираль внутрь);
+- $\alpha>0$ — неустойчивый фокус (спираль наружу).
+
+([урок](https://mathprofi.ru/kak_reshit_sistemu_differencialnyh_uravnenii.html))
 
 ## Теория подробно
 
-1. Находим $\lambda=\alpha+i\beta$ и комплексный $\mathbf{h}=\mathbf{u}+i\mathbf{v}$ из $(A-\lambda E)\mathbf{h}=\mathbf{0}$.
-2. Комплексное решение: $\mathbf{z}(t)=\mathbf{h}\,e^{\lambda t}=e^{\alpha t}(\cos\beta t+i\sin\beta t)(\mathbf{u}+i\mathbf{v}).$
-3. Раскрываем: $\begin{aligned} \mathbf{z}&=e^{\alpha t}\bigl[ (\mathbf{u}\cos\beta t-\mathbf{v}\sin\beta t) +i(\mathbf{u}\sin\beta t+\mathbf{v}\cos\beta t) \bigr]. \end{aligned}$
-4. Два действительных независимых решения: $\begin{aligned} \mathbf{x}_1(t)&=e^{\alpha t}(\mathbf{u}\cos\beta t-\mathbf{v}\sin\beta t), \\\\ \mathbf{x}_2(t)&=e^{\alpha t}(\mathbf{u}\sin\beta t+\mathbf{v}\cos\beta t). \end{aligned}$
-5. Общее действительное решение: $\mathbf{x}=C_1\mathbf{x}_1+C_2\mathbf{x}_2.$ ([урок](https://mathprofi.ru/kak_reshit_sistemu_differencialnyh_uravnenii.html))
+Формула Эйлера:
 
-Сопряжённый корень $\alpha-i\beta$ отдельно не обрабатывают — он даёт те же $\mathbf{x}_1,\mathbf{x}_2$.
+$$e^{(\alpha+i\beta)t}=e^{\alpha t}(\cos\beta t+i\sin\beta t).$$
 
-При кратном комплексном корне появляются множители $t^{j}$ (аналогично скалярному случаю).
+Пусть $V=U+iW$. Тогда
 
-## Как решать / алгоритм
+$$X_{\mathbb{C}}=e^{\alpha t}(\cos\beta t+i\sin\beta t)(U+iW).$$
 
-1. $\det(A-\lambda E)=0$ → $\lambda=\alpha\pm i\beta$.
-2. Решить $(A-(\alpha+i\beta)E)\mathbf{h}=0$; выделить $\mathbf{u}=\mathrm{Re}\,\mathbf{h}$, $\mathbf{v}=\mathrm{Im}\,\mathbf{h}$.
-3. Записать $\mathbf{x}_1$, $\mathbf{x}_2$ по формулам выше.
-4. Собрать общее решение; при Коши найти $C_1,C_2$.
+Раскрывая и собирая действительную и мнимую части:
 
-Практический совет: систему для $\mathbf{h}$ можно решать в комплексных числах аккуратно построчно.
+$$X_1(t)=e^{\alpha t}\bigl((\cos\beta t)\,U-(\sin\beta t)\,W\bigr),$$
+
+$$X_2(t)=e^{\alpha t}\bigl((\sin\beta t)\,U+(\cos\beta t)\,W\bigr).$$
+
+(Знаки зависят от соглашения $\mathrm{Im}$; важно взять пару $\mathrm{Re}$ и $\mathrm{Im}$ последовательно из одного $X_{\mathbb{C}}$.)
+
+Общее действительное решение:
+
+$$X=C_1 X_1+C_2 X_2.$$
+
+Это значит: движение — комбинация двух квадратурных (сдвинутых по фазе на $\pi/2$) мод с огибающей $e^{\alpha t}$. ([урок](https://mathprofi.ru/kak_reshit_sistemu_differencialnyh_uravnenii.html))
+
+Для системы $2\times 2$ с только этой парой корней ФСР состоит ровно из $X_1,X_2$.
+
+### Связь со скалярным уравнением
+
+Уравнение $y''-2\alpha y'+(\alpha^{2}+\beta^{2})y=0$ даёт ту же пару $\alpha\pm i\beta$ и решения $e^{\alpha t}\cos\beta t$, $e^{\alpha t}\sin\beta t$; система для $\bigl(y,y'\bigr)$ воспроизводит спираль / центр в фазовой плоскости (вопрос 25).
+
+### Кратные комплексные (идея)
+
+При кратности появляются множители $t^{j}$ рядом с $e^{\alpha t}\cos/\sin$ — как в вопросе 23; на типовом экзамене чаще простая пара.
+
+## Примеры из практики (мир)
+
+### 1. Круговое / эллиптическое движение
+
+$$X'=\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \end{pmatrix}X$$
+
+— вращение с угловой скоростью $1$; орбиты — окружности (центр). Идеальный гармонический осциллятор в фазовой плоскости.
+
+### 2. Затухающий осциллятор
+
+Положение–скорость → устойчивый фокус: спираль к равновесию. Амортизатор с трением, демпфированный маятник.
+
+### 3. RLC-контур
+
+Ток и напряжение на конденсаторе образуют фазовый портрет фокуса / центра в зависимости от сопротивления; частота $\beta$ связана с $\sqrt{1/LC}$ с поправкой на $R$.
+
+### 4. Орбиты около равновесия в экологии
+
+После линеаризации модели популяций: если спектр — $\alpha\pm i\beta$ с $\alpha<0$, численности «накручивают» спираль к равновесию (затухающие колебания около стационара).
+
+## Алгоритм «как решать на экзамене»
+
+1. Найди $\lambda=\alpha\pm i\beta$.
+2. Для $\lambda=\alpha+i\beta$ найди комплексный собственный вектор $V=U+iW$.
+3. Выпиши $X_{\mathbb{C}}=e^{(\alpha+i\beta)t}V$, возьми $X_1=\mathrm{Re}\,X_{\mathbb{C}}$, $X_2=\mathrm{Im}\,X_{\mathbb{C}}$.
+4. Общее решение $X=C_1 X_1+C_2 X_2$.
+5. Коши — подстановка начальных данных (действительных).
+
+Не нужно отдельно решать для сопряжённого $\alpha-i\beta$: он даст те же $\mathrm{Re}/\mathrm{Im}$.
 
 ## Разобранный пример
 
-$$A=\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \end{pmatrix} \quad\bigl(x'=-y,\ y'=x\bigr).$$
+$$A=\begin{pmatrix} 1 & -2 \\\\ 1 & -1 \end{pmatrix}.$$
 
-$$\det\begin{pmatrix} -\lambda & -1 \\\\ 1 & -\lambda \end{pmatrix}=\lambda^{2}+1=0\Rightarrow\lambda=\pm i.$$
+**Характеристическое:**
 
-$\alpha=0$, $\beta=1$.
+$$\det\begin{pmatrix} 1-\lambda & -2 \\\\ 1 & -1-\lambda \end{pmatrix}=\lambda^{2}+1=0,$$
 
-Для $\lambda=i$:
+$\lambda=\pm i$, то есть $\alpha=0$, $\beta=1$.
 
-$$\begin{pmatrix} -i & -1 \\\\ 1 & -i \end{pmatrix}\begin{pmatrix} h_1 \\\\ h_2 \end{pmatrix}=0 \Rightarrow h_2=-i h_1.$$
+**Для $\lambda=i$:**
 
-Берём $h_1=1$, $h_2=-i$. Тогда 
+$$\begin{pmatrix} 1-i & -2 \\\\ 1 & -1-i \end{pmatrix}\begin{pmatrix} v_1 \\\\ v_2 \end{pmatrix}=0.$$
 
-$$\mathbf{h}=\begin{pmatrix}1 \\\\ 0\end{pmatrix}+i\begin{pmatrix}0 \\\\ -1\end{pmatrix}$$
+Из первой строки: $\bigl(1-i\bigr)v_1=2v_2$, возьмём $v_1=2$, $v_2=1-i$. Тогда
 
-, то есть
+$$V=\begin{pmatrix} 2 \\\\ 1 \end{pmatrix}+i\begin{pmatrix} 0 \\\\ -1 \end{pmatrix},$$
 
-$$\mathbf{u}=\begin{pmatrix} 1 \\\\ 0 \end{pmatrix},\qquad\mathbf{v}=\begin{pmatrix} 0 \\\\ -1 \end{pmatrix}.$$
+то есть
 
-$$\begin{aligned} \mathbf{x}_1&=\mathbf{u}\cos t-\mathbf{v}\sin t=\begin{pmatrix} \cos t \\\\ \sin t \end{pmatrix}, \\\\ \mathbf{x}_2&=\mathbf{u}\sin t+\mathbf{v}\cos t=\begin{pmatrix} \sin t \\\\ -\cos t \end{pmatrix}. \end{aligned}$$
+$$U=\begin{pmatrix} 2 \\\\ 1 \end{pmatrix},\qquad W=\begin{pmatrix} 0 \\\\ -1 \end{pmatrix}.$$
 
-Общее решение:
+$$X_{\mathbb{C}}=e^{it}V=(\cos t+i\sin t)(U+iW).$$
 
-$$\begin{cases} x=C_1\cos t+C_2\sin t, \\\\ y=C_1\sin t-C_2\cos t. \end{cases}$$
+Действительная и мнимая части:
 
-Траектории — окружности (центр в нуле).
+$$X_1=\begin{pmatrix} 2\cos t \\\\ \cos t+\sin t \end{pmatrix},\qquad X_2=\begin{pmatrix} 2\sin t \\\\ \sin t-\cos t \end{pmatrix}$$
 
-**Ещё пример:** 
+(проверка раскрытием; допускается эквивалентный базис с другим масштабом $V$).
 
-$$A=\begin{pmatrix}1 & -2 \\\\ 1 & -1\end{pmatrix}$$
+Общее решение — $C_1 X_1+C_2 X_2$. Так как $\alpha=0$, фазовые кривые — замкнутые (центр в линейной модели) / эллипсы в подходящих координатах.
 
-.
-Характеристическое: $\lambda^{2}+1=0$? Проверьте: 
-
-$$\det\begin{pmatrix}1-\lambda&-2 \\\\ 1&-1-\lambda\end{pmatrix}=(1-\lambda)(-1-\lambda)+2=\lambda^{2}+1$$
-
-. Да, $\lambda=\pm i$, $\alpha=0$, $\beta=1$. Далее — тот же алгоритм.
+**Спиральный пример.** У $y''+2y'+2y=0$ корни $-1\pm i$; в плоскости $\bigl(y,y'\bigr)$ — устойчивый фокус с огибающей $e^{-t}$.
 
 ## Практика
 
-1. Для 
-
-$$A=\begin{pmatrix}0 & 1 \\\\ -1 & 0\end{pmatrix}$$
-
- найти общее решение.
-2. Что меняется, если $\lambda=2\pm 3i$?
+1. Для $A=\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \end{pmatrix}$ найдите общее решение $X'=AX$.
+2. Какой портрет при $\lambda=-1\pm 2i$?
 3. Почему достаточно одного комплексного вектора из пары $\alpha\pm i\beta$?
-4. Свести систему $x'=-y$, $y'=x$ исключением к уравнению на $x$.
+4. Свяжите с вопросом 23: какие скалярные функции соответствуют $\alpha\pm i\beta$?
+5. Что будет, если взять только $\mathrm{Re}\,X_{\mathbb{C}}$ и забыть $\mathrm{Im}$?
 
-**Ответы:** 1) аналогично окружностям/эллипсам, $\lambda=\pm i$; 2) множитель $e^{2t}$ и частота $3$; 3) сопряжение даёт те же действительные/мнимые части; 4) $x''+x=0$.
+**Ответы:**
 
-## Что сказать устно за 1 минуту
+1. $X=C_1\begin{pmatrix} \cos t \\\\ \sin t \end{pmatrix}+C_2\begin{pmatrix} -\sin t \\\\ \cos t \end{pmatrix}$ (с точностью к базису).
+2. Устойчивый фокус (спираль внутрь).
+3. Сопряжённый даёт те же Re/Im.
+4. $e^{\alpha t}\cos\beta t$, $e^{\alpha t}\sin\beta t$.
+5. Получится только одномерное семейство, не общее решение в $\mathbb{R}^{2}$.
 
-При паре $\alpha\pm i\beta$ находим комплексный собственный вектор $\mathbf{u}+i\mathbf{v}$, берём комплексное решение $\mathbf{h}e^{(\alpha+i\beta)t}$ и выделяем действительную и мнимую части — получаем два действительных решения с множителем $e^{\alpha t}$ и комбинациями $\mathbf{u},\mathbf{v}$ с $\cos\beta t$ и $\sin\beta t$. Общее решение — их линейная комбинация.
+## Что сказать устно за 1–2 минуты
+
+При комплексных $\alpha\pm i\beta$ берём комплексный собственный вектор, строим $e^{(\alpha+i\beta)t}V$ и выделяем действительную и мнимую части — две действительные решения. Огибающая $e^{\alpha t}$ и частота $\beta$ дают центр ($\alpha=0$) или фокус (спираль). Так описываются круговые движения, RLC и затухающие колебания в фазовой плоскости.
 
 ## Источник
 
-- [Системы дифференциальных уравнений (mathprofi)](https://mathprofi.ru/sistemy_differencialnyh_uravnenij.html)
 - [Как решить систему ДУ (mathprofi)](https://mathprofi.ru/kak_reshit_sistemu_differencialnyh_uravnenii.html)
+- [Системы дифференциальных уравнений (mathprofi)](https://mathprofi.ru/sistemy_differencialnyh_uravnenij.html)
+- [Собственные значения и векторы (mathprofi)](https://mathprofi.ru/sobstvennye_znachenija_i_sobstvennye_vektory.html)
+- [ДУ второго порядка (скалярный аналог) (mathprofi)](https://mathprofi.ru/differencialnye_uravnenija_vtorogo_poryadka.html)
