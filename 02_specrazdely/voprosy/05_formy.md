@@ -27,9 +27,9 @@ $$L(\alpha\mathbf{x}+\beta\mathbf{y})=\alpha L(\mathbf{x})+\beta L(\mathbf{y}).$
 
 **Билинейная форма** — функция $B(\mathbf{x},\mathbf{y})$ от двух векторов, линейная по каждому аргументу отдельно. В координатах
 
-$$B(\mathbf{x},\mathbf{y})=X^T B Y=\sum_{i,j}b_{ij}x_i y_j.$$
+$$B(\mathbf{x},\mathbf{y})=X^{\mathrm{T}} B Y=\sum_{i,j}b_{ij}x_i y_j.$$
 
-Если $B^T=B$, форма **симметричная**. ([урок](https://mathprofi.ru/kvadratichnye_formy.html))
+Если $B^{\mathrm{T}}=B$, форма **симметричная**. ([урок](https://mathprofi.ru/kvadratichnye_formy.html))
 
 **Квадратичная форма** — однородный многочлен второй степени от координат:
 
@@ -78,17 +78,17 @@ $$X^TAX=\begin{pmatrix}x_1 & x_2\end{pmatrix}\begin{pmatrix}2 & -2 \\\\ -2 & 5\e
 
 ### Связь с линейным оператором
 
-Симметричная матрица $A$ задаёт самосопряжённый оператор (в ортонормированном базисе). Квадратичная форма — «скалярное произведение» $(A\mathbf{x},\mathbf{x})$. Поэтому теория собственных значений симметричных матриц напрямую применяется к $Q$.
+Симметричная матрица $A$ задаёт самосопряжённый оператор (в ортонормированном базисе). Квадратичная форма — «скалярное произведение» $\,(A\mathbf{x},\mathbf{x})$. Поэтому теория собственных значений симметричных матриц напрямую применяется к $Q$.
 
 ### Диагонализация через собственные значения
 
-Так как $A=A^T$, существует ортонормированный собственный базис: ортогональная матрица $U$ ($U^{-1}=U^T$) из собственных векторов-столбцов такая, что
+Так как $A=A^{\mathrm{T}}$, существует ортонормированный собственный базис: ортогональная матрица $U$ ($U^{-1}=U^{\mathrm{T}}$) из собственных векторов-столбцов такая, что
 
-$$U^T A U=\Lambda=\mathrm{diag}(\lambda_1,\ldots,\lambda_n).$$
+$$U^{\mathrm{T}} A U=\Lambda=\mathrm{diag}(\lambda_1,\ldots,\lambda_n).$$
 
 Замена переменных $X=UY$ (новые координаты $Y$ — координаты в собственном базисе) даёт
 
-$$Q=X^TAX=Y^T(U^T A U)Y=Y^T\Lambda Y=\lambda_1 y_1^2+\ldots+\lambda_n y_n^2.$$
+$$Q=X^TAX=Y^{\mathrm{T}}(U^{\mathrm{T}} A U)Y=Y^{\mathrm{T}}\Lambda Y=\lambda_1 y_1^2+\ldots+\lambda_n y_n^2.$$
 
 Это **канонический вид методом ортогонального преобразования**. На mathprofi его выделяют как наиболее «геометричный»: оси поворачивают вдоль главных направлений формы. ([урок](https://mathprofi.ru/metod_ortogonalnogo_preobrazovaniya_kf.html))
 
@@ -133,16 +133,16 @@ $$A=\begin{pmatrix} 5 & 2 \\\\ 2 & 2 \end{pmatrix}.$$
 
 $$\det\begin{pmatrix} 5-\lambda & 2 \\\\ 2 & 2-\lambda \end{pmatrix}=(5-\lambda)(2-\lambda)-4=\lambda^2-7\lambda+6=0.$$
 
-$$(\lambda-1)(\lambda-6)=0\implies\lambda_1=1,\ \lambda_2=6.$$
+$$\,(\lambda-1)(\lambda-6)=0\implies\lambda_1=1,\ \lambda_2=6.$$
 
 **Шаг 3. Собственные векторы.**
 
 Для $\lambda=1$: 
 
-$$(A-E)X=0\Rightarrow\begin{pmatrix}4 & 2 \\\\ 2 & 1\end{pmatrix}X=0\Rightarrow 2x+y=0$$
+$$\,(A-E)X=0\Rightarrow\begin{pmatrix}4 & 2 \\\\ 2 & 1\end{pmatrix}X=0\Rightarrow 2x+y=0$$
 
 .  
-Вектор $(1,-2)$; длина $\sqrt{5}$. Орт: 
+Вектор $\,(1,-2)$; длина $\sqrt{5}$. Орт: 
 
 $$u_1=\frac{1}{\sqrt{5}}\begin{pmatrix}1 \\\\ -2\end{pmatrix}$$
 
@@ -150,10 +150,10 @@ $$u_1=\frac{1}{\sqrt{5}}\begin{pmatrix}1 \\\\ -2\end{pmatrix}$$
 
 Для $\lambda=6$: 
 
-$$(A-6E)X=0\Rightarrow\begin{pmatrix}-1 & 2 \\\\ 2 & -4\end{pmatrix}X=0\Rightarrow -x+2y=0$$
+$$\,(A-6E)X=0\Rightarrow\begin{pmatrix}-1 & 2 \\\\ 2 & -4\end{pmatrix}X=0\Rightarrow -x+2y=0$$
 
 .  
-Вектор $(2,1)$; длина $\sqrt{5}$. Орт: 
+Вектор $\,(2,1)$; длина $\sqrt{5}$. Орт: 
 
 $$u_2=\frac{1}{\sqrt{5}}\begin{pmatrix}2 \\\\ 1\end{pmatrix}$$
 

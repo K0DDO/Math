@@ -17,7 +17,7 @@ $$\begin{cases} x_1'=a_{11}x_1+\cdots+a_{1n}x_n, \\\\ \vdots \\\\ x_n'=a_{n1}x_1
 
 $$\mathbf{x}'=A\mathbf{x},$$
 
-где $A=(a_{ij})$ — постоянная матрица $n\times n$, $\mathbf{x}=(x_1,\ldots,x_n)^{T}$. ([урок](https://mathprofi.ru/sistemy_differencialnyh_uravnenij.html))
+где $A=(a_{ij})$ — постоянная матрица $n\times n$, $\mathbf{x}=(x_1,\ldots,x_n)^{\mathrm{T}}$. ([урок](https://mathprofi.ru/sistemy_differencialnyh_uravnenij.html))
 
 **Собственное значение** $\lambda$ и **собственный вектор** $\mathbf{h}\neq\mathbf{0}$:
 
@@ -54,7 +54,7 @@ $$\mathbf{x}(t)=C_1\begin{pmatrix} h_{11} \\\\ h_{21} \end{pmatrix}e^{\lambda_1 
 
 1. Записать матрицу $A$.
 2. Вычислить $\det(A-\lambda E)=0$, найти $\lambda_1\neq\lambda_2$ (для $n=2$).
-3. Для каждого $\lambda_i$ решить $(A-\lambda_i E)\mathbf{h}_i=\mathbf{0}$, выбрать ненулевой $\mathbf{h}_i$.
+3. Для каждого $\lambda_i$ решить $\,(A-\lambda_i E)\mathbf{h}_i=\mathbf{0}$, выбрать ненулевой $\mathbf{h}_i$.
 4. Записать $\mathbf{x}=C_1\mathbf{h}_1 e^{\lambda_1 t}+C_2\mathbf{h}_2 e^{\lambda_2 t}$.
 5. При Коши — подставить $t_0$, найти $C_1,C_2$.
 

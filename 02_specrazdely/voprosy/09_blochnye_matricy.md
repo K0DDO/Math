@@ -12,7 +12,7 @@
 
 $$M=\begin{pmatrix} A & B \\\\ C & D \end{pmatrix}.$$
 
-Здесь $A,B,C,D$ сами матрицы подходящих размеров. Например, $A$ размера $m\times m$, $D$ — $n\times n$, тогда $B$ — $m\times n$, $C$ — $n\times m$, а вся $M$ — $(m+n)\times(m+n)$. ([урок](https://mathprofi.ru/svoistva_operacij_nad_matricami_matrichnye_vyrazheniya.html))
+Здесь $A,B,C,D$ сами матрицы подходящих размеров. Например, $A$ размера $m\times m$, $D$ — $n\times n$, тогда $B$ — $m\times n$, $C$ — $n\times m$, а вся $M$ — $\,(m+n)\times(m+n)$. ([урок](https://mathprofi.ru/svoistva_operacij_nad_matricami_matrichnye_vyrazheniya.html))
 
 **Согласованность разбиения** — чтобы операции имели смысл, одинаковые «позиции» должны иметь блоки одного размера (для сложения), а для умножения — как у обычных матриц: ширина левого блока = высота правого.
 
@@ -38,7 +38,7 @@ $$\begin{pmatrix} A & B \\\\ C & D \end{pmatrix}\begin{pmatrix} P & Q \\\\ R & S
 
 ### Транспонирование
 
-$$\begin{pmatrix} A & B \\\\ C & D \end{pmatrix}^T=\begin{pmatrix} A^T & C^T \\\\ B^T & D^T \end{pmatrix}.$$
+$$\begin{pmatrix} A & B \\\\ C & D \end{pmatrix}^{\mathrm{T}}=\begin{pmatrix} A^{\mathrm{T}} & C^{\mathrm{T}} \\\\ B^{\mathrm{T}} & D^{\mathrm{T}} \end{pmatrix}.$$
 
 Блоки меняются местами «относительно диагонали» и каждый транспонируется. ([урок](https://mathprofi.ru/svoistva_operacij_nad_matricami_matrichnye_vyrazheniya.html))
 
@@ -86,7 +86,7 @@ $$MN=\begin{pmatrix} E\cdot E+A\cdot O & E\cdot B+A\cdot E \\\\ O\cdot E+E\cdot 
 
 **Транспонирование.** 
 
-$$\begin{pmatrix}A & B \\\\ O & D\end{pmatrix}^T=\begin{pmatrix}A^T & O \\\\ B^T & D^T\end{pmatrix}$$
+$$\begin{pmatrix}A & B \\\\ O & D\end{pmatrix}^{\mathrm{T}}=\begin{pmatrix}A^{\mathrm{T}} & O \\\\ B^{\mathrm{T}} & D^{\mathrm{T}}\end{pmatrix}$$
 
 .
 
