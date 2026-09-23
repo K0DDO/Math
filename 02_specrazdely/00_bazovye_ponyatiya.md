@@ -99,7 +99,11 @@ $$
 то столбец
 
 $$
-X=\begin{pmatrix}x_1\\ \vdots\\ x_n\end{pmatrix}
+X=\begin{pmatrix}
+x_1 \cr
+\vdots \cr
+x_n
+\end{pmatrix}
 $$
 
 называют **координатным столбцом** вектора $\mathbf{x}$. Один и тот же вектор в другом базисе имеет **другие** координаты.
@@ -120,9 +124,9 @@ $$
 
 $$
 A=\begin{pmatrix}
-a_{11} & a_{12} & \ldots & a_{1n}\\
-a_{21} & a_{22} & \ldots & a_{2n}\\
-\vdots & \vdots & \ddots & \vdots\\
+a_{11} & a_{12} & \ldots & a_{1n} \cr
+a_{21} & a_{22} & \ldots & a_{2n} \cr
+\vdots & \vdots & \ddots & \vdots \cr
 a_{m1} & a_{m2} & \ldots & a_{mn}
 \end{pmatrix}.
 $$
@@ -174,9 +178,9 @@ $$
 
 $$
 E=\begin{pmatrix}
-1 & 0 & \ldots & 0\\
-0 & 1 & \ldots & 0\\
-\vdots & \vdots & \ddots & \vdots\\
+1 & 0 & \ldots & 0 \cr
+0 & 1 & \ldots & 0 \cr
+\vdots & \vdots & \ddots & \vdots \cr
 0 & 0 & \ldots & 1
 \end{pmatrix}.
 $$
@@ -196,10 +200,13 @@ $$
 ### Как считать $2\times 2$
 
 $$
-\det\begin{pmatrix}a & b\\ c & d\end{pmatrix}=ad-bc.
+\det\begin{pmatrix}
+a & b \cr
+c & d
+\end{pmatrix}=ad-bc.
 $$
 
-Пример: $\det\begin{pmatrix}2 & 3\\ 1 & 4\end{pmatrix}=8-3=5$.
+Пример: $\det\begin{pmatrix}2 & 3 \cr 1 & 4\end{pmatrix}=8-3=5$.
 
 ### Как считать $3\times 3$
 
@@ -207,8 +214,8 @@ $$
 
 $$
 \det\begin{pmatrix}
-a_{11} & a_{12} & a_{13}\\
-a_{21} & a_{22} & a_{23}\\
+a_{11} & a_{12} & a_{13} \cr
+a_{21} & a_{22} & a_{23} \cr
 a_{31} & a_{32} & a_{33}
 \end{pmatrix}
 =
@@ -284,19 +291,31 @@ $$
 Пример. Пусть
 
 $$
-A=\begin{pmatrix}1 & 2 & 3\\ 2 & 4 & 6\\ 1 & 0 & 1\end{pmatrix}.
+A=\begin{pmatrix}
+1 & 2 & 3 \cr
+2 & 4 & 6 \cr
+1 & 0 & 1
+\end{pmatrix}.
 $$
 
 Строка $2=2\cdot(\text{строка }1)$ — вычтем. Получим
 
 $$
-\begin{pmatrix}1 & 2 & 3\\ 0 & 0 & 0\\ 1 & 0 & 1\end{pmatrix}.
+\begin{pmatrix}
+1 & 2 & 3 \cr
+0 & 0 & 0 \cr
+1 & 0 & 1
+\end{pmatrix}.
 $$
 
 Вычтем строку $1$ из строки $3$:
 
 $$
-\begin{pmatrix}1 & 2 & 3\\ 0 & 0 & 0\\ 0 & -2 & -2\end{pmatrix}.
+\begin{pmatrix}
+1 & 2 & 3 \cr
+0 & 0 & 0 \cr
+0 & -2 & -2
+\end{pmatrix}.
 $$
 
 Переставим строки $2$ и $3$, разделим новую вторую на $-2$: две ненулевые строки. Значит $\mathrm{rang}\,A=2$.
@@ -402,7 +421,7 @@ $$
 
 $$
 (\mathbf{e}_i,\mathbf{e}_j)=\begin{cases}
-1, & i=j,\\
+1, & i=j, \cr
 0, & i\neq j.
 \end{cases}
 $$

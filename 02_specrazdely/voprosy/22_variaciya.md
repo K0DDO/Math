@@ -42,10 +42,10 @@ $$
 Накладывают условия:
 $$
 \begin{cases}
-\sum C_i' y_i = 0,\\
-\sum C_i' y_i' = 0,\\
-\vdots\\
-\sum C_i' y_i^{(n-2)} = 0,\\
+\sum C_i' y_i = 0, \cr
+\sum C_i' y_i' = 0, \cr
+\vdots \cr
+\sum C_i' y_i^{(n-2)} = 0, \cr
 \sum C_i' y_i^{(n-1)} = g(x).
 \end{cases}
 $$
@@ -57,7 +57,7 @@ $$
 Для **$n=2$**, $y''+p y'+q y=g$:
 $$
 \begin{cases}
-C_1' y_1 + C_2' y_2 = 0,\\
+C_1' y_1 + C_2' y_2 = 0, \cr
 C_1' y_1' + C_2' y_2' = g,
 \end{cases}
 \qquad
@@ -82,13 +82,16 @@ $$
 
 Однородное: $y''+y=0$, ФСР $y_1=\cos x$, $y_2=\sin x$.
 $$
-W=\begin{vmatrix}\cos x & \sin x\\ -\sin x & \cos x\end{vmatrix}=1.
+W=\begin{vmatrix}
+\cos x & \sin x \cr
+-\sin x & \cos x
+\end{vmatrix}=1.
 $$
 
 Система вариации при $g=1/\cos x$:
 $$
 \begin{cases}
-C_1'\cos x+C_2'\sin x=0,\\
+C_1'\cos x+C_2'\sin x=0, \cr
 -C_1'\sin x+C_2'\cos x=\dfrac{1}{\cos x}.
 \end{cases}
 $$

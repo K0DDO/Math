@@ -71,12 +71,15 @@ $$
 Пример: $Q=2x_1^2-4x_1 x_2+5x_2^2$.
 
 $$
-A=\begin{pmatrix}2 & -2\\ -2 & 5\end{pmatrix},
+A=\begin{pmatrix}
+2 & -2 \cr
+-2 & 5
+\end{pmatrix},
 $$
 
 потому что $-4x_1x_2$ даёт два симметричных места по $-2$.
 
-Проверка: $X^TAX=\begin{pmatrix}x_1 & x_2\end{pmatrix}\begin{pmatrix}2 & -2\\ -2 & 5\end{pmatrix}\begin{pmatrix}x_1\\x_2\end{pmatrix}=2x_1^2-4x_1x_2+5x_2^2$.
+Проверка: $X^TAX=\begin{pmatrix}x_1 & x_2\end{pmatrix}\begin{pmatrix}2 & -2 \cr -2 & 5\end{pmatrix}\begin{pmatrix}x_1 \cr x_2\end{pmatrix}=2x_1^2-4x_1x_2+5x_2^2$.
 
 Ранг формы — ранг матрицы $A$. Определитель $\det A$ иногда называют дискриминантом формы (для $n=2$).
 
@@ -138,13 +141,19 @@ $$
 **Шаг 1. Матрица.** Коэффициент при $xy$ равен $4$, значит $a_{12}=a_{21}=2$:
 
 $$
-A=\begin{pmatrix}5 & 2\\ 2 & 2\end{pmatrix}.
+A=\begin{pmatrix}
+5 & 2 \cr
+2 & 2
+\end{pmatrix}.
 $$
 
 **Шаг 2. Собственные значения.**
 
 $$
-\det\begin{pmatrix}5-\lambda & 2\\ 2 & 2-\lambda\end{pmatrix}=(5-\lambda)(2-\lambda)-4=\lambda^2-7\lambda+6=0.
+\det\begin{pmatrix}
+5-\lambda & 2 \cr
+2 & 2-\lambda
+\end{pmatrix}=(5-\lambda)(2-\lambda)-4=\lambda^2-7\lambda+6=0.
 $$
 
 $$
@@ -153,19 +162,28 @@ $$
 
 **Шаг 3. Собственные векторы.**
 
-Для $\lambda=1$: $(A-E)X=0\Rightarrow\begin{pmatrix}4 & 2\\ 2 & 1\end{pmatrix}X=0\Rightarrow 2x+y=0$.  
-Вектор $(1,-2)$; длина $\sqrt{5}$. Орт: $u_1=\frac{1}{\sqrt{5}}\begin{pmatrix}1\\-2\end{pmatrix}$.
+Для $\lambda=1$: $(A-E)X=0\Rightarrow\begin{pmatrix}4 & 2 \cr 2 & 1\end{pmatrix}X=0\Rightarrow 2x+y=0$.  
+Вектор $(1,-2)$; длина $\sqrt{5}$. Орт: $u_1=\frac{1}{\sqrt{5}}\begin{pmatrix}1 \cr -2\end{pmatrix}$.
 
-Для $\lambda=6$: $(A-6E)X=0\Rightarrow\begin{pmatrix}-1 & 2\\ 2 & -4\end{pmatrix}X=0\Rightarrow -x+2y=0$.  
-Вектор $(2,1)$; длина $\sqrt{5}$. Орт: $u_2=\frac{1}{\sqrt{5}}\begin{pmatrix}2\\1\end{pmatrix}$.
+Для $\lambda=6$: $(A-6E)X=0\Rightarrow\begin{pmatrix}-1 & 2 \cr 2 & -4\end{pmatrix}X=0\Rightarrow -x+2y=0$.  
+Вектор $(2,1)$; длина $\sqrt{5}$. Орт: $u_2=\frac{1}{\sqrt{5}}\begin{pmatrix}2 \cr 1\end{pmatrix}$.
 
 Проверка ортогональности: $1\cdot 2+(-2)\cdot 1=0$.
 
 **Шаг 4. Замена и канон.**
 
 $$
-U=\frac{1}{\sqrt{5}}\begin{pmatrix}1 & 2\\ -2 & 1\end{pmatrix},\qquad
-\begin{pmatrix}x\\ y\end{pmatrix}=U\begin{pmatrix}y_1\\ y_2\end{pmatrix}.
+U=\frac{1}{\sqrt{5}}\begin{pmatrix}
+1 & 2 \cr
+-2 & 1
+\end{pmatrix},\qquad
+\begin{pmatrix}
+x \cr
+y
+\end{pmatrix}=U\begin{pmatrix}
+y_1 \cr
+y_2
+\end{pmatrix}.
 $$
 
 Канонический вид:
@@ -181,13 +199,13 @@ $$
 ## Практика
 
 **1.** Выпишите матрицу формы $Q=x_1^2-6x_1x_2+x_2^2$.  
-*Ответ:* $A=\begin{pmatrix}1 & -3\\ -3 & 1\end{pmatrix}$.
+*Ответ:* $A=\begin{pmatrix}1 & -3 \cr -3 & 1\end{pmatrix}$.
 
 **2.** Приведите $Q=x^2+y^2$ к канону. Что получится?  
 *Ответ:* уже канон; $A=E$, $\lambda=1,1$. Любой ортонормированный базис годится.
 
 **3.** $Q=xy$. Выпишите $A$ и найдите канонический вид через собственные значения.  
-*Ответ:* $A=\begin{pmatrix}0 & 1/2\\ 1/2 & 0\end{pmatrix}$, $\lambda=\pm\frac12$, канон $\frac12 u^2-\frac12 v^2$ (после ортогональной замены).
+*Ответ:* $A=\begin{pmatrix}0 & 1/2 \cr 1/2 & 0\end{pmatrix}$, $\lambda=\pm\frac12$, канон $\frac12 u^2-\frac12 v^2$ (после ортогональной замены).
 
 **4.** Верно ли, что любая квадратичная форма приводится к канону ортогональным преобразованием над $\mathbb{R}$?  
 *Ответ:* да, потому что матрица симметрична и всегда диагонализуема ортогональной матрицей.

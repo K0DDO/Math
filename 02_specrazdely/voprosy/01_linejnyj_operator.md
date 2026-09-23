@@ -16,7 +16,7 @@
 
 ## Все понятия с нуля
 
-**Отображение (оператор) $A:V\to V$.** Правило, которое каждому вектору $\mathbf{x}\in V$ ставит в соответствие вектор $A\mathbf{x}$ (или $A(\mathbf{x})$) из того же пространства $V$.
+**Отображение (оператор) $A:V\to V$.** Правило, которое каждому вектору $\mathbf{x}\in V$ ставит в соответствие вектор $A\mathbf{x}$ (та же запись со скобками) из того же пространства $V$.
 
 **Образ вектора** — результат $A\mathbf{x}$. **Прообраз** — исходный $\mathbf{x}$.
 
@@ -85,9 +85,12 @@ $$
 1. $A(x_1,x_2)=(x_1+2x_2,\,3x_1-x_2)$ в $\mathbb{R}^2$.
 2. Растяжение / сжатие: $A\mathbf{x}=k\mathbf{x}$ (гомотетия); матрица $kE$.
 3. Поворот плоскости на угол $\varphi$:
-   $$
-   \begin{pmatrix}\cos\varphi & -\sin\varphi\\ \sin\varphi & \cos\varphi\end{pmatrix}.
-   $$
+$$
+\begin{pmatrix}
+\cos\varphi & -\sin\varphi \cr
+\sin\varphi & \cos\varphi
+\end{pmatrix}.
+$$
 4. Проектирование на ось $Ox$: $A(x,y)=(x,0)$.
 5. Дифференцирование многочленов: $D(p)=p'$ (на пространстве многочленов степени $\le n$).
 6. Транспонирование квадратных матриц фиксированного размера.
@@ -176,15 +179,33 @@ $$
 Столбцы:
 
 $$
-A=\begin{pmatrix}2 & 1\\ 1 & -1\end{pmatrix}.
+A=\begin{pmatrix}
+2 & 1 \cr
+1 & -1
+\end{pmatrix}.
 $$
 
-Проверка: $A\begin{pmatrix}x_1\\x_2\end{pmatrix}=\begin{pmatrix}2x_1+x_2\\ x_1-x_2\end{pmatrix}$.
+Проверка:
+
+$$
+A\begin{pmatrix}
+x_1 \cr
+x_2
+\end{pmatrix}
+=
+\begin{pmatrix}
+2x_1+x_2 \cr
+x_1-x_2
+\end{pmatrix}.
+$$
 
 **Шаг 2. Ядро.** Решаем $AX=0$:
 
 $$
-\begin{cases}2x_1+x_2=0,\\ x_1-x_2=0.\end{cases}
+\begin{cases}
+2x_1+x_2=0, \cr
+x_1-x_2=0.
+\end{cases}
 $$
 
 Из второго $x_1=x_2$, подстановка в первое: $3x_1=0\Rightarrow x_1=x_2=0$. Значит $\ker A=\{\mathbf{0}\}$, $\mathrm{def}\,A=0$.
@@ -194,7 +215,10 @@ $$
 **Шаг 4. Самосопряжённость.**
 
 $$
-A^T=\begin{pmatrix}2 & 1\\ 1 & -1\end{pmatrix}=A.
+A^T=\begin{pmatrix}
+2 & 1 \cr
+1 & -1
+\end{pmatrix}=A.
 $$
 
 Да, оператор самосопряжённый (матрица симметрична).
@@ -207,13 +231,13 @@ $$
 *Ответ:* не линеен (произведение координат). Например, $A(1,1)=(2,1)$, а $A(1,0)+A(0,1)=(1,0)+(1,0)=(2,0)\neq(2,1)$.
 
 **2.** Найдите матрицу проектирования $P(x,y)=(x,0)$ в стандартном базисе, ядро и образ.  
-*Ответ:* $P=\begin{pmatrix}1 & 0\\ 0 & 0\end{pmatrix}$, $\ker P=\mathrm{span}\{(0,1)\}$, $\mathrm{Im}\,P=\mathrm{span}\{(1,0)\}$, $\mathrm{rang}=1$, $\mathrm{def}=1$.
+*Ответ:* $P=\begin{pmatrix}1 & 0 \cr 0 & 0\end{pmatrix}$, $\ker P=\mathrm{span}\{(0,1)\}$, $\mathrm{Im}\,P=\mathrm{span}\{(1,0)\}$, $\mathrm{rang}=1$, $\mathrm{def}=1$.
 
-**3.** Для $A=\begin{pmatrix}1 & 2\\ 2 & 4\end{pmatrix}$ найдите $\mathrm{rang}$, $\mathrm{def}$, базис ядра. Самосопряжён ли оператор?  
-*Ответ:* $\mathrm{rang}=1$, $\mathrm{def}=1$, $\ker$: $x_1+2x_2=0$, базис $\begin{pmatrix}-2\\1\end{pmatrix}$. Да, $A^T=A$.
+**3.** Для $A=\begin{pmatrix}1 & 2 \cr 2 & 4\end{pmatrix}$ найдите $\mathrm{rang}$, $\mathrm{def}$, базис ядра. Самосопряжён ли оператор?  
+*Ответ:* $\mathrm{rang}=1$, $\mathrm{def}=1$, $\ker$: $x_1+2x_2=0$, базис $\begin{pmatrix}-2 \cr 1\end{pmatrix}$. Да, $A^T=A$.
 
 **4.** $A(x_1,x_2,x_3)=(x_1+x_2,\,x_2+x_3,\,0)$. Найдите матрицу и дефект.  
-*Ответ:* $A=\begin{pmatrix}1 & 1 & 0\\ 0 & 1 & 1\\ 0 & 0 & 0\end{pmatrix}$, $\mathrm{rang}=2$, $\mathrm{def}=1$.
+*Ответ:* $A=\begin{pmatrix}1 & 1 & 0 \cr 0 & 1 & 1 \cr 0 & 0 & 0\end{pmatrix}$, $\mathrm{rang}=2$, $\mathrm{def}=1$.
 
 ---
 

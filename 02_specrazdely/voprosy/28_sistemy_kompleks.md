@@ -42,7 +42,7 @@ $$
 4. Два действительных независимых решения:
 $$
 \begin{align*}
-\mathbf{x}_1(t)&=e^{\alpha t}(\mathbf{u}\cos\beta t-\mathbf{v}\sin\beta t),\\
+\mathbf{x}_1(t)&=e^{\alpha t}(\mathbf{u}\cos\beta t-\mathbf{v}\sin\beta t), \cr
 \mathbf{x}_2(t)&=e^{\alpha t}(\mathbf{u}\sin\beta t+\mathbf{v}\cos\beta t).
 \end{align*}
 $$
@@ -67,47 +67,71 @@ $$
 ## Разобранный пример
 
 $$
-A=\begin{pmatrix}0 & -1\\ 1 & 0\end{pmatrix}
+A=\begin{pmatrix}
+0 & -1 \cr
+1 & 0
+\end{pmatrix}
 \quad\bigl(x'=-y,\ y'=x\bigr).
 $$
 
 $$
-\det\begin{pmatrix}-\lambda & -1\\ 1 & -\lambda\end{pmatrix}=\lambda^{2}+1=0\Rightarrow\lambda=\pm i.
+\det\begin{pmatrix}
+-\lambda & -1 \cr
+1 & -\lambda
+\end{pmatrix}=\lambda^{2}+1=0\Rightarrow\lambda=\pm i.
 $$
 $\alpha=0$, $\beta=1$.
 
 Для $\lambda=i$:
 $$
-\begin{pmatrix}-i & -1\\ 1 & -i\end{pmatrix}\begin{pmatrix}h_1\\ h_2\end{pmatrix}=0
+\begin{pmatrix}
+-i & -1 \cr
+1 & -i
+\end{pmatrix}\begin{pmatrix}
+h_1 \cr
+h_2
+\end{pmatrix}=0
 \Rightarrow h_2=-i h_1.
 $$
-Берём $h_1=1$, $h_2=-i$. Тогда $\mathbf{h}=\begin{pmatrix}1\\ 0\end{pmatrix}+i\begin{pmatrix}0\\ -1\end{pmatrix}$, то есть
+Берём $h_1=1$, $h_2=-i$. Тогда $\mathbf{h}=\begin{pmatrix}1 \cr 0\end{pmatrix}+i\begin{pmatrix}0 \cr -1\end{pmatrix}$, то есть
 $$
-\mathbf{u}=\begin{pmatrix}1\\ 0\end{pmatrix},\qquad\mathbf{v}=\begin{pmatrix}0\\ -1\end{pmatrix}.
+\mathbf{u}=\begin{pmatrix}
+1 \cr
+0
+\end{pmatrix},\qquad\mathbf{v}=\begin{pmatrix}
+0 \cr
+-1
+\end{pmatrix}.
 $$
 
 $$
 \begin{align*}
-\mathbf{x}_1&=\mathbf{u}\cos t-\mathbf{v}\sin t=\begin{pmatrix}\cos t\\ \sin t\end{pmatrix},\\
-\mathbf{x}_2&=\mathbf{u}\sin t+\mathbf{v}\cos t=\begin{pmatrix}\sin t\\ -\cos t\end{pmatrix}.
+\mathbf{x}_1&=\mathbf{u}\cos t-\mathbf{v}\sin t=\begin{pmatrix}
+\cos t \cr
+\sin t
+\end{pmatrix}, \cr
+\mathbf{x}_2&=\mathbf{u}\sin t+\mathbf{v}\cos t=\begin{pmatrix}
+\sin t \cr
+-\cos t
+\end{pmatrix}.
 \end{align*}
 $$
 
 Общее решение:
 $$
 \begin{cases}
-x=C_1\cos t+C_2\sin t,\\
+x=C_1\cos t+C_2\sin t, \cr
 y=C_1\sin t-C_2\cos t.
 \end{cases}
 $$
 Траектории — окружности (центр в нуле).
 
-**Ещё пример:** $A=\begin{pmatrix}1 & -2\\ 1 & -1\end{pmatrix}$.
-Характеристическое: $\lambda^{2}+1=0$? Проверьте: $\det\begin{pmatrix}1-\lambda&-2\\1&-1-\lambda\end{pmatrix}=(1-\lambda)(-1-\lambda)+2=\lambda^{2}+1$. Да, $\lambda=\pm i$, $\alpha=0$, $\beta=1$. Далее — тот же алгоритм.
+**Ещё пример:** $A=\begin{pmatrix}1 & -2 \cr 1 & -1\end{pmatrix}$.
+Характеристическое: $\lambda^{2}+1=0$? Проверьте: $\det\begin{pmatrix}1-\lambda&-2 \cr 1&-1-\lambda\end{pmatrix}=(1-\lambda)(-1-\lambda)+2=\lambda^{2}+1$. Да, $\lambda=\pm i$, $\alpha=0$, $\beta=1$. Далее — тот же алгоритм.
 
 ## Практика
 
-1. Для $A=\begin{pmatrix}0 & 1\\ -1 & 0\end{pmatrix}$ найти общее решение.
+1. Для $A=\begin{pmatrix}0 & 1 \cr -1 & 0\end{pmatrix}$ найти общее решение.
 2. Что меняется, если $\lambda=2\pm 3i$?
 3. Почему достаточно одного комплексного вектора из пары $\alpha\pm i\beta$?
 4. Свести систему $x'=-y$, $y'=x$ исключением к уравнению на $x$.

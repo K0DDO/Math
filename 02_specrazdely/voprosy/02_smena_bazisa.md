@@ -111,7 +111,10 @@ $$
 **Задача.** Оператор в стандартном базисе $\mathbb{R}^2$ имеет матрицу
 
 $$
-A=\begin{pmatrix}1 & 2\\ 0 & 3\end{pmatrix}.
+A=\begin{pmatrix}
+1 & 2 \cr
+0 & 3
+\end{pmatrix}.
 $$
 
 Новый базис: $\mathbf{e}'_1=(1,0)$, $\mathbf{e}'_2=(1,1)$. Найти $A'$.
@@ -119,23 +122,47 @@ $$
 **Шаг 1. Матрица перехода.**
 
 $$
-T=\begin{pmatrix}1 & 1\\ 0 & 1\end{pmatrix},\qquad \det T=1\neq 0.
+T=\begin{pmatrix}
+1 & 1 \cr
+0 & 1
+\end{pmatrix},\qquad \det T=1\neq 0.
 $$
 
 **Шаг 2. Обратная.**
 
 $$
-T^{-1}=\begin{pmatrix}1 & -1\\ 0 & 1\end{pmatrix}.
+T^{-1}=\begin{pmatrix}
+1 & -1 \cr
+0 & 1
+\end{pmatrix}.
 $$
 
 **Шаг 3. Произведение.**
 
 $$
-AT=\begin{pmatrix}1 & 2\\ 0 & 3\end{pmatrix}\begin{pmatrix}1 & 1\\ 0 & 1\end{pmatrix}=\begin{pmatrix}1 & 3\\ 0 & 3\end{pmatrix},
+AT=\begin{pmatrix}
+1 & 2 \cr
+0 & 3
+\end{pmatrix}\begin{pmatrix}
+1 & 1 \cr
+0 & 1
+\end{pmatrix}=\begin{pmatrix}
+1 & 3 \cr
+0 & 3
+\end{pmatrix},
 $$
 
 $$
-A'=T^{-1}(AT)=\begin{pmatrix}1 & -1\\ 0 & 1\end{pmatrix}\begin{pmatrix}1 & 3\\ 0 & 3\end{pmatrix}=\begin{pmatrix}1 & 0\\ 0 & 3\end{pmatrix}.
+A'=T^{-1}(AT)=\begin{pmatrix}
+1 & -1 \cr
+0 & 1
+\end{pmatrix}\begin{pmatrix}
+1 & 3 \cr
+0 & 3
+\end{pmatrix}=\begin{pmatrix}
+1 & 0 \cr
+0 & 3
+\end{pmatrix}.
 $$
 
 **Проверка.** $\mathrm{tr}\,A=4=\mathrm{tr}\,A'$, $\det A=3=\det A'$. Заметим: новый базис оказался собственным ($\lambda=1$ и $\lambda=3$), поэтому $A'$ диагональна — это нормально и ожидаемо.
@@ -146,14 +173,14 @@ $$
 
 ## Практика
 
-**1.** $A=\begin{pmatrix}2 & 0\\ 0 & 5\end{pmatrix}$, новый базис $\mathbf{e}'_1=(1,1)$, $\mathbf{e}'_2=(-1,1)$ (координаты в старом). Найдите $A'$.  
-*Эскиз:* $T=\begin{pmatrix}1 & -1\\ 1 & 1\end{pmatrix}$, $T^{-1}=\frac12\begin{pmatrix}1 & 1\\ -1 & 1\end{pmatrix}$, $A'=T^{-1}AT=\begin{pmatrix}7/2 & -3/2\\ -3/2 & 7/2\end{pmatrix}$ (проверка: след $7$).
+**1.** $A=\begin{pmatrix}2 & 0 \cr 0 & 5\end{pmatrix}$, новый базис $\mathbf{e}'_1=(1,1)$, $\mathbf{e}'_2=(-1,1)$ (координаты в старом). Найдите $A'$.  
+*Эскиз:* $T=\begin{pmatrix}1 & -1 \cr 1 & 1\end{pmatrix}$, $T^{-1}=\frac12\begin{pmatrix}1 & 1 \cr -1 & 1\end{pmatrix}$, $A'=T^{-1}AT=\begin{pmatrix}7/2 & -3/2 \cr -3/2 & 7/2\end{pmatrix}$ (проверка: след $7$).
 
 **2.** Докажите, что если $A'=T^{-1}AT$, то $\det(A'-\lambda E)=\det(A-\lambda E)$.  
 *Эскиз:* $A'-\lambda E=T^{-1}(A-\lambda E)T$, определители перемножаются.
 
-**3.** Матрица перехода $T=\begin{pmatrix}1 & 1\\ 0 & 1\end{pmatrix}$, $A=\begin{pmatrix}0 & -1\\ 1 & 0\end{pmatrix}$ (поворот на $90^\circ$). Найдите $A'$.  
-*Ответ:* $A'=\begin{pmatrix}1 & -2\\ 1 & -1\end{pmatrix}$ (проверить умножением; след $0$, $\det=1$).
+**3.** Матрица перехода $T=\begin{pmatrix}1 & 1 \cr 0 & 1\end{pmatrix}$, $A=\begin{pmatrix}0 & -1 \cr 1 & 0\end{pmatrix}$ (поворот на $90^\circ$). Найдите $A'$.  
+*Ответ:* $A'=\begin{pmatrix}1 & -2 \cr 1 & -1\end{pmatrix}$ (проверить умножением; след $0$, $\det=1$).
 
 **4.** Верно ли, что любая матрица, подобная $E$, равна $E$?  
 *Ответ:* да, $T^{-1}ET=E$.

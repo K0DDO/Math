@@ -71,34 +71,58 @@ $$
 ## Разобранный пример
 
 $$
-A=\begin{pmatrix}2 & -1\\ 1 & 0\end{pmatrix}.
+A=\begin{pmatrix}
+2 & -1 \cr
+1 & 0
+\end{pmatrix}.
 $$
 
 $$
-\det\begin{pmatrix}2-\lambda & -1\\ 1 & -\lambda\end{pmatrix}
+\det\begin{pmatrix}
+2-\lambda & -1 \cr
+1 & -\lambda
+\end{pmatrix}
 =\lambda^{2}-2\lambda+1=(\lambda-1)^{2}=0.
 $$
 $\lambda=1$ кратности 2.
 
-$(A-E)\mathbf{h}=\begin{pmatrix}1 & -1\\ 1 & -1\end{pmatrix}\mathbf{h}=0$ ⇒ $h_1=h_2$. Берём $\mathbf{h}=\begin{pmatrix}1\\ 1\end{pmatrix}$.
+$(A-E)\mathbf{h}=\begin{pmatrix}1 & -1 \cr 1 & -1\end{pmatrix}\mathbf{h}=0$ ⇒ $h_1=h_2$. Берём $\mathbf{h}=\begin{pmatrix}1 \cr 1\end{pmatrix}$.
 
 Второй независимый собственный вектор нет (ранг $A-E$ равен 1).
 
-Ищем $\mathbf{g}=\begin{pmatrix}g_1\\ g_2\end{pmatrix}$:
+Ищем $\mathbf{g}=\begin{pmatrix}g_1 \cr g_2\end{pmatrix}$:
 $$
-\begin{pmatrix}1 & -1\\ 1 & -1\end{pmatrix}\begin{pmatrix}g_1\\ g_2\end{pmatrix}=\begin{pmatrix}1\\ 1\end{pmatrix}
+\begin{pmatrix}
+1 & -1 \cr
+1 & -1
+\end{pmatrix}\begin{pmatrix}
+g_1 \cr
+g_2
+\end{pmatrix}=\begin{pmatrix}
+1 \cr
+1
+\end{pmatrix}
 \Rightarrow g_1-g_2=1.
 $$
-Берём $g_2=0$, $g_1=1$, то есть $\mathbf{g}=\begin{pmatrix}1\\ 0\end{pmatrix}$.
+Берём $g_2=0$, $g_1=1$, то есть $\mathbf{g}=\begin{pmatrix}1 \cr 0\end{pmatrix}$.
 
 Общее решение:
 $$
-\mathbf{x}=C_1\begin{pmatrix}1\\ 1\end{pmatrix}e^{t}
-+C_2\left(\begin{pmatrix}1\\ 1\end{pmatrix}t+\begin{pmatrix}1\\ 0\end{pmatrix}\right)e^{t},
+\mathbf{x}=C_1\begin{pmatrix}
+1 \cr
+1
+\end{pmatrix}e^{t}
++C_2\left(\begin{pmatrix}
+1 \cr
+1
+\end{pmatrix}t+\begin{pmatrix}
+1 \cr
+0
+\end{pmatrix}\right)e^{t},
 $$
 $$
 \begin{cases}
-x=(C_1+C_2 t+C_2)e^{t}=(C_1+C_2+C_2 t)e^{t},\\
+x=(C_1+C_2 t+C_2)e^{t}=(C_1+C_2+C_2 t)e^{t}, \cr
 y=(C_1+C_2 t)e^{t}.
 \end{cases}
 $$
@@ -106,8 +130,8 @@ $$
 
 ## Практика
 
-1. $A=\begin{pmatrix}1 & 1\\ 0 & 1\end{pmatrix}$ — найти общее решение.
-2. $A=\begin{pmatrix}3 & 0\\ 0 & 3\end{pmatrix}$ — какой случай?
+1. $A=\begin{pmatrix}1 & 1 \cr 0 & 1\end{pmatrix}$ — найти общее решение.
+2. $A=\begin{pmatrix}3 & 0 \cr 0 & 3\end{pmatrix}$ — какой случай?
 3. Почему уравнение $(A-\lambda E)\mathbf{g}=\mathbf{h}$ обязательно совместно, если $\mathbf{h}$ — собственный и клетка жорданова?
 4. Сравнить вид решения с кратным корнем у скалярного ДУ $y''-2y'+y=0$.
 

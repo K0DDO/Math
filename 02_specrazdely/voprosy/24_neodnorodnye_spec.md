@@ -76,7 +76,7 @@ $$
 
 $$
 \begin{align*}
-y_{\mathrm{ч}}'&=A(2x e^{x}+x^{2}e^{x})=A(x^{2}+2x)e^{x},\\
+y_{\mathrm{ч}}'&=A(2x e^{x}+x^{2}e^{x})=A(x^{2}+2x)e^{x}, \cr
 y_{\mathrm{ч}}''&=A(2x+2+x^{2}+2x)e^{x}=A(x^{2}+4x+2)e^{x}.
 \end{align*}
 $$

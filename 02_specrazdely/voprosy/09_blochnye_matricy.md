@@ -10,7 +10,10 @@
 
 **Блочная матрица** — матрица, мысленно (или явно) разрезанная на блоки:
 
-$$M=\begin{pmatrix}A & B \\ C & D\end{pmatrix}.$$
+$$M=\begin{pmatrix}
+A & B \cr
+C & D
+\end{pmatrix}.$$
 
 Здесь $A,B,C,D$ сами матрицы подходящих размеров. Например, $A$ размера $m\times m$, $D$ — $n\times n$, тогда $B$ — $m\times n$, $C$ — $n\times m$, а вся $M$ — $(m+n)\times(m+n)$.
 
@@ -26,19 +29,49 @@ $$M=\begin{pmatrix}A & B \\ C & D\end{pmatrix}.$$
 
 Если разбиения одинаковы,
 
-$$\begin{pmatrix}A & B \\ C & D\end{pmatrix}+\begin{pmatrix}A' & B' \\ C' & D'\end{pmatrix}=\begin{pmatrix}A+A' & B+B' \\ C+C' & D+D'\end{pmatrix},$$
+$$\begin{pmatrix}
+A & B \cr
+C & D
+\end{pmatrix}+\begin{pmatrix}
+A' & B' \cr
+C' & D'
+\end{pmatrix}=\begin{pmatrix}
+A+A' & B+B' \cr
+C+C' & D+D'
+\end{pmatrix},$$
 
-$$\lambda\begin{pmatrix}A & B \\ C & D\end{pmatrix}=\begin{pmatrix}\lambda A & \lambda B \\ \lambda C & \lambda D\end{pmatrix}.$$
+$$\lambda\begin{pmatrix}
+A & B \cr
+C & D
+\end{pmatrix}=\begin{pmatrix}
+\lambda A & \lambda B \cr
+\lambda C & \lambda D
+\end{pmatrix}.$$
 
 ### Умножение
 
-$$\begin{pmatrix}A & B \\ C & D\end{pmatrix}\begin{pmatrix}P & Q \\ R & S\end{pmatrix}=\begin{pmatrix}AP+BR & AQ+BS \\ CP+DR & CQ+DS\end{pmatrix}.$$
+$$\begin{pmatrix}
+A & B \cr
+C & D
+\end{pmatrix}\begin{pmatrix}
+P & Q \cr
+R & S
+\end{pmatrix}=\begin{pmatrix}
+AP+BR & AQ+BS \cr
+CP+DR & CQ+DS
+\end{pmatrix}.$$
 
 Правило как у чисел $2\times 2$, но **порядок сомножителей в произведениях блоков важен**: $AP\neq PA$ вообще говоря. Размеры должны позволять каждое произведение ($A$ и $P$, $B$ и $R$, …).
 
 ### Транспонирование
 
-$$\begin{pmatrix}A & B \\ C & D\end{pmatrix}^T=\begin{pmatrix}A^T & C^T \\ B^T & D^T\end{pmatrix}.$$
+$$\begin{pmatrix}
+A & B \cr
+C & D
+\end{pmatrix}^T=\begin{pmatrix}
+A^T & C^T \cr
+B^T & D^T
+\end{pmatrix}.$$
 
 Блоки меняются местами «относительно диагонали» и каждый транспонируется.
 
@@ -46,7 +79,10 @@ $$\begin{pmatrix}A & B \\ C & D\end{pmatrix}^T=\begin{pmatrix}A^T & C^T \\ B^T &
 
 Если $A$ обратима,
 
-$$\det\begin{pmatrix}A & B \\ C & D\end{pmatrix}=\det A\cdot\det(D-CA^{-1}B).$$
+$$\det\begin{pmatrix}
+A & B \cr
+C & D
+\end{pmatrix}=\det A\cdot\det(D-CA^{-1}B).$$
 
 Матрица $D-CA^{-1}B$ называется **дополнением Шура** блока $A$. Есть симметричный вариант при обратимом $D$.
 
@@ -54,11 +90,17 @@ $$\det\begin{pmatrix}A & B \\ C & D\end{pmatrix}=\det A\cdot\det(D-CA^{-1}B).$$
 
 Частый полезный факт:
 
-$$\begin{pmatrix}E & X \\ O & E\end{pmatrix}^{-1}=\begin{pmatrix}E & -X \\ O & E\end{pmatrix}.$$
+$$\begin{pmatrix}
+E & X \cr
+O & E
+\end{pmatrix}^{-1}=\begin{pmatrix}
+E & -X \cr
+O & E
+\end{pmatrix}.$$
 
 Проверка: произведение даёт $E$.
 
-Для общего $\begin{pmatrix}A & B \\ C & D\end{pmatrix}$ обратная выражается через дополнения Шура (на экзамене чаще просят идею или простой случай).
+Для общего $\begin{pmatrix}A & B \cr C & D\end{pmatrix}$ обратная выражается через дополнения Шура (на экзамене чаще просят идею или простой случай).
 
 ## Как решать / алгоритм
 
@@ -72,24 +114,36 @@ $$\begin{pmatrix}E & X \\ O & E\end{pmatrix}^{-1}=\begin{pmatrix}E & -X \\ O & E
 
 **Умножение.** Пусть
 
-$$M=\begin{pmatrix}E & A \\ O & E\end{pmatrix},\qquad N=\begin{pmatrix}E & B \\ O & E\end{pmatrix}.$$
+$$M=\begin{pmatrix}
+E & A \cr
+O & E
+\end{pmatrix},\qquad N=\begin{pmatrix}
+E & B \cr
+O & E
+\end{pmatrix}.$$
 
 Тогда
 
-$$MN=\begin{pmatrix}E\cdot E+A\cdot O & E\cdot B+A\cdot E \\ O\cdot E+E\cdot O & O\cdot B+E\cdot E\end{pmatrix}=\begin{pmatrix}E & A+B \\ O & E\end{pmatrix}.$$
+$$MN=\begin{pmatrix}
+E\cdot E+A\cdot O & E\cdot B+A\cdot E \cr
+O\cdot E+E\cdot O & O\cdot B+E\cdot E
+\end{pmatrix}=\begin{pmatrix}
+E & A+B \cr
+O & E
+\end{pmatrix}.$$
 
 Интерпретация: «сдвиги» складываются.
 
-**Транспонирование.** $\begin{pmatrix}A & B \\ O & D\end{pmatrix}^T=\begin{pmatrix}A^T & O \\ B^T & D^T\end{pmatrix}$.
+**Транспонирование.** $\begin{pmatrix}A & B \cr O & D\end{pmatrix}^T=\begin{pmatrix}A^T & O \cr B^T & D^T\end{pmatrix}$.
 
-**Определитель.** Для верхнетреугольной блочной $\begin{pmatrix}A & B \\ O & D\end{pmatrix}$ имеем $\det=\det A\cdot\det D$ (как частный случай Шура при $C=O$).
+**Определитель.** Для верхнетреугольной блочной $\begin{pmatrix}A & B \cr O & D\end{pmatrix}$ имеем $\det=\det A\cdot\det D$ (как частный случай Шура при $C=O$).
 
 ## Практика
 
-1. Вычислить $\begin{pmatrix}I & A \\ O & I\end{pmatrix}\begin{pmatrix}I & B \\ O & I\end{pmatrix}$.
-2. Найти обратную к $\begin{pmatrix}I & X \\ O & I\end{pmatrix}$.
-3. Проверить согласованность: можно ли умножить $\begin{pmatrix}A_{2\times 2} & B_{2\times 3} \\ C_{1\times 2} & D_{1\times 3}\end{pmatrix}$ на себя? (Ответ: нет — размеры «не квадратные» согласованно для такого же разбиения.)
-4. По формуле Шура оценить идею вычисления $\det\begin{pmatrix}2 & 1 & 0 \\ 1 & 2 & 1 \\ 0 & 1 & 3\end{pmatrix}$ с блоком $A=\begin{pmatrix}2 & 1 \\ 1 & 2\end{pmatrix}$.
+1. Вычислить $\begin{pmatrix}I & A \cr O & I\end{pmatrix}\begin{pmatrix}I & B \cr O & I\end{pmatrix}$.
+2. Найти обратную к $\begin{pmatrix}I & X \cr O & I\end{pmatrix}$.
+3. Проверить согласованность: можно ли умножить $\begin{pmatrix}A_{2\times 2} & B_{2\times 3} \cr C_{1\times 2} & D_{1\times 3}\end{pmatrix}$ на себя? (Ответ: нет — размеры «не квадратные» согласованно для такого же разбиения.)
+4. По формуле Шура оценить идею вычисления $\det\begin{pmatrix}2 & 1 & 0 \cr 1 & 2 & 1 \cr 0 & 1 & 3\end{pmatrix}$ с блоком $A=\begin{pmatrix}2 & 1 \cr 1 & 2\end{pmatrix}$.
 
 ## Что сказать устно за 1 минуту
 

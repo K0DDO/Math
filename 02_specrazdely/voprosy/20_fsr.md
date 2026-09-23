@@ -60,7 +60,10 @@ $$
 
 Частные решения: $y_1=e^{x}$, $y_2=e^{-x}$.
 $$
-W=\begin{vmatrix} e^{x} & e^{-x} \\ e^{x} & -e^{-x} \end{vmatrix}=-1-1=-2\neq 0.
+W=\begin{vmatrix}
+e^{x} & e^{-x} \cr
+e^{x} & -e^{-x}
+\end{vmatrix}=-1-1=-2\neq 0.
 $$
 Значит, это ФСР. Общее решение:
 $$
@@ -70,7 +73,10 @@ $$
 
 Задача Коши $y(0)=1$, $y'(0)=0$:
 $$
-\begin{cases} C_1+C_2=1,\\ C_1-C_2=0 \end{cases}
+\begin{cases}
+C_1+C_2=1, \cr
+C_1-C_2=0
+\end{cases}
 \Rightarrow C_1=C_2=\tfrac12 \Rightarrow y=\cosh x.
 $$
 

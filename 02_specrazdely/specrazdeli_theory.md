@@ -45,7 +45,7 @@ $$A(x+y)=A(x)+A(y),\quad A(\alpha x)=\alpha A(x)\quad\forall x,y\in V,\ \alpha\i
 
 $$A e_j = \sum_{i=1}^n a_{ij} e_i,\quad A = (a_{ij})_{n\times n}.$$
 
-Тогда для $x$ с столбцом $X$: $Y = A X$, где $Y$ — координаты $A x$. Правило: «последовательно применяем к базисным векторам, результаты — в столбцы слева направо». Пример в базисе $e_1=(1,0), e_2=(0,1)$ для $A(x_1,x_2)=(2x_1+x_2,\;x_1-x_2)$ матрица $\begin{pmatrix}2 & 1 \\ 1 & -1\end{pmatrix}$.
+Тогда для $x$ с столбцом $X$: $Y = A X$, где $Y$ — координаты $A x$. Правило: «последовательно применяем к базисным векторам, результаты — в столбцы слева направо». Пример в базисе $e_1=(1,0), e_2=(0,1)$ для $A(x_1,x_2)=(2x_1+x_2,\;x_1-x_2)$ матрица $\begin{pmatrix}2 & 1 \cr 1 & -1\end{pmatrix}$.
 
 **Ядро и образ.** 
 - $\ker A =\{x: Ax=0\}$ — подпространство. Размерность $k=\dim\ker A$ — **дефект** $def A$.
@@ -73,7 +73,7 @@ $$A_{e'} = C^{-1} A_e C.$$
 
 **Смысл:** меняем точку зрения, но оператор тот же. Определитель и след сохраняются: $\det A_{e'}=\det A_e$, $\mathrm{tr} A_{e'}=\mathrm{tr} A_e$ — инварианты.
 
-*Пример:* поворот на $90^\circ$ в стандартном базисе $\begin{pmatrix}0 & -1 \\ 1 & 0\end{pmatrix}$, в базисе из собственных (комплексных) — диагонален.
+*Пример:* поворот на $90^\circ$ в стандартном базисе $\begin{pmatrix}0 & -1 \cr 1 & 0\end{pmatrix}$, в базисе из собственных (комплексных) — диагонален.
 
 Доказательство — из $Y = A X$, $Y=CY'$, $X=CX'$ $\Rightarrow$ $C Y' = A C X'$ $\Rightarrow$ $Y' = C^{-1} AC X'$.
 
@@ -116,7 +116,11 @@ $$\det(A-\lambda E)=0.$$
 
 Если собственный базис $f_1,...,f_n$, $A f_i =\lambda_i f_i$, то в нём матрица **диагональна**:
 
-$$A_f = \mathrm{diag}(\lambda_1,\lambda_2,...,\lambda_n)= \begin{pmatrix}\lambda_1 &  & 0 \\  & \ddots &  \\ 0 &  & \lambda_n\end{pmatrix}.$$
+$$A_f = \mathrm{diag}(\lambda_1,\lambda_2,...,\lambda_n)= \begin{pmatrix}
+\lambda_1 &  & 0 \cr
+& \ddots & \cr
+0 &  & \lambda_n
+\end{pmatrix}.$$
 
 Обратно, диагональная матрица означает, что базисные векторы — собственные.
 
@@ -142,7 +146,7 @@ $$Q(x)=\sum_{i=1}^n a_{ii}x_i^2 + 2\sum_{i<j} a_{ij}x_i x_j,$$
 - на диагонали — коэффициенты при $x_i^2$,
 - $a_{ij}=a_{ji}= (\text{коэфф. при }x_i x_j)/2$, занимает два симметричных места.
 
-Пример $Q=2x_1^2-4x_1x_2+5x_2^2$: $A=\begin{pmatrix}2 & -2 \\ -2 & 5\end{pmatrix}$. Ранг — ранг $A$, дискриминант $\det A$.
+Пример $Q=2x_1^2-4x_1x_2+5x_2^2$: $A=\begin{pmatrix}2 & -2 \cr -2 & 5\end{pmatrix}$. Ранг — ранг $A$, дискриминант $\det A$.
 
 **Диагонализация с помощью собственных чисел .** Так как $A$ симметрична, существует ортогональная $U$ ($U^T U=E$) из собственных векторов, что
 
@@ -205,7 +209,7 @@ $$Q = \frac{\Delta_1}{\Delta_0} y_1^2 + \frac{\Delta_2}{\Delta_1} y_2^2 + ... + 
 - $Q$ отрицательно определена $\iff$ знаки чередуются: $\Delta_1<0,\ \Delta_2>0,\ \Delta_3<0,...$ $((-1)^k\Delta_k>0)$.
 - Если какой-то $\Delta_k=0$ или условие нарушено — нужна дополнительная проверка (Сильвестр не даёт ответа для полуопределённости). Тогда смотрят на другие миноры или приводят к канону.
 
-*Пример:* $A=\begin{pmatrix}2 & -1 \\ -1 & 2\end{pmatrix}$, $\Delta_1=2>0$, $\Delta_2=3>0$ → положительно определена.
+*Пример:* $A=\begin{pmatrix}2 & -1 \cr -1 & 2\end{pmatrix}$, $\Delta_1=2>0$, $\Delta_2=3>0$ → положительно определена.
 
 Следствие — определитель положительно определённой $>0$.
 
@@ -223,7 +227,7 @@ $$a_{11}x^2+2a_{12}xy+a_{22}y^2+2a_{13}x+2a_{23}y+a_{33}=0,$$
 1. Выписываем $A$ квадратичной части.
 2. Находим собственные числа $\lambda_1,\lambda_2$ и ортонормированные собственные векторы — матрица $U$.
 3. Поворот $X = U X'$ (ортогональное преобразование, убирает $x'y'$): уравнение становится
- $$\lambda_1 x'^2+\lambda_2 y'^2 + 2b'_1 x' +2b'_2 y' +c=0,$$
+$$\lambda_1 x'^2+\lambda_2 y'^2 + 2b'_1 x' +2b'_2 y' +c=0,$$
 
  где $(b'_1,b'_2)= B^T U$.
 4. Выделяем полные квадраты (сдвиг начала координат) по $x',y'$ — параллельный перенос.
@@ -241,19 +245,31 @@ $$a_{11}x^2+2a_{12}xy+a_{22}y^2+2a_{13}x+2a_{23}y+a_{33}=0,$$
 
 **Блочная (клеточная) матрица** — матрица, разбитая на подматрицы-блоки:
 
-$$M = \begin{pmatrix}A & B \\ C & D\end{pmatrix},\quad A\ (m\times m),\ D\ (n\times n) \text{ и т.д.}$$
+$$M = \begin{pmatrix}
+A & B \cr
+C & D
+\end{pmatrix},\quad A\ (m\times m),\ D\ (n\times n) \text{ и т.д.}$$
 
 Главное — разбиение согласовано для операций.
 
 **Операции:** если блоки согласованы по размерам, с ними работают как с числами, но с учётом некоммутативности умножения.
 
-- Сложение: $\begin{pmatrix}A & B \\ C & D\end{pmatrix}+\begin{pmatrix}A' & B' \\ C' & D'\end{pmatrix}= \begin{pmatrix}A+A' & B+B' \\ C+C' & D+D'\end{pmatrix}$.
-- Умножение на число: $\lambda M = \begin{pmatrix}\lambda A & \lambda B \\ \lambda C & \lambda D\end{pmatrix}$.
+- Сложение: $\begin{pmatrix}A & B \cr C & D\end{pmatrix}+\begin{pmatrix}A' & B' \cr C' & D'\end{pmatrix}= \begin{pmatrix}A+A' & B+B' \cr C+C' & D+D'\end{pmatrix}$.
+- Умножение на число: $\lambda M = \begin{pmatrix}\lambda A & \lambda B \cr \lambda C & \lambda D\end{pmatrix}$.
 - Умножение: 
- $$\begin{pmatrix}A & B \\ C & D\end{pmatrix}\begin{pmatrix}P & Q \\ R & S\end{pmatrix}= \begin{pmatrix}AP+BR & AQ+BS \\ CP+DR & CQ+DS\end{pmatrix},$$
+$$\begin{pmatrix}
+A & B \cr
+C & D
+\end{pmatrix}\begin{pmatrix}
+P & Q \cr
+R & S
+\end{pmatrix}= \begin{pmatrix}
+AP+BR & AQ+BS \cr
+CP+DR & CQ+DS
+\end{pmatrix},$$
 
  требуется совместимость $A_{m\times k} P_{k\times p}$ и тд. Порядок важен!
-- Транспонирование: $\begin{pmatrix}A & B \\ C & D\end{pmatrix}^T = \begin{pmatrix}A^T & C^T \\ B^T & D^T\end{pmatrix}$.
+- Транспонирование: $\begin{pmatrix}A & B \cr C & D\end{pmatrix}^T = \begin{pmatrix}A^T & C^T \cr B^T & D^T\end{pmatrix}$.
 - Определитель (при $A$ невырождена): $\det M = \det A\cdot\det(D-CA^{-1}B)$ — формула Шура.
 - Обратная (блочная): при способах — через дополнения, часто используют метод Гаусса по блокам.
 
@@ -272,7 +288,7 @@ $$M = \begin{pmatrix}A & B \\ C & D\end{pmatrix},\quad A\ (m\times m),\ D\ (n\ti
 3. **Проверяем количество:** всего получено $k$ векторов. Если $k=n$ — они образуют собственный базис (линейно независимы, т.к. для разных $\lambda$ — автоматически). Если $k<n$ — собственного базиса нет, оператор дефектен (жорданова форма).
 4. **Формируем матрицу $C$** из векторов-столбцов $C=(f_1|...|f_n)$, тогда $C^{-1}AC = \mathrm{diag}(\lambda_i)$ (с учётом кратности). Для симметричной матрицы дополнительно ортонормируем — получаем ортогональный собственный базис $U$.
 
-*Пример:* $A=\begin{pmatrix}2 & 1 \\ 1 & 2\end{pmatrix}$, $p=(2-\lambda)^2-1=0$, $\lambda_1=1,\lambda_2=3$, $f_1=(1,-1)^T$, $f_2=(1,1)^T$ — собственный базис $\mathbb R^2$.
+*Пример:* $A=\begin{pmatrix}2 & 1 \cr 1 & 2\end{pmatrix}$, $p=(2-\lambda)^2-1=0$, $\lambda_1=1,\lambda_2=3$, $f_1=(1,-1)^T$, $f_2=(1,1)^T$ — собственный базис $\mathbb R^2$.
 
 Если матрица $3\times3$ с $\lambda=2$ кратности 2 и нашли 2 независимых вектора — дополняем третьим для $\lambda_3$.
 
@@ -396,7 +412,7 @@ $$y' + P(x)y = Q(x)y^n,\quad n\neq0,1.$$
 **Метод:**
 1. Делим на $y^n$: $y^{-n}y' +P y^{1-n}=Q$.
 2. Замена $z = y^{1-n}$, тогда $z'=(1-n)y^{-n}y'$ → получаем линейное:
- $$z' + (1-n)P(x)z = (1-n)Q(x).$$
+$$z' + (1-n)P(x)z = (1-n)Q(x).$$
 
  Решаем как линейное, возвращаемся $y = z^{1/(1-n)}$.
 
@@ -415,7 +431,10 @@ $$y' + P(x)y = Q(x)y^n,\quad n\neq0,1.$$
 **Нахождение огибающей:**
 Система
 
-$$\begin{cases}\Phi(x,y,C)=0\\ \partial\Phi/\partial C =0\end{cases}$$
+$$\begin{cases}
+\Phi(x,y,C)=0 \cr
+\partial\Phi/\partial C =0
+\end{cases}$$
 
 Исключаем $C$ — получаем $C$-дискриминантную кривую. Из неё отбирают огибающую (проверяют, что удовлетворяет ДУ и не содержится в общем решении). Также есть $p$-дискриминант: $F(x,y,p)=0$, $F_p=0$ с $p=y'$.
 
@@ -483,9 +502,9 @@ $$L[\alpha y_1+\beta y_2]= \alpha L[y_1]+\beta L[y_2].$$
 **Определитель Вронского (вронскиан):**
 
 $$W(y_1,...,y_n)= \begin{vmatrix}
-y_1 & y_2 & ... & y_n\\
-y'_1 & y'_2 & ... & y'_n\\
-\vdots &&&\vdots\\
+y_1 & y_2 & ... & y_n \cr
+y'_1 & y'_2 & ... & y'_n \cr
+\vdots &&&\vdots \cr
 y_1^{(n-1)}&...&y_n^{(n-1)}
 \end{vmatrix}.$$
 
@@ -554,9 +573,9 @@ $$y_{о.н.} = y_{о.о.} + y_{ч.н.},$$
 Получают систему для $C'_i$:
 
 $$\begin{cases}
-C'_1 y_1 +...+C'_n y_n =0\\
-C'_1 y'_1 +...+C'_n y'_n =0\\
-\vdots\\
+C'_1 y_1 +...+C'_n y_n =0 \cr
+C'_1 y'_1 +...+C'_n y'_n =0 \cr
+\vdots \cr
 C'_1 y_1^{(n-1)}+...+C'_n y_n^{(n-1)}=g
 \end{cases}$$
 
@@ -565,7 +584,7 @@ C'_1 y_1^{(n-1)}+...+C'_n y_n^{(n-1)}=g
 Для $n=2$:
 
 $$\begin{cases}
-C'_1 y_1 + C'_2 y_2 =0\\
+C'_1 y_1 + C'_2 y_2 =0 \cr
 C'_1 y'_1 + C'_2 y'_2 = g
 \end{cases}\Rightarrow C'_1= -y_2 g/W,\ C'_2= y_1 g/W,\ W=y_1y'_2-y'_1y_2.$$
 
@@ -611,7 +630,7 @@ $$k^n + a_{n-1}k^{n-1}+...+a_1 k + a_0 =0.$$
 - Считаем $ \gamma = \alpha + i\beta$ (комплексное число).
 - Находим, сколько раз $\gamma$ является корнем характеристического уравнения — кратность $s$ ($s=0$ если не корень, $s=1$ если простой, $s=2$ и т.д.).
 - Частное ищем в виде
- $$y_{ч.н.}= x^s e^{\alpha x}\big(R_l(x)\cos\beta x + S_l(x)\sin\beta x\big),$$
+$$y_{ч.н.}= x^s e^{\alpha x}\big(R_l(x)\cos\beta x + S_l(x)\sin\beta x\big),$$
 
  где $l=\max(m,n)$, $R_l,S_l$ — многочлены степени $l$ с неопределёнными коэффициентами.
 
@@ -637,8 +656,8 @@ $$k^n + a_{n-1}k^{n-1}+...+a_1 k + a_0 =0.$$
 **Нормальная система** (разрешённая относительно производных):
 
 $$\begin{cases}
-x'_1 = f_1(t,x_1,...,x_n)\\
-...\\
+x'_1 = f_1(t,x_1,...,x_n) \cr
+... \cr
 x'_n = f_n(t,x_1,...,x_n)
 \end{cases},\quad ' = d/dt,$$
 
@@ -665,7 +684,7 @@ x'_n = f_n(t,x_1,...,x_n)
 
 **Векторно-матричная запись:** $\mathbf{x}' = A\mathbf{x}$, где $A$ $n\times n$ постоянная, $\mathbf{x}=(x_1,...,x_n)^T$.
 
-Для $n=2$: $\begin{pmatrix}x' \\ y'\end{pmatrix}= \begin{pmatrix}a_{11} & a_{12} \\ a_{21} & a_{22}\end{pmatrix}\begin{pmatrix}x \\ y\end{pmatrix}$.
+Для $n=2$: $\begin{pmatrix}x' \cr y'\end{pmatrix}= \begin{pmatrix}a_{11} & a_{12} \cr a_{21} & a_{22}\end{pmatrix}\begin{pmatrix}x \cr y\end{pmatrix}$.
 
 **Решение через собственные числа (простые корни характеристического уравнения).**
 
@@ -677,7 +696,7 @@ x'_n = f_n(t,x_1,...,x_n)
 
 Общее: $\mathbf{x}(t)= C_1 h_1 e^{\lambda_1 t}+...+C_n h_n e^{\lambda_n t}$.
 
-*Пример:* $A=\begin{pmatrix}1 & 2 \\ 2 & 1\end{pmatrix}$, $\lambda_1=3, h_1=(1,1)$, $\lambda_2=-1, h_2=(1,-1)$ → $x=C_1 e^{3t}+C_2 e^{-t}$, $y=C_1 e^{3t}-C_2 e^{-t}$.
+*Пример:* $A=\begin{pmatrix}1 & 2 \cr 2 & 1\end{pmatrix}$, $\lambda_1=3, h_1=(1,1)$, $\lambda_2=-1, h_2=(1,-1)$ → $x=C_1 e^{3t}+C_2 e^{-t}$, $y=C_1 e^{3t}-C_2 e^{-t}$.
 
 Проверка — подстановкой.
 
@@ -697,7 +716,7 @@ x'_n = f_n(t,x_1,...,x_n)
 
 Общее $ \mathbf{x}=C_1 h e^{\lambda t}+ C_2 (h t+g)e^{\lambda t}$.
 
-*Пример:* $A=\begin{pmatrix}2 & -1 \\ 1 & 0\end{pmatrix}$, $\lambda=1$ двукратный, $h=(1,1)$, $g=(1,0)$ → $x=(C_1+C_2 t)e^t$, ...
+*Пример:* $A=\begin{pmatrix}2 & -1 \cr 1 & 0\end{pmatrix}$, $\lambda=1$ двукратный, $h=(1,1)$, $g=(1,0)$ → $x=(C_1+C_2 t)e^t$, ...
 
 Для $n>2$ аналогично строят цепочки Жордана длины $m$.
 
@@ -717,7 +736,7 @@ $$\mathbf{x}_1 = e^{\alpha t}(u\cos\beta t - v\sin\beta t),\quad \mathbf{x}_2 = 
 
 Общее: $\mathbf{x}= C_1\mathbf{x}_1 + C_2\mathbf{x}_2$.
 
-*Пример:* $A=\begin{pmatrix}0 & -1 \\ 1 & 0\end{pmatrix}$, $\lambda=\pm i$, $h=(1,-i)$ → $x=C_1\cos t+C_2\sin t$, $y=C_1\sin t -C_2\cos t$ (окружности).
+*Пример:* $A=\begin{pmatrix}0 & -1 \cr 1 & 0\end{pmatrix}$, $\lambda=\pm i$, $h=(1,-i)$ → $x=C_1\cos t+C_2\sin t$, $y=C_1\sin t -C_2\cos t$ (окружности).
 
 При кратном комплексном — аналогично с $t$.
 
