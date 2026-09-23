@@ -38,7 +38,7 @@ $$\begin{pmatrix} A & B \\\\ C & D \end{pmatrix}\begin{pmatrix} P & Q \\\\ R & S
 
 ### Транспонирование
 
-$$\begin{pmatrix} A & B \\\\ C & D \end{pmatrix}^{\mathrm{T}}=\begin{pmatrix} A^{\mathrm{T}} & C^{\mathrm{T}} \\\\ B^{\mathrm{T}} & D^{\mathrm{T}} \end{pmatrix}.$$
+$$\begin{pmatrix} A & B \\\\ C & D \end{pmatrix}^{\top}=\begin{pmatrix} A^{\top} & C^{\top} \\\\ B^{\top} & D^{\top} \end{pmatrix}.$$
 
 Блоки меняются местами «относительно диагонали» и каждый транспонируется. ([урок](https://mathprofi.ru/svoistva_operacij_nad_matricami_matrichnye_vyrazheniya.html))
 
@@ -86,7 +86,7 @@ $$MN=\begin{pmatrix} E\cdot E+A\cdot O & E\cdot B+A\cdot E \\\\ O\cdot E+E\cdot 
 
 **Транспонирование.** 
 
-$$\begin{pmatrix}A & B \\\\ O & D\end{pmatrix}^{\mathrm{T}}=\begin{pmatrix}A^{\mathrm{T}} & O \\\\ B^{\mathrm{T}} & D^{\mathrm{T}}\end{pmatrix}$$
+$$\begin{pmatrix}A & B \\\\ O & D\end{pmatrix}^{\top}=\begin{pmatrix}A^{\top} & O \\\\ B^{\top} & D^{\top}\end{pmatrix}$$
 
 .
 

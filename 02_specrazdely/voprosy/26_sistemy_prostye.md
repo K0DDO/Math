@@ -17,7 +17,7 @@ $$\begin{cases} x_1'=a_{11}x_1+\cdots+a_{1n}x_n, \\\\ \vdots \\\\ x_n'=a_{n1}x_1
 
 $$\mathbf{x}'=A\mathbf{x},$$
 
-где $A=(a_{ij})$ — постоянная матрица $n\times n$, $\mathbf{x}=(x_1,\ldots,x_n)^{\mathrm{T}}$. ([урок](https://mathprofi.ru/sistemy_differencialnyh_uravnenij.html))
+где $A=(a_{ij})$ — постоянная матрица $n\times n$, $\mathbf{x}=(x_1,\ldots,x_n)^{\top}$. ([урок](https://mathprofi.ru/sistemy_differencialnyh_uravnenij.html))
 
 **Собственное значение** $\lambda$ и **собственный вектор** $\mathbf{h}\neq\mathbf{0}$:
 

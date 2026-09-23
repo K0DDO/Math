@@ -29,7 +29,7 @@
 
 **Пример 1.** Проверить линейность $A(x_1,x_2)=(x_1+2x_2, 3x_1-x_2)$. $A(ax+by)=aAx+bAy$ — выполняется.
 
-**Пример 2.** Матрица оператора $A(x_1,x_2)=(2x_1+x_2, x_1-x_2)$ в базисе $e_1,e_2$: $Ae_1=(2,1)$ → 1-й столбец $\,(2,1)^{\mathrm{T}}$, $Ae_2=(1,-1)$ → 2-й столбец → 
+**Пример 2.** Матрица оператора $A(x_1,x_2)=(2x_1+x_2, x_1-x_2)$ в базисе $e_1,e_2$: $Ae_1=(2,1)$ → 1-й столбец $\,(2,1)^{\top}$, $Ae_2=(1,-1)$ → 2-й столбец → 
 
 $$\begin{pmatrix}2 & 1 \\\\ 1 & -1\end{pmatrix}$$
 
@@ -47,7 +47,7 @@ $$A=\begin{pmatrix}1 & 2 \\\\ 0 & 1\end{pmatrix}$$
 
  → 
 
-$$A^{\ast}=A^{\mathrm{T}}=\begin{pmatrix}1 & 0 \\\\ 2 & 1\end{pmatrix}$$
+$$A^{\ast}=A^{\top}=\begin{pmatrix}1 & 0 \\\\ 2 & 1\end{pmatrix}$$
 
 ; $A$ не самосопряжён. 
 
@@ -141,7 +141,7 @@ $$A=\begin{pmatrix}2 & 1 \\\\ 1 & 2\end{pmatrix}$$
 
 $$U=\frac1{\sqrt2}\begin{pmatrix}1 & 1 \\\\ -1 & 1\end{pmatrix}$$
 
-, $U^{\mathrm{T}} A U=\mathrm{diag}(1,3)$, замена $X=UY$ → $Q=y_1^2+3y_2^2$.
+, $U^{\top} A U=\mathrm{diag}(1,3)$, замена $X=UY$ → $Q=y_1^2+3y_2^2$.
 
 ## 6. Лагранж и Якоби — практика — [лекция](https://mathprofi.ru/kak_privesti_kf_k_kanonicheskomu_vidu.html)
 

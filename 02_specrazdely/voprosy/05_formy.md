@@ -27,9 +27,9 @@ $$L(\alpha\mathbf{x}+\beta\mathbf{y})=\alpha L(\mathbf{x})+\beta L(\mathbf{y}).$
 
 **Билинейная форма** — функция $B(\mathbf{x},\mathbf{y})$ от двух векторов, линейная по каждому аргументу отдельно. В координатах
 
-$$B(\mathbf{x},\mathbf{y})=X^{\mathrm{T}} B Y=\sum_{i,j}b_{ij}x_i y_j.$$
+$$B(\mathbf{x},\mathbf{y})=X^{\top} B Y=\sum_{i,j}b_{ij}x_i y_j.$$
 
-Если $B^{\mathrm{T}}=B$, форма **симметричная**. ([урок](https://mathprofi.ru/kvadratichnye_formy.html))
+Если $B^{\top}=B$, форма **симметричная**. ([урок](https://mathprofi.ru/kvadratichnye_formy.html))
 
 **Квадратичная форма** — однородный многочлен второй степени от координат:
 
@@ -82,13 +82,13 @@ $$X^TAX=\begin{pmatrix}x_1 & x_2\end{pmatrix}\begin{pmatrix}2 & -2 \\\\ -2 & 5\e
 
 ### Диагонализация через собственные значения
 
-Так как $A=A^{\mathrm{T}}$, существует ортонормированный собственный базис: ортогональная матрица $U$ ($U^{-1}=U^{\mathrm{T}}$) из собственных векторов-столбцов такая, что
+Так как $A=A^{\top}$, существует ортонормированный собственный базис: ортогональная матрица $U$ ($U^{-1}=U^{\top}$) из собственных векторов-столбцов такая, что
 
-$$U^{\mathrm{T}} A U=\Lambda=\mathrm{diag}(\lambda_1,\ldots,\lambda_n).$$
+$$U^{\top} A U=\Lambda=\mathrm{diag}(\lambda_1,\ldots,\lambda_n).$$
 
 Замена переменных $X=UY$ (новые координаты $Y$ — координаты в собственном базисе) даёт
 
-$$Q=X^TAX=Y^{\mathrm{T}}(U^{\mathrm{T}} A U)Y=Y^{\mathrm{T}}\Lambda Y=\lambda_1 y_1^2+\ldots+\lambda_n y_n^2.$$
+$$Q=X^TAX=Y^{\top}(U^{\top} A U)Y=Y^{\top}\Lambda Y=\lambda_1 y_1^2+\ldots+\lambda_n y_n^2.$$
 
 Это **канонический вид методом ортогонального преобразования**. На mathprofi его выделяют как наиболее «геометричный»: оси поворачивают вдоль главных направлений формы. ([урок](https://mathprofi.ru/metod_ortogonalnogo_preobrazovaniya_kf.html))
 

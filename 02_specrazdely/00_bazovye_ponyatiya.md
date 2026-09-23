@@ -113,7 +113,7 @@ $$X=\begin{pmatrix} x_1 \\\\ \vdots \\\\ x_n \end{pmatrix}$$
 $$A=\begin{pmatrix} a_{11} & a_{12} & \ldots & a_{1n} \\\\ a_{21} & a_{22} & \ldots & a_{2n} \\\\ \vdots & \vdots & \ddots & \vdots \\\\ a_{m1} & a_{m2} & \ldots & a_{mn} \end{pmatrix}.$$
 
 - $i$-я **строка** — горизонтальный набор $\,(a_{i1},\ldots,a_{in})$;
-- $j$-й **столбец** — вертикальный набор $\,(a_{1j},\ldots,a_{mj})^{\mathrm{T}}$.
+- $j$-й **столбец** — вертикальный набор $\,(a_{1j},\ldots,a_{mj})^{\top}$.
 
 Квадратная матрица: $m=n$. Диагональ — элементы $a_{11},a_{22},\ldots,a_{nn}$. ([урок](https://mathprofi.ru/dejstviya_s_matricami.html))
 
@@ -139,11 +139,11 @@ $$\,(AB)_{ij}=\sum_{k} a_{ik}b_{kj}.$$
 
 ## Транспонирование
 
-Транспонированная матрица $A^{\mathrm{T}}$ получается отражением относительно главной диагонали: строки становятся столбцами,
+Транспонированная матрица $A^{\top}$ получается отражением относительно главной диагонали: строки становятся столбцами,
 
-$$\,(A^{\mathrm{T}})_{ij}=a_{ji}.$$
+$$\,(A^{\top})_{ij}=a_{ji}.$$
 
-Свойства: $\,(A+B)^{\mathrm{T}}=A^{\mathrm{T}}+B^{\mathrm{T}}$, $\,(AB)^{\mathrm{T}}=B^{\mathrm{T}} A^{\mathrm{T}}$, $\,(A^{\mathrm{T}})^{\mathrm{T}}=A$. ([урок](https://mathprofi.ru/dejstviya_s_matricami.html))
+Свойства: $\,(A+B)^{\top}=A^{\top}+B^{\top}$, $\,(AB)^{\top}=B^{\top} A^{\top}$, $\,(A^{\top})^{\top}=A$. ([урок](https://mathprofi.ru/dejstviya_s_matricami.html))
 
 ---
 
@@ -201,7 +201,7 @@ $$A A^{-1}=A^{-1}A=E.$$
 
 Способы нахождения:
 
-1. через алгебраические дополнения: $A^{-1}=\frac{1}{\det A}(A_{ij})^{\mathrm{T}}$;
+1. через алгебраические дополнения: $A^{-1}=\frac{1}{\det A}(A_{ij})^{\top}$;
 2. методом Жордана–Гаусса: приписать справа $E$ и элементарными преобразованиями строк превратить левую часть в $E$; справа появится $A^{-1}$.
 
 Подробный алгоритм: [обратная матрица](https://mathprofi.ru/obratnaya_matrica_metod_zhordana_gaussa.html).
@@ -326,7 +326,7 @@ $$X=C_1\mathbf{x}^{(1)}+\ldots+C_{n-r}\mathbf{x}^{(n-r)},$$
 
 В $\mathbb{R}^n$ стандартное:
 
-$$\,(\mathbf{x},\mathbf{y})=x_1y_1+\ldots+x_ny_n=X^{\mathrm{T}} Y.$$
+$$\,(\mathbf{x},\mathbf{y})=x_1y_1+\ldots+x_ny_n=X^{\top} Y.$$
 
 Длина (норма): $\|\mathbf{x}\|=\sqrt{(\mathbf{x},\mathbf{x})}$. Угол: $\cos\varphi=\frac{(\mathbf{x},\mathbf{y})}{\|\mathbf{x}\|\,\|\mathbf{y}\|}$.
 
